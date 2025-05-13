@@ -140,19 +140,20 @@ color: #555555
 
 ---
 
-# 🚫 Et ne PAS contenir
+# 🚫 Et ne doit pas :
 
-- Du bullshit inutile :
+- Contenir du bullshit inutile :
   - **Historique**, **détails inutiles**, **règles de l'art**, éléments **vagues** ou trop généraux
 
-- De la **répétition** (principe DRY 🔄) :
+- **Répéter** (principe DRY 🔄) :
   - Préférer référencer les documents existants
 
-- **Tout ce qui peut changer rapidement** (jours à semaines)
+- Contenir **des informations ephemères** (jours à semaines)
 
-- De la **compensation pour du code peu explicite** (voir Clean Code 📖)
+- **Compenser du code peu explicite** (voir Clean Code / Screaming Architecture 📖)
 
-- Du contenu **inadapté à son audience cible** 🎯
+- Être **inadapté** à son audience 🎯
+
 ---
 
 ## 📋 Petit exemple fonctionnel
@@ -271,34 +272,41 @@ Répond à la plupart de ses critères :
 
 ---
 
-## 🗃️ Docs traditionnelles : manque de clarté et de traçabilité
+## 🗃️ Les problèmes de la doc traditionnelles  (1/3)
 
-- Difficile de retrouver les **rationales** et les **intentions** derrière les choix d'architecture
-
-- Peu ou pas de **collaboration active** avec les parties prenantes  
+* 🚪 Peu ou pas de **collaboration active** avec les parties prenantes  
   - Décisions prises en silo  
-  - Peu de relectures croisées
+  - Peu adapté aux revues par pair
 
-- Faible **traçabilité des évolutions**, en particulier sur les **schémas non versionnés**
+* 🕳️ Faible **traçabilité des évolutions**, en particulier sur les **diagrammes** (binaires)
 
-- Difficulté en cas de **renommage** ou de réorganisation des périmètres  
+* 🤯 Difficulté en cas de **renommage** ou de réorganisation  
   - Références croisées cassées  
-  - Impacts mal identifiés
+  - Renomages / refactorings risqués et peu pratiques sur un lot de documents
 
 ---
 
-## 📄 Docs bureautiques : outils inadaptés
+## 🗃️ Les problèmes de la doc traditionnelles  (2/3)
 
-- Outils bureautiques **peu formels** :  
-  - Structure faible, pas de validation des contenus  
+* 🕳️ Outils bureautiques **peu formels** :  Structure faible, pas de validation possible du contenu ou des meta-données (type Git hooks)
 
-- Perte de sens en cas d’**entraînement de LLM**  
-  - Contenu peu structuré, difficile à exploiter par l'IA  
-  - Plus diffile de générer du contenu
+* 🕳️ Perte de sens en cas d’**entraînement de LLM**  
+  - Contenu essentiellement binaire peu structuré, difficile à exploiter par l'IA  
+  - Plus diffile de faire générer du contenu
 
-- Risque de **fuite d’informations sensibles**  
-  - Stockage non maîtrisé sur des drives partagés  
-  - Export et diffusion incontrôlés des fichiers
+* 🔒 Risque de **fuite d’informations sensibles**  
+    - Aspiration de drives partagés  
+    - Export et diffusion incontrôlés des fichiers
+    - Métadonnées oubliées
+
+
+---
+
+## 🗃️ Les problèmes de la doc traditionnelles  (3/3)
+
+* 🕒 **Efforts de mise en page** : faible valeur ajoutée
+
+* 📈 **Volumétrie importante** (surtout en multi-versions)
 
 ---
 
