@@ -118,14 +118,10 @@ color: #555555
 
 ---
 
-## 🛡️ **Éviter les quiproquos**  
+## 🛡️ **Documenter pour avancer**  
 
 - 🚫 Moins de malentendus ➔ **Économies** de temps, d’argent et de frustrations
 - 📚 **Tracer les choix et leurs raisons** ➔ éviter de reposer sans cesse les mêmes questions
-
-### ✅ **Acter et assumer les décisions pour avancer**  
-
-- 📌 **Documenter, c’est décider et avancer**, pas rester bloqué dans des débats sans fin
 - 📖 Utiliser des **Architecture Decision Records (ADR)** pour tracer les décisions importantes
 - 🔄 *Si besoin, on pourra toujours les réévaluer plus tard... mais en conscience.*  
 
@@ -136,10 +132,11 @@ color: #555555
 
 - **TOUT** ce qui est nécessaire, mais **QUE** ce qui est nécessaire
 
-- 🧪 **Test de Litmus** : Dois-je documenter ?
-  - Une **personne externe compétente** dans le domaine peut-elle comprendre facilement ? Si oui, pas de doc
+- 🧪 **Tests de Litmus** : Dois-je documenter ?
+  - Une **personne externe compétente** dans le domaine a-elle besoin d'explications complémentaires au code/écrans ? Si non, pas de doc
   - Documenter essentiellement **ce qui ne peut pas être deviné**
   - Répondre à la plupart des « **WTF** » d'une nouvelle personne sur le projet
+  - Est-ce que je l'**afficherais au mur** dans l'open-space ?
 
 ---
 
@@ -199,14 +196,13 @@ Que doit contenir (ou pas) la doc ?
 
     📅 Périmée : décrit un monde qui n'existe plus
 
-
 ---
 
 ## Quid de la documentation d'architecturte en particulier ?
 
 - Tout ce qui a été dit précédemment s'applique aussi aux documents d'architecture
 
-- Préférer les diagrammes (**UML2**, **C4**, **BPMN**, **ArchiMate** en particulier) au texte
+- Préférer les diagrammes au texte (**UML**, **C4**, **BPMN**, **ArchiMate** en particulier) 
 
 - Ne pas hésiter à commenter les diagrammes (directement dans diagramme ou dans le document parent avec des détails pertinents (**tips / warnings**)
 
@@ -251,8 +247,114 @@ Que doit contenir (ou pas) la doc ?
 ### Exemple C4 : diagrame de container
 ![width:20%](images/bons-diagrammes.png)
 
+---
+
+# 1 - Le problème avec la documentation traditionnelle
+
+---
+
+## 🗃️ Ce que j'entends par 'documentation traditionnelle'
+
+Répond à la plupart de ses critères :
+
+- **Documents bureautique** (Word, PDF ou PowerPoint, ...), même partagés
+
+- **Statique et figée** dès sa publication
+
+- **Mise à jour fastidieuse** -> risque élevé de **rapidement devenir obsolète**
+
+- **Traçabilité des modifications** faible ou manuelle
+
+- Peu intégrée aux **outils et processus de développement**
+
+- Existe uniquement parce comme livrable d'un **procesus, pas orienté produit**
+
+---
+
+## 🗃️ Docs traditionnelles : manque de clarté et de traçabilité
+
+- Difficile de retrouver les **rationales** et les **intentions** derrière les choix d'architecture
+
+- Peu ou pas de **collaboration active** avec les parties prenantes  
+  - Décisions prises en silo  
+  - Peu de relectures croisées
+
+- Faible **traçabilité des évolutions**, en particulier sur les **schémas non versionnés**
+
+- Difficulté en cas de **renommage** ou de réorganisation des périmètres  
+  - Références croisées cassées  
+  - Impacts mal identifiés
+
+---
+
+## 📄 Docs bureautiques : outils inadaptés
+
+- Outils bureautiques **peu formels** :  
+  - Structure faible, pas de validation des contenus  
+
+- Perte de sens en cas d’**entraînement de LLM**  
+  - Contenu peu structuré, difficile à exploiter par l'IA  
+  - Plus diffile de générer du contenu
+
+- Risque de **fuite d’informations sensibles**  
+  - Stockage non maîtrisé sur des drives partagés  
+  - Export et diffusion incontrôlés des fichiers
+
+---
+
+## 📚 Confusion des concepts
+
+- Solutions décrites **sans les exigences et contraintes correspondantes**  
+
+- Mélange fréquent entre :  
+  - **Contraintes** (imposées par le contexte)  
+  - **Exigences** (attendues par le métier)  
+  - **Solutions** (choix technologiques)  
+
+- Résultat :  
+  - Perte de lisibilité  
+  - Difficulté pour justifier les choix faits
+
+---
 
 
+## ⏱️ Un temps important perdu inutilement
+
+- Trop de temps consacré à la **mise en page** et au **polissage des diagrammes**  
+  - Esthétique privilégiée au détriment du fond  
+
+- Création de **diagrammes figés** qui nécessitent de lourdes reprises pour toute modification
+
+- Peu de **réutilisation** et pas de factorisation des représentations
+
+---
+
+## 📉 Une documentation difficile à maintenir
+
+- **Templates de documents rigides** et mal adaptés à l’évolution des projets  
+
+- Difficulté à garantir une **qualité homogène** dans les différents DA produits  
+
+- Risque de production de **documents inutiles ou rapidement obsolètes**
+
+---
+
+# 2- Doc as code
+
+## 🏛️ Documentation d'architecture : Traditionnelle vs Vivante (As Code)
+
+| Traditionnelle 📚          | Vivante / As Code 💻          |
+|----------------------------|-------------------------------|
+| Fichiers Word / PDF statiques | Documentation versionnée (Git)  |
+| Mise à jour manuelle        | Mise à jour via PR / CI-CD    |
+| Peu ou pas de traçabilité   | Historique et auteurs tracés  |
+| Rapide obsolescence         | Mise à jour continue          |
+| Non intégrée aux workflows  | Intégrée dans le cycle DevOps |
+| Lecture linéaire            | Navigation hypertexte         |
+| Diagrammes figés             | Diagrammes générés à partir du code (PlantUML, Structurizr) |
+| Peu collaborative           | Collaboration via revues de code / merge requests |
+
+🎯 **En résumé :** Passer d’un document que l’on subit à un **actif vivant et maîtrisé** du projet
 
 ---
 
@@ -260,3 +362,10 @@ Takeaway
 
 Présentatrion disponible à https://florat.net
 
+
+
+---
+
+Aller plus loin :
+
+La living documentation (pointeur vers Cyril Martraire)
