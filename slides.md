@@ -59,17 +59,15 @@ color: #555555
 
 # 🧭 Agenda (1H)
 
-* 0 - A quoi sert la documentation ? (générale et d'architecture)
+* 0 - Les enjeux de la documentation (générale et d'architecture)
 * 1 - Les challenges de la documentation traditionnelle
 * 2 - La Documentation d'Architectrure As Code
 * 3 - RETEX, tips, blueprints
 * 4 - Take-away & perspectives
 
-
-
 ---
 
-# 📚 1 — À quoi sert la documentation ?
+# 📚 0 — Les enjeux de la documentation
 (en général et en architecture en particulier)
 
 
