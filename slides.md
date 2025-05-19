@@ -120,9 +120,8 @@ color: #555555
 
 ## 🛡️ **Documenter pour avancer**  
 
-- 🚫 Moins de malentendus ➔ **Économies** de temps, d’argent et de frustrations
-- 📚 **Tracer les choix et leurs raisons** ➔ éviter de reposer sans cesse les mêmes questions
-- 📖 Utiliser des **Architecture Decision Records (ADR)** pour tracer les décisions importantes
+- 🚫 Moins de malentendus ➔ **économies** de temps, d’argent et de frustrations
+- 📚 **Tracer les choix et leurs raisons** (ex: ADR) ➔ éviter de reposer sans cesse les mêmes questions
 - 🔄 *Si besoin, on pourra toujours les réévaluer plus tard... mais en conscience.*  
 
 ---
@@ -133,8 +132,8 @@ color: #555555
 - **TOUT** ce qui est nécessaire, mais **QUE** ce qui est nécessaire
 
 - 🧪 **Tests de Litmus** : Dois-je documenter ?
-  - Une **personne externe compétente** dans le domaine a-elle besoin d'explications complémentaires au code/écrans ? Si non, pas de doc
-  - Documenter essentiellement **ce qui ne peut pas être deviné**
+  - Une **personne externe compétente** dans le domaine a-elle besoin d'explications complémentaires au code/écrans ? Si non ➔ pas de doc
+  - Documenter essentiellement **ce qui ne peut pas être deviné** (ex: respect d'une réglementation)
   - Répondre à la plupart des « **WTF** » d'une nouvelle personne sur le projet
   - Est-ce que je l'**afficherais au mur** dans l'open-space ?
 
@@ -148,7 +147,7 @@ color: #555555
 - **Répéter** (principe DRY 🔄) :
   - Préférer référencer les documents existants
 
-- Contenir **des informations ephemères** (jours à semaines)
+- Contenir **des informations ephemères** 
 
 - **Compenser du code peu explicite** (voir Clean Code / Screaming Architecture 📖)
 
@@ -219,7 +218,7 @@ Que doit contenir (ou pas) la doc ?
 
 - Trop d'éléments (**~ > 20**)
 
-- Métaréprésentation floue  
+- Métaréprésentations floues  
   - Pas de légende  
   - Trop de couleurs, formes, types de flèches  
   - Légendes difficiles à comprendre
@@ -234,15 +233,12 @@ Que doit contenir (ou pas) la doc ?
 
 ## ✅ Les diagrammes : bonnes pratiques principales
 
-- Métaréprésentation **simple**  
-  - Peu de couleurs  
-  - Peu de types de flèches  
+- Métaréprésentations **simples**, niveau d’**abstraction homogène**, **nombre raisonnable** d'élements.
 
 - **Actions explicites sur les flèches**  
   - Indiquer le type d’échange ou de flux  
   - Indiquer la nature du flux (Lecture / Écriture / Exécution) si utile
-
-- Niveau d’**abstraction homogène**  
+  
 
 ---
 ### Exemple C4 : diagrame de container
