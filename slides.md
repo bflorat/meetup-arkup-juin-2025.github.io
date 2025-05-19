@@ -254,7 +254,7 @@ Que doit contenir (ou pas) la doc ?
 
 Répond à la plupart de ses critères :
 
-- **Documents bureautique** (Word, PDF ou PowerPoint, ...), même partagés
+- **Documents bureautique** binaire Word, PDF, PowerPoint, ... (même partagés)
 
 - **Statique et figée** dès sa publication
 
@@ -268,11 +268,11 @@ Répond à la plupart de ses critères :
 
 ---
 
-## 🗃️ Les problèmes de la doc traditionnelles  (1/3)
+## 🗃️ Faible évolutivité et traçabilité
 
 * 🚪 Peu ou pas de **collaboration active** avec les parties prenantes  
   - Décisions prises en silo  
-  - Peu adapté aux revues par pair
+  - Peu adapté aux revues par pair (suivi des modifications mais pas de MR)
 
 * 🕳️ Faible **traçabilité des évolutions**, en particulier sur les **diagrammes** (binaires)
 
@@ -282,52 +282,30 @@ Répond à la plupart de ses critères :
 
 ---
 
-## 🗃️ Les problèmes de la doc traditionnelles  (2/3)
+## 🗃️ Une doc moins adaptée aux LLM
 
-* 🕳️ Outils bureautiques **peu formels** :  Structure faible, pas de validation possible du contenu ou des meta-données (type Git hooks)
+* 🕳️ Outils bureautiques **peu formels** : structure faible, pas de validation possible du contenu ou des meta-données (type Git hooks)
 
 * 🕳️ Perte de sens en cas d’**entraînement de LLM**  
-  - Contenu essentiellement binaire peu structuré, difficile à exploiter par l'IA  
+  - Contenu essentiellement binaire peu structuré, plus difficile à exploiter par l'IA  
   - Plus diffile de faire générer du contenu
 
-* 🔒 Risque de **fuite d’informations sensibles**  
-    - Aspiration de drives partagés  
-    - Export et diffusion incontrôlés des fichiers
-    - Métadonnées oubliées
+---
 
+## 🔒 Des risque de fuite d’informations sensibles
+
+ - Aspiration de drives partagés  
+ - Export et diffusion incontrôlés des fichiers
+ - Métadonnées oubliées (devis pour un autre client...)
+ - 📈 **Volumétrie importante** (surtout en multi-versions)
 
 ---
 
-## 🗃️ Les problèmes de la doc traditionnelles  (3/3)
+## ⏱️ Des efforts de mise en page importants
 
-* 🕒 **Efforts de mise en page** : faible valeur ajoutée
-
-* 📈 **Volumétrie importante** (surtout en multi-versions)
-
----
-
-## 📚 Confusion des concepts
-
-- Solutions décrites **sans les exigences et contraintes correspondantes**  
-
-- Mélange fréquent entre :  
-  - **Contraintes** (imposées par le contexte)  
-  - **Exigences** (attendues par le métier)  
-  - **Solutions** (choix technologiques)  
-
-- Résultat :  
-  - Perte de lisibilité  
-  - Difficulté pour justifier les choix faits
-
----
-
-
-## ⏱️ Un temps important perdu inutilement
-
-- Trop de temps consacré à la **mise en page** et au **polissage des diagrammes**  
+  - Trop de temps consacré à la **mise en page** du texte et au **polissage des diagrammes**  
   - Esthétique privilégiée au détriment du fond  
-
-- Création de **diagrammes figés** qui nécessitent de lourdes reprises pour toute modification
+ - Création de **diagrammes figés** qui nécessitent de lourdes reprises pour toute modification
 
 - Peu de **réutilisation** et pas de factorisation des représentations
 
@@ -361,6 +339,24 @@ Répond à la plupart de ses critères :
 🎯 **En résumé :** Passer d’un document que l’on subit à un **actif vivant et maîtrisé** du projet
 
 ---
+
+
+## 📚 Confusion des concepts
+
+- Solutions décrites **sans les exigences et contraintes correspondantes**  
+
+- Mélange fréquent entre :  
+  - **Contraintes** (imposées par le contexte)  
+  - **Exigences** (attendues par le métier)  
+  - **Solutions** (choix technologiques)  
+
+- Résultat :  
+  - Perte de lisibilité  
+  - Difficulté pour justifier les choix faits
+
+---
+
+
 
 Takeaway
 
