@@ -305,19 +305,8 @@ Répond à la plupart de ses critères :
 
   - Trop de temps consacré à la **mise en page** du texte et au **polissage des diagrammes**  
   - Esthétique privilégiée au détriment du fond  
- - Création de **diagrammes figés** qui nécessitent de lourdes reprises pour toute modification
-
-- Peu de **réutilisation** et pas de factorisation des représentations
-
----
-
-## 📉 Une documentation difficile à maintenir
-
-- **Templates de documents rigides** et mal adaptés à l’évolution des projets  
-
-- Difficulté à garantir une **qualité homogène** dans les différents DA produits  
-
-- Risque de production de **documents inutiles ou rapidement obsolètes**
+  - Création de **diagrammes figés** qui nécessitent de lourdes reprises pour toute modification
+  - Peu de **réutilisation** et pas de factorisation des représentations
 
 ---
 
@@ -329,7 +318,7 @@ Répond à la plupart de ses critères :
 |----------------------------|-------------------------------|
 | Fichiers Word / PDF statiques | Documentation versionnée (Git)  |
 | Mise à jour manuelle        | Mise à jour via PR / CI-CD    |
-| Peu ou pas de traçabilité   | Historique et auteurs tracés  |
+| Peu ou pas de traçabilité   | Historiquen,tags et auteurs tracés |
 | Rapide obsolescence         | Mise à jour continue          |
 | Non intégrée aux workflows  | Intégrée dans le cycle DevOps |
 | Lecture linéaire            | Navigation hypertexte         |
@@ -339,7 +328,6 @@ Répond à la plupart de ses critères :
 🎯 **En résumé :** Passer d’un document que l’on subit à un **actif vivant et maîtrisé** du projet
 
 ---
-
 
 ## 📚 Confusion des concepts
 
