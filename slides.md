@@ -61,7 +61,7 @@ color: #555555
 
 * 0 - Les enjeux de la documentation (générale et d'architecture)
 * 1 - Les challenges de la documentation traditionnelle
-* 2 - La Documentation d'Architectrure As Code
+* 2 - La documentation d'architectrure As Code
 * 3 - RETEX, tips, blueprints
 * 4 - Take-away & perspectives
 
@@ -70,12 +70,11 @@ color: #555555
 # 📚 0 — Les enjeux de la documentation
 (en général et en architecture en particulier)
 
-
 ---
 
 ## ⚠️ Disclaimer
 
-- La **documentation** est l’un des domaines les plus **mal compris** et **mal maîtrisés** par les équipes
+- La **documentation** est selon moi particulièrement  **incompris** et **mal maîtrisé** par les équipes
 - Le plus souvent :  
    - 🗂️ **Trop** de documentation...  
    - 📉 **Pas assez** de documentation...  
@@ -85,7 +84,7 @@ color: #555555
 ---
 ## 📈 Le ROI de la documentation
 
-- **Une activité qui dérive très facilement :**
+- **Une activité qui dérappe très facilement :**
   - Documentation inutile, hors sujet, inmaintenable
   - Coût élevé, retour hypothétique voire négatif
   - En **lean**, on appelle ça du **Muda** (gaspillage)
@@ -112,9 +111,10 @@ color: #555555
 
 - 📡 **Dans l’espace** :  
    - Organisations **distribuées**, télétravail, décalage horaire...  
-- ⏳ **Dans le temps** :  
+- ⏳ mais surtout **dans le temps** :  
    - Pour les autres : **TMA**, futurs développeurs, architectes…  
-   - Pour soi-même dans 6 mois 😅 ou pour les **transferts de compétence** !   
+   - Pour soi-même dans 6 mois 😅
+   - pour les **transferts de compétence**,...   
 
 ---
 
