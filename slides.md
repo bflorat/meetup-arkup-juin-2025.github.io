@@ -317,8 +317,8 @@ Répond à la plupart de ses critères :
 | Traditionnelle 📚          | Vivante / As Code 💻          |
 |----------------------------|-------------------------------|
 | Fichiers Word / PDF statiques | Documentation versionnée (Git)  |
-| Mise à jour manuelle        | Mise à jour via PR / CI-CD    |
-| Peu ou pas de traçabilité   | Historiquen,tags et auteurs tracés |
+| Mise à jour manuelle        | Mise à jour via PR-MR / CI-CD    |
+| Peu ou pas de traçabilité   | Historique, tags et auteurs tracés |
 | Rapide obsolescence         | Mise à jour continue          |
 | Non intégrée aux workflows  | Intégrée dans le cycle DevOps |
 | Lecture linéaire            | Navigation hypertexte         |
@@ -328,6 +328,70 @@ Répond à la plupart de ses critères :
 🎯 **En résumé :** Passer d’un document que l’on subit à un **actif vivant et maîtrisé** du projet
 
 ---
+
+## 🧰 Utiliser Git pour documenter efficacement
+
+- 📜 **Historique complet** : chaque modification est enregistrée  
+- 🔖 **Tags** : versionnez les jalons de votre documentation (v1.0, v2.0...)  
+- 👤 **Blame** : savoir *qui* a écrit *quoi*, et *quand*  
+- 🔍 **Diffs** : comparaison facile entre deux versions  
+- ✅ **Revue via merge request / pull request**  
+- 🕰️ **Revenir dans le temps** : checkout d'une version antérieure  
+
+---
+
+## 🚀 Et au-delà de Git de base
+
+- 🧪 **CI/CD** pour valider / publier automatiquement votre doc (PDF, HTML...)  
+- 🔄 **Git hooks** : automatiser la mise à jour d’index ou de métadonnées  
+- 🔐 **Traçabilité / conformité** via signature GPG sur commits/tags : utile dans les environnements sensibles  
+- 🌍 **Collaboration distribuée** : plusieurs auteurs, plusieurs branches  
+
+---
+
+## 📄 L'intrret des langages de balisage légers : AsciiDoc / Markdown
+
+-  **Lisibles en brut** : pas besoin d’outil pour lire ou modifier  
+-  **Simplicité** : syntaxe intuitive pour écrire vite  
+-  **Facile à générer** : ex : spécificatons exécutables des rapports de tests Spock 
+-  **Faciles à versionner** : parfait pour Git (diffs propres, pas de binaire)  
+-  **Intégration continue** : générer HTML, PDF, Diagrams, SBOM, etc.  
+-  **Extensibles** : AsciiDoc permet des blocs structurés (admonitions, macros, includes...)
+
+---
+
+## 🎯 Idéal pour de la doc "as code"
+
+> Les formats Markdown / AsciiDoc :
+> - ✅ s’intègrent naturellement à votre code source (de préférence dans le même dépot)
+> - ✅ évitent les formats fermés ou verbeux (Word, PDF, XML)
+> - ✅ permettent l’automatisation, la réutilisation et la documentation vivante
+
+📘 Utilisés par : GitHub, GitLab, Red Hat, Spring, Kubernetes...
+
+---
+## 🏆 Pourquoi AsciiDoc pour la doc technique avancée ?
+
+- **Structure riche** : sections, blocs, tableaux complexes  
+- **Macros & includes** : contenu réutilisable, factorisable  
+- **Index, glossaires, bibliographies**  
+- **Admonitions** : `NOTE`, `TIP`, `CAUTION`, etc.  
+- **Diagrammes intégrés** : PlantUML, Mermaid...  
+- **Sorties variées** : HTML5, PDF, DocBook...
+
+---
+
+## 🚀 Antora : plateforme de doc modulaire
+
+-  **Organisation par composants, versions, modules**  
+-  **Multi-dépôts Git** : chaque équipe gère sa doc dans son repo  
+-  **Mise à jour automatique** des sources  
+-  **Navigation unifiée** sur un portail de documentation  
+-  **Thématisation et publication pro** (docs produits, API, guides, etc.)
+
+> ✅ Parfait pour la doc d’architecture, microservices, documentation produit distribuée
+
+
 
 ## 📚 Confusion des concepts
 
@@ -358,8 +422,12 @@ Aller plus loin :
 
 La living documentation (pointeur vers Cyril Martraire)
 
+
+----
+
+
 2)  La documentation Archi As Code
-Utilisation de Git (et tous ses utilitaires et features)
+x Utilisation de Git (et tous ses utilitaires et features)
 Utilisation de langages de balisages légers pour le text (Asciidoc / markdown)
 Utilisation de diagrammes textuels (plantuml/mermaid..)
 C4
