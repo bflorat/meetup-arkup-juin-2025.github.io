@@ -357,3 +357,43 @@ Présentatrion disponible à https://florat.net
 Aller plus loin :
 
 La living documentation (pointeur vers Cyril Martraire)
+
+2)  La documentation Archi As Code
+Utilisation de Git (et tous ses utilitaires et features)
+Utilisation de langages de balisages légers pour le text (Asciidoc / markdown)
+Utilisation de diagrammes textuels (plantuml/mermaid..)
+C4
+Le Mob Design en équipe
+La notion de coordonnées d'archi pour s'y retrouver rapidement
+Modèle de DA orienté usage et orienté checklist
+Les ADR
+De l'importance de l'Ubiquitous Language
+Les suivi de réunions
+Les supports (Marp, reveal.js...)
+Intégration dans une CI (exports...)
+La documentation multi-dépôts avec Antora
+Possibilité de découpage par type de public pour cibler le contenu
+Possibilité de filtrage par contexte (ex: pour un projet d'ETL, pas besoin des sections portant sur les GUI)
+Possibilité de faire des scripts pour avoir un taux d'avancement / remplissage ? -> Bonne idée !
+script avec des extractions automatique ( scan d'infra par exemple, analyse du paramétrage dans le code ou CMDB ?)  -> [BFL] A discuter, souvent une fausse bonne idée de mon expérience et faible ROI. 
+
+
+3) Les challenges /REX
+Comment faire pour que cette documentation technique ne soit pas qu'a la main / en responsabilité de l'archi -> Écriture / MR par les non techniques (mais filtrage)
+Export PDF/HTML... -> mise en place dans la CI au MAE, export en 1 clic
+Comment faire lire le DA par les devs et autres parties prenantes  ? -> syllabus , quiz
+Cohabitation avec d'autres systèmes documentaires (ex: doc infra sur un autre wiki)
+Taille du modèle -> découper par filtres contextuels (en cours). Contextes par organisation et/ou projet.
+Petits projets / Manque d'architectes, quand les chefs de projet font l'architecture.
+Les contextes propices/ non propices
+Dichotomie DA/guide de développement (pour les solutions surtout)
+Dichotomie DA / DEX : ne pas mélanger, pas les mêmes temporalités / confidentialité des infos.
+Comment valider/suivre le cycle de vie du DA par le management ? s'impliquer dans la réalisation/qualité du DA.
+Attention à ne pas confondre exigences et solution.
+Problème de la maintenance toujours présent. Quelques solutions, la revue globale périodique.
+Solution 'loin' des exigences -> exige des hyperliens
+Business Analysts  sur specs générales: une approches Wysysig type Confluence peut être préférable (problème d’adhésion), pas de solution unique
+
+4) Conclusion
+Vers un outil Open Source (SaaS / on Prem ? ) de gestion/génération des modèles de DA/ADR ?
+Aller plus loin : pointeurs vers 'Living documentation' de Cyrill Martraire , etc
