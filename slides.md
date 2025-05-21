@@ -239,9 +239,8 @@ Que doit contenir (ou pas) la doc ?
   - Indiquer le type d’échange ou de flux  
   - Indiquer la nature du flux (Lecture / Écriture / Exécution) si utile
   
-
 ---
-### Exemple C4 : diagrame de container
+### Exemple C4 : diagramme de container
 ![width:20%](images/bons-diagrammes.png)
 
 ---
@@ -292,7 +291,7 @@ Répond à la plupart de ses critères :
 
 ---
 
-## 🔒 Des risque de fuite d’informations sensibles
+## 🔒 Plus de risque de fuites
 
  - Aspiration de drives partagés  
  - Export et diffusion incontrôlés des fichiers
@@ -331,21 +330,21 @@ Répond à la plupart de ses critères :
 
 ## 🧰 Utiliser Git pour documenter efficacement
 
-- 📜 **Historique complet** : chaque modification est enregistrée  
-- 🔖 **Tags** : versionnez les jalons de votre documentation (v1.0, v2.0...)  
-- 👤 **Blame** : savoir *qui* a écrit *quoi*, et *quand*  
-- 🔍 **Diffs** : comparaison facile entre deux versions  
-- ✅ **Revue via merge request / pull request**  
-- 🕰️ **Revenir dans le temps** : checkout d'une version antérieure  
+-  **Historique complet** : chaque modification est enregistrée  
+-  **Tags** : versionnez les jalons de votre documentation (v1.0, v2.0...)  
+-  **Blame** : savoir *qui* a écrit *quoi*, et *quand*  
+-  **Diffs** : comparaison facile entre deux versions  
+-  **Revue via merge request / pull request**  
+-  **Revenir dans le temps** : checkout d'une version antérieure  
 
 ---
 
 ## 🚀 Et au-delà de Git de base
 
-- 🧪 **CI/CD** pour valider / publier automatiquement votre doc (PDF, HTML...)  
-- 🔄 **Git hooks** : automatiser la mise à jour d’index ou de métadonnées  
-- 🔐 **Traçabilité / conformité** via signature GPG sur commits/tags : utile dans les environnements sensibles  
-- 🌍 **Collaboration distribuée** : plusieurs auteurs, plusieurs branches  
+-  **CI/CD** pour valider / publier automatiquement votre doc (PDF, HTML...)  
+-  **Git hooks** : automatiser la mise à jour d’index ou de métadonnées  
+-  **Traçabilité / conformité** via signature GPG sur commits/tags : utile dans les environnements sensibles  
+-  **Collaboration distribuée** : plusieurs auteurs, plusieurs branches  
 
 ---
 
@@ -390,6 +389,16 @@ Répond à la plupart de ses critères :
 -  **Thématisation et publication pro** (docs produits, API, guides, etc.)
 
 > ✅ Parfait pour la doc d’architecture, microservices, documentation produit distribuée
+
+## Les spécifications executables
+
+TODO: rapports
+
+## 🔄 Exemple de site Antora multi-dépots à partir de documentation générée
+
+Spécifications 
+
+![image](https://github.com/user-attachments/assets/7c71d669-94e1-4f3c-b4b5-9b0ca23da1d4)
 
 
 
