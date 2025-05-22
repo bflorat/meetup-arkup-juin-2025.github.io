@@ -390,16 +390,68 @@ Répond à la plupart de ses critères :
 
 > ✅ Parfait pour la doc d’architecture, microservices, documentation produit distribuée
 
-## Les spécifications executables
+## ✅ Spécifications exécutables
 
-TODO: rapports
+- Traduction directe d’une **exigence** en un **test automatisé**
+- Structurtion des tests en **Gherkin** (Given/when/then)
+- Servent à la fois :
+  - à **documenter** les comportements attendus
+  - à **vérifier** en continu leur respect
+- Forme lisible par les humains : développeurs, PO, QA...
+
+---
+
+## 🧪 Exemple de spécification avec Spock
+
+```groovy
+class CalculatriceSpec extends Specification {
+
+  def "la somme de #a et #b doit être #result"() {
+    expect:
+    new Calculatrice().somme(a, b) == result
+
+    where:
+    a | b || result
+    1 | 2 || 3
+    0 | 0 || 0
+    -1 | 1 || 0
+  }
+}
+```
+
+---
+
+## 📄 Génération automatique de documentation
+
+- Avec un plugin Spock Reports + conversion AsciiDoc/HTML/PDF
+- Exemple de sortie :
+
+```adoc
+== Spécification : CalculatriceSpec
+
+=== la somme de #a et #b doit être #result
+
+[cols="1,1,1"]
+|===
+| a | b | result
+| 1 | 2 | 3
+| 0 | 0 | 0
+| -1 | 1 | 0
+|===
+```
+---
+
+## 🎯 Bénéfices concrets
+
+- Plus de divergence entre code/test/doc
+- Vérifiables automatiquement à chaque build
+- Réutilisables pour l'audit, l'architecture, etc.
 
 ## 🔄 Exemple de site Antora multi-dépots à partir de documentation générée
 
 Spécifications 
 
 ![image](https://github.com/user-attachments/assets/7c71d669-94e1-4f3c-b4b5-9b0ca23da1d4)
-
 
 
 ## 📚 Confusion des concepts
