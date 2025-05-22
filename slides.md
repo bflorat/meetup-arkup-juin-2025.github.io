@@ -454,6 +454,69 @@ Spécifications
 ![image](https://github.com/user-attachments/assets/7c71d669-94e1-4f3c-b4b5-9b0ca23da1d4)
 
 
+## 🛠️ Outils de diagrammes textuels
+
+- Description des **diagrammes en texte brut**
+- Stockables en Git, versionnables, diffables
+- Intégrables dans les docs AsciiDoc/Markdown
+- Génération automatique dans les CI/CD
+
+**Exemples populaires :**
+- **Mermaid** : natif Markdown, supporté par GitHub, Obsidian...
+- **PlantUML** : plus riche, très utilisé en architecture logicielle
+- **Kroki** : agrege ˜20 outils
+
+---
+
+### ✍️ Exemples de syntaxe
+
+#### Mermaid (séquence)
+
+```mermaid
+sequenceDiagram
+  participant Client
+  participant Server
+  Client->>Server: Requête HTTP
+  Server-->>Client: Réponse JSON
+```
+
+#### PlantUML (use case)
+
+```plantuml
+@startuml
+:Utilisateur: --> (S'authentifier)
+(S'authentifier) --> (Accéder aux données)
+@enduml
+```
+
+> Résultat : un diagramme lisible, versionnable, reproductible !
+
+---
+
+### 🔧 Autres outils de diagrammes textuels
+
+| Outil              | Points forts                                       | Format(s)      |
+|-------------------|----------------------------------------------------|----------------|
+| **Graphviz / DOT** | Graphes orientés (DAG, dépendances)               | `.dot`         |
+| **Draw.io CLI**    | GUI + export CLI (semi-textuel)                   | `.drawio`      |
+| **Structurizr DSL**| Vue C4 modélisée textuellement                    | `.dsl`         |
+| **Nomnoml**        | UML simplifié avec une syntaxe markdown-like      | `.nomnoml`     |
+| **Kroki**          | Service centralisé pour +10 formats               | API, remote    |
+
+---
+
+### ⚙️ Intégrations populaires
+
+- **IDE** :
+  - **IntelliJ** : support natif PlantUML, Mermaid via plugins
+  - **VS Code** : extensions Mermaid, PlantUML, Graphviz
+  - **Obsidian** : Mermaid intégré, PlantUML via plugins
+- **Docs** : Antora, MkDocs, Asciidoctor
+- **CI/CD** : génération automatique via CLI ou Kroki
+- **Plateformes** : GitHub, GitLab (prévisualisation automatique)
+
+
+
 ## 📚 Confusion des concepts
 
 - Solutions décrites **sans les exigences et contraintes correspondantes**  
