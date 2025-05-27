@@ -97,11 +97,11 @@ color: #555555
 
 # 📊 Temps passé par un.e architecte à produire de la documentation ?  
 
-- 🧩 Conception & réflexions techniques : 30–40%  
-- 📖 **Rédaction de documentation : 20–30% (15% sur projets très agiles, 40% dans secteurs très reglementés** 
-- 🤝 Réunions & arbitrages : 20–30%  
-- 📢 Communication & vulgarisation : 10–15%  
-- 📈 Veille technologique : 5–10%  
+- Conception & réflexions techniques : 30–40%  
+- **Rédaction de documentation : 20–30% (15% sur projets très agiles, 40% dans secteurs très reglementés** 
+- Réunions & arbitrages : 20–30%  
+- Communication & vulgarisation : 10–15%  
+- Veille technologique : 5–10%  
 
 ---
 
@@ -178,23 +178,17 @@ Que doit contenir (ou pas) la doc ?
 ---
 ✅ Bonne documentation
 
-    📖 Accessible : trouvable en 2 clics ou via une recherche simple
-
-    🎯 Pertinente : adaptée au public (développeur, ops, manager…)
-
-    🛠️ Actionnable : apporte des exemples concrets, des commandes, des extraits de code
-
-    🔄 Vivante : maintenue à jour, intégrée dans les cycles de développement
+  * **Accessible** : trouvable en 2 clics ou via une recherche simple
+  * **Pertinente** : adaptée au public (développeur, ops, manager…)
+  * **Actionnable** : apporte des exemples concrets, des commandes, des extraits de code
+  * **Vivante** : maintenue à jour, intégrée dans les cycles de développement
 
 ❌ Mauvaise documentation
 
-    🕸️ Inaccessible : fichiers perdus, wiki abandonné…
-
-    📚 Encyclopédique : trop de détails inutiles, illisible
-
-    🤷 Vague : « Il faut configurer le proxy »… Mais comment ?
-
-    📅 Périmée : décrit un monde qui n'existe plus
+  * **Inaccessible** : fichiers perdus, wiki abandonné…
+  * **Encyclopédique** : trop de détails inutiles, illisible
+  * **Vague** : « Il faut configurer le proxy »… Mais comment ?
+  * **Périmée** : décrit un monde qui n'existe plus
 
 ---
 
@@ -269,13 +263,13 @@ Répond à la plupart de ses critères :
 
 ## 🗃️ Faible évolutivité et traçabilité
 
-* 🚪 Peu ou pas de **collaboration active** avec les parties prenantes  
+* Peu ou pas de **collaboration active** avec les parties prenantes  
   - Décisions prises en silo  
   - Peu adapté aux revues par pair (suivi des modifications mais pas de MR)
 
-* 🕳️ Faible **traçabilité des évolutions**, en particulier sur les **diagrammes** (binaires)
+* Faible **traçabilité des évolutions**, en particulier sur les **diagrammes** (binaires)
 
-* 🤯 Difficulté en cas de **renommage** ou de réorganisation  
+* Difficulté en cas de **renommage** ou de réorganisation  
   - Références croisées cassées  
   - Renomages / refactorings risqués et peu pratiques sur un lot de documents
 
@@ -283,9 +277,9 @@ Répond à la plupart de ses critères :
 
 ## 🗃️ Une doc moins adaptée aux LLM
 
-* 🕳️ Outils bureautiques **peu formels** : structure faible, pas de validation possible du contenu ou des meta-données (type Git hooks)
+* Outils bureautiques **peu formels** : structure faible, pas de validation possible du contenu ou des meta-données (type Git hooks)
 
-* 🕳️ Perte de sens en cas d’**entraînement de LLM**  
+* Perte de sens en cas d’**entraînement de LLM**  
   - Contenu essentiellement binaire peu structuré, plus difficile à exploiter par l'IA  
   - Plus diffile de faire générer du contenu
 
@@ -341,14 +335,14 @@ Répond à la plupart de ses critères :
 
 ## 🚀 Et au-delà de Git de base
 
--  **CI/CD** pour valider / publier automatiquement votre doc (PDF, HTML...)  
+-  **CI/CD** pour valider / publier automatiquement votre doc (PDF, HTML...)
 -  **Git hooks** : automatiser la mise à jour d’index ou de métadonnées  
 -  **Traçabilité / conformité** via signature GPG sur commits/tags : utile dans les environnements sensibles  
 -  **Collaboration distribuée** : plusieurs auteurs, plusieurs branches  
 
 ---
 
-## 📄 L'intrret des langages de balisage légers : AsciiDoc / Markdown
+## 📄 L'intéret des langages de balisage légers : AsciiDoc / Markdown
 
 -  **Lisibles en brut** : pas besoin d’outil pour lire ou modifier  
 -  **Simplicité** : syntaxe intuitive pour écrire vite  
@@ -390,10 +384,12 @@ Répond à la plupart de ses critères :
 
 > ✅ Parfait pour la doc d’architecture, microservices, documentation produit distribuée
 
-## ✅ Spécifications exécutables
+---
+
+## ✅ Les Spécifications Exécutables
 
 - Traduction directe d’une **exigence** en un **test automatisé**
-- Structurtion des tests en **Gherkin** (Given/when/then)
+- Structuration des tests en **Gherkin** (Given/When/Then)
 - Servent à la fois :
   - à **documenter** les comportements attendus
   - à **vérifier** en continu leur respect
@@ -406,15 +402,21 @@ Répond à la plupart de ses critères :
 ```groovy
 class CalculatriceSpec extends Specification {
 
-  def "la somme de #a et #b doit être #result"() {
-    expect:
-    new Calculatrice().somme(a, b) == result
+  def "La somme de deux nombres – Gherkin style"() {
+    given: "une calculatrice"
+    def calculatrice = new Calculatrice()
+
+    when: "je calcule la somme de #a et #b"
+    def resultat = calculatrice.somme(a, b)
+
+    then: "le résultat doit être #result"
+    resultat == result
 
     where:
-    a | b || result
-    1 | 2 || 3
-    0 | 0 || 0
-    -1 | 1 || 0
+    a  | b  || result
+    1  | 2  || 3
+    0  | 0  || 0
+    -1 | 1  || 0
   }
 }
 ```
@@ -447,12 +449,16 @@ class CalculatriceSpec extends Specification {
 - Vérifiables automatiquement à chaque build
 - Réutilisables pour l'audit, l'architecture, etc.
 
+---
+
 ## 🔄 Exemple de site Antora multi-dépots à partir de documentation générée
 
 Spécifications 
 
 ![image](https://github.com/user-attachments/assets/7c71d669-94e1-4f3c-b4b5-9b0ca23da1d4)
 
+
+---
 
 ## 🛠️ Outils de diagrammes textuels
 
@@ -464,7 +470,7 @@ Spécifications
 **Exemples populaires :**
 - **Mermaid** : natif Markdown, supporté par GitHub, Obsidian...
 - **PlantUML** : plus riche, très utilisé en architecture logicielle
-- **Kroki** : agrege ˜20 outils
+- **Kroki** : agrege une vngtaine d'outils
 
 ---
 
@@ -472,14 +478,17 @@ Spécifications
 
 #### Mermaid (séquence)
 
-```mermaid
-sequenceDiagram
-  participant Client
-  participant Server
-  Client->>Server: Requête HTTP
-  Server-->>Client: Réponse JSON
-```
+![bg left width:300px](images/ex-mermaid.png)
+![bg left width:300px ](images/ex-plantuml.png)
 
+```mermaid
+graph TD
+  A[ Anyone ] -->|Can help | B( Go to github.com/yuzutech/kroki )
+  B --> C{ How to contribute? }
+  C --> D[ Reporting bugs ]
+  C --> E[ Sharing ideas ]
+  C --> F[ Advocating ]
+```
 #### PlantUML (use case)
 
 ```plantuml
@@ -490,6 +499,8 @@ sequenceDiagram
 ```
 
 > Résultat : un diagramme lisible, versionnable, reproductible !
+
+
 
 ---
 
@@ -509,12 +520,14 @@ sequenceDiagram
 
 - **IDE** :
   - **IntelliJ** : support natif PlantUML, Mermaid via plugins
-  - **VS Code** : extensions Mermaid, PlantUML, Graphviz
+  - **VS Code** : extensions Mermaid, PlantUML, Graphviz, Kroki
   - **Obsidian** : Mermaid intégré, PlantUML via plugins
 - **Docs** : Antora, MkDocs, Asciidoctor
 - **CI/CD** : génération automatique via CLI ou Kroki
 - **Plateformes** : GitHub, GitLab (prévisualisation automatique)
 
+
+---
 
 
 ## 📚 Confusion des concepts
