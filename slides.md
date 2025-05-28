@@ -526,6 +526,134 @@ graph TD
 - **CI/CD** : génération automatique via CLI ou Kroki
 - **Plateformes** : GitHub, GitLab (prévisualisation automatique)
 
+---
+
+## 🧱 Le modèle C4 — Définition
+
+- Un ensemble d’**abstractions hiérarchiques** :  
+  *systèmes logiciels*, *conteneurs*, *composants*, et *code*
+
+- Un ensemble de **diagrammes hiérarchiques** :  
+  *contexte système*, *conteneurs*, *composants*, et *code*
+
+- **Indépendant de la notation**  
+  (UML, texte, diagramme libre…)
+
+- **Indépendant des outils**  
+  (Structurizr, PlantUML, AsciiDoc, etc.)
+
+---
+
+## 🧱 Le modèle C4 — diagrammes
+
+![width:800px](images/c4-overview.png)
+
+Source: https://c4model.com/
+
+---
+
+## 💡 C4 dans la vraie vie
+
+<!-- _class: small -->
+
+* Coupler à Plantuml (intégré de base maintenant)
+* Mes diagrammes préférés
+  * Système Landscape (en ra)mplcement au Context) et servant pour l'architecture générale
+  * Diagramme de container* : de loin le plus utilisé
+  * Diagrammes de déploiement pour les diagrammes d'infrastrcture.
+* Les diagrammes dynamiques au format séquences sont une version améliorée d'un diagramme de séquence.   
+* Eviter trop de diagrammes de composant (conception détaillée -> risque de sur-documentation) et de code (UML) 
+* Utiliser les sprites (milliers inclus de base dans plantuml)
+* Moins adapté qu'Archimate dans certains cas (EA, TOGAF, outillage existant...)
+
+
+<div class="admonition tip">
+  💡 (*) Je n'aime pas le terme <i>diagramme de containeur</i> J'utilise à la place le terme <i>diagramme d'unités déployables</i>.
+</div>
+
+---
+
+## 💡 Exemple de C4 en plantuml
+
+![width:600px](images/28-diag-4.svg)
+
+```
+@startuml
+   !include <C4/C4_Container>
+   !include <tupadr3/devicons2/chrome>
+   !include <tupadr3/devicons2/java>
+   !include <tupadr3/devicons2/postgresql>
+   LAYOUT_LEFT_RIGHT()
+   Container(browser, "Browser","Firefox or Chrome", $sprite="chrome")
+   Container(api_a, "API A","Spring Boot", $sprite="java")
+   ContainerDb(db_a, "Database A","Postgresql", $sprite="postgresql")
+   Rel(browser,api_a,"HTTPS")
+   Rel_R(api_a,db_a,"pg")
+@enduml
+```
+
+---
+
+## 🥷 La factorisation des diagrammes
+<!-- _class: small -->
+Les diagrammes As Code permettent la factorisation de librairies (à utiliser en plantuml avec `remove @unlinked`) :
+
+```
+fragments.iuml:
+
+!startsub dmz
+  Container(browser, "Browser","Firefox or Chrome", $sprite="chrome")
+  Container(api_a, "API A","Spring Boot", $sprite="java")
+  Container(api_b, "API B (hors contexte)","Python", $sprite="python")
+!endsub
+!startsub intranet
+  ContainerDb(db_a, "Database A","Postgresql", $sprite="postgresql")  
+!endsub
+!startsub extranet
+  ContainerDb(db_b, "Database B","Postgresql", $sprite="postgresql")
+!endsub
+
+File diags-1.puml:
+@startuml use-case-1
+  remove @unlinked
+  !includesub fragments.iuml!dmz
+  !includesub fragments.iuml!intranet
+    
+  Rel(browser,api_a,"HTTPS")
+  Rel_R(api_a,db_a,"pg")
+@enduml
+```
+
+---
+
+## 🥷 Pattern : diagrammes d'inventaire
+
+* Regrouper les unités déployables dans des 'librairires' reutilsiables et découpés en zones. Intégrer dans le DA (vue applicative) la big picture de l'inventaire sans relations.
+
+![bg left width:400px](images/28-diag-1.png)
+
+---
+
+## 🥷 Pattern : diagrammes dynamiques
+
+* Intégrer dans le DA (vue applicative) la big picture des dépenedances principales
+
+![bg left width:400px](images/28-diag-2.png)
+
+---
+## 🥷 Pattern : diagrammes de chaine de liaison 
+
+* Et pour chaque feature, découper en chaine de laiison synchrones :
+
+![bg left width:400px](images/28-diag-9.svg)
+
+---
+
+## 🥷 La notion de coordonnées d'architrecture
+
+* Si un DA contient des dizaines voire centaines de diagrammes, difficile de s'y référer (pour discutter d'un flux precis en PROD par exemple)
+* Nous découpons nos features en x chaines de liaison synchrones de n appels 
+* Exemple de corrdonnées du flux 5 de la chaine de laison 3 de la feature enregistrement de la commande :  `timeout sur com-3:5` -> à utiliser dans les tickets et post-mortems.
 
 ---
 
@@ -550,7 +678,7 @@ graph TD
 Takeaway
 
 Présentatrion disponible à https://florat.net
-
+https://florat.net/architecture-as-code-with-c4-and-plantuml/
 
 
 ---
@@ -564,19 +692,13 @@ La living documentation (pointeur vers Cyril Martraire)
 
 
 2)  La documentation Archi As Code
-x Utilisation de Git (et tous ses utilitaires et features)
-Utilisation de langages de balisages légers pour le text (Asciidoc / markdown)
-Utilisation de diagrammes textuels (plantuml/mermaid..)
-C4
-Le Mob Design en équipe
-La notion de coordonnées d'archi pour s'y retrouver rapidement
+
 Modèle de DA orienté usage et orienté checklist
 Les ADR
 De l'importance de l'Ubiquitous Language
 Les suivi de réunions
 Les supports (Marp, reveal.js...)
 Intégration dans une CI (exports...)
-La documentation multi-dépôts avec Antora
 Possibilité de découpage par type de public pour cibler le contenu
 Possibilité de filtrage par contexte (ex: pour un projet d'ETL, pas besoin des sections portant sur les GUI)
 Possibilité de faire des scripts pour avoir un taux d'avancement / remplissage ? -> Bonne idée !
