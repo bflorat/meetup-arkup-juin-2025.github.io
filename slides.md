@@ -762,7 +762,7 @@ File diags-1.puml:
 - Structure chaque vue en **Contraintes**, **Exigences** (ENF : Exigences Non Fonctionnelles) et **Solutions**
 - Approche **"check-list"** : aide à ne pas oublier les sujets importants
 - **Intègre l’incertitude** (hypothèses / points à statuer…)
-- Licence **Creative Commons – Attribution - Partage dans les mêmes conditions**
+- Licence **CC Attribution - Partage dans les mêmes conditions**
 - Existe aussi en **version anglaise**
 - **Prêt à l’usage** : modèles vierges, manuel utilisateur, outils d’export…
 - **Amélioration continue** – Contributions bienvenues !
@@ -911,8 +911,7 @@ Grâce aux **blocs structurés AsciiDoc**, il est possible de **consolider autom
   ➔ **Productivité x2**
 
 <div class="admonition tip">
-  💡 Ce support a été rédigé avec Marp, assisté de ChatGPT 4o et Mistral 7B.  
-  📎 Source : https://github.com/bflorat/meetup-arkup-juin-2025.github.io .
+  💡 Ce support a été rédigé avec Marp, assisté de ChatGPT 4o et Mistral 7B
 </div>
 
 ---
@@ -937,7 +936,7 @@ Grâce aux **blocs structurés AsciiDoc**, il est possible de **consolider autom
   - ❌ Docx / ODT : peu recommandé…
 
 - **Traitements automatisés** :
-  - Ajout d’`include::`, notices de copyright, filtrage selon le public cible...
+  - Inclusion de texte, notices de copyright, filtrage selon le public cible...
   - Découpage en modules ou pages selon la structure du DA
 
 - **Analyses & contrôles** automatiques :
@@ -1146,9 +1145,12 @@ If a message can be interpreted in several ways, it will be interpreted in a man
 ---
 
 ## 🧩 Architecture as Code : rôle du management
-<!-- _class: small -->
+
+---
 
 ### ✅ Comment suivre et valider le cycle de vie du DA ?
+
+<!-- _class: small -->
 
 - 🕵️‍♂️ **Suivi formel** :
   - Définir un **workflow de revue** :  
