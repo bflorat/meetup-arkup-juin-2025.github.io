@@ -5,6 +5,9 @@
 ### Licence
 Creative Commons Attribution-ShareAlike 4.0 International License.
 
+### Rendu
+https://meetup-arkup-juin-2025.florat.net/
+
 ## Tips
 
 ### Preview
