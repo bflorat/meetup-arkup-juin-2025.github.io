@@ -62,7 +62,7 @@ color: #555555
 * 0 - Les enjeux de la documentation (générale et d'architecture)
 * 1 - Les challenges de la documentation traditionnelle
 * 2 - La documentation d'architectrure As Code
-* 3 - RETEX, tips, blueprints
+* 3 - Les challenges de la doc As Code
 * 4 - Take-away & perspectives
 
 ---
