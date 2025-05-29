@@ -61,7 +61,7 @@ color: #555555
 
 * 0 - Les enjeux de la documentation (générale et d'architecture)
 * 1 - Les challenges de la documentation traditionnelle
-* 2 - La documentation d'architectrure As Code
+* 2 - La documentation d'architecture As Code
 * 3 - Les challenges de la doc As Code
 * 4 - Take-away & perspectives
 
@@ -74,7 +74,7 @@ color: #555555
 
 ## ⚠️ Disclaimer
 
-- La **documentation** est selon moi particulièrement  **incompris** et **mal maîtrisé** par les équipes
+- La **documentation** est, selon moi, particulièrement **incomprise** et **mal maîtrisée** par les équipes.
 - Le plus souvent :  
    - 🗂️ **Trop** de documentation...  
    - 📉 **Pas assez** de documentation...  
@@ -82,26 +82,27 @@ color: #555555
    - ☠️ **Documentation morte** (non à jour, jamais lue) 
 
 ---
+
 ## 📈 Le ROI de la documentation
 
-- **Une activité qui dérappe très facilement :**
+- **Une activité qui dérape très facilement :**
   - Documentation inutile, hors sujet, inmaintenable
   - Coût élevé, retour hypothétique voire négatif
-  - En **lean**, on appelle ça du **Muda** (gaspillage)
+  - En **Lean**, on appelle ça du **Muda** (gaspillage)
 
-- **Écrire une doc, c'est un engagement :**
+- **Écrire une doc, c’est un engagement :**
   - Beaucoup aiment écrire, peu souhaitent maintenir
-  - Écrire implique maintenir dans la durée ⚠️
+  - Écrire implique de maintenir dans la durée ⚠️
 
 ---
 
-# 📊 Temps passé par un.e architecte à produire de la documentation ?  
+# 📊 Temps passé par un·e architecte à produire de la documentation  
 
-- Conception & réflexions techniques : 30–40%  
-- **Rédaction de documentation : 20–30% (15% sur projets très agiles, 40% dans secteurs très reglementés** 
-- Réunions & arbitrages : 20–30%  
-- Communication & vulgarisation : 10–15%  
-- Veille technologique : 5–10%  
+- Conception & réflexions techniques : 30–40 %  
+- **Rédaction de documentation : 20–30 %** (15 % sur projets très agiles, 40 % dans les secteurs très réglementés)  
+- Réunions & arbitrages : 20–30 %  
+- Communication & vulgarisation : 10–15 %  
+- Veille technologique : 5–10 %  
 
 ---
 
@@ -110,19 +111,19 @@ color: #555555
 ## 🌍 **Communiquer des informations importantes**  
 
 - 📡 **Dans l’espace** :  
-   - Organisations **distribuées**, télétravail, décalage horaire...  
-- ⏳ mais surtout **dans le temps** :  
+   - Organisations **distribuées**, télétravail, décalage horaire…  
+- ⏳ Mais surtout **dans le temps** :  
    - Pour les autres : **TMA**, futurs développeurs, architectes…  
-   - Pour soi-même dans 6 mois 😅
-   - pour les **transferts de compétence**,...   
+   - Pour soi-même dans 6 mois 😅  
+   - Pour les **transferts de compétences**, etc.
 
 ---
 
 ## 🛡️ **Documenter pour avancer**  
 
-- 🚫 Moins de malentendus ➔ **économies** de temps, d’argent et de frustrations
-- 📚 **Tracer les choix et leurs raisons** (ex: ADR) ➔ éviter de reposer sans cesse les mêmes questions
-- 🔄 *Si besoin, on pourra toujours les réévaluer plus tard... mais en conscience.*  
+- 🚫 Moins de malentendus ➔ **économies** de temps, d’argent et de frustrations  
+- 📚 **Tracer les choix et leurs raisons** (ex. : ADR) ➔ éviter de reposer sans cesse les mêmes questions  
+- 🔄 Si besoin, on pourra toujours les réévaluer plus tard… mais en conscience.
 
 ---
 
@@ -132,53 +133,54 @@ color: #555555
 - **TOUT** ce qui est nécessaire, mais **QUE** ce qui est nécessaire
 
 - 🧪 **Tests de Litmus** : Dois-je documenter ?
-  - Une **personne externe compétente** dans le domaine a-elle besoin d'explications complémentaires au code/écrans ? Si non ➔ pas de doc
-  - Documenter essentiellement **ce qui ne peut pas être deviné** (ex: respect d'une réglementation)
-  - Répondre à la plupart des « **WTF** » d'une nouvelle personne sur le projet
-  - Est-ce que je l'**afficherais au mur** dans l'open-space ?
+  - Une **personne externe compétente** dans le domaine a-t-elle besoin d’explications complémentaires au code/écrans ? Si non ➔ pas de doc  
+  - Documenter essentiellement **ce qui ne peut pas être deviné** (ex. : respect d’une réglementation)  
+  - Répondre à la plupart des « **WTF** » d’une nouvelle personne sur le projet  
+  - Est-ce que je l’**afficherais au mur** dans l’open space ?
 
 ---
 
 # 🚫 Et ne doit pas :
 
-- Contenir du bullshit inutile :
-  - **Historique**, **détails inutiles**, **règles de l'art**, éléments **vagues** ou trop généraux
+- Contenir du bullshit inutile :  
+  - **Historique**, **détails inutiles**, **règles de l’art**, éléments **vagues** ou trop généraux
 
-- **Répéter** (principe DRY 🔄) :
+- **Répéter** (principe DRY 🔄) :  
   - Préférer référencer les documents existants
 
-- Contenir **des informations ephemères** 
+- Contenir **des informations éphémères**
 
-- **Compenser du code peu explicite** (voir Clean Code / Screaming Architecture 📖)
+- **Compenser du code peu explicite** (voir *Clean Code* / *Screaming Architecture* 📖)
 
-- Être **inadapté** à son audience 🎯
+- Être **inadaptée** à son audience 🎯
 
 ---
 
 ## 📋 Petit exemple fonctionnel
 
-Une application d'état civil permet de saisir les dates de naissance avec **trois champs entier** et non pas un **Date Picker**
+Une application d’état civil permet de saisir les dates de naissance avec **trois champs entiers** et non pas un **Date Picker**
 
 **WTF ????**
 
-Que doit contenir (ou pas) la doc ?
+Que doit contenir (ou pas) la doc dans ce cas ?
 
 ---
 
-## 💬 Avez vous un problème de doc ? comptez les :
+## 💬 Avez-vous un problème de doc ? Comptez les... :
 
-    🙄 "Ça doit être quelque part dans Confluence..."
+    🙄 "Ça doit être quelque part dans Confluence…"
 
-    😅 "Je l'ai fait, mais je ne sais plus comment..."
+    😅 "Je l’ai fait, mais je ne sais plus comment…"
 
-    🤔 "Tu peux demander à Maurice, c’est lui qui sait..."
+    🤔 "Tu peux demander à Maurice, c’est lui qui sait…"
 
-    🫣 "Ah oui, le guide de DEV... mais il n’est plus à jour depuis 2021…"
+    🫣 "Ah oui, le guide de DEV… mais il n’est plus à jour depuis 2021…"
 
 ---
+
 ✅ Bonne documentation
 
-  * **Accessible** : trouvable en 2 clics ou via une recherche simple
+  * **Accessible** : trouvable en deux clics ou via une recherche simple
   * **Pertinente** : adaptée au public (développeur, ops, manager…)
   * **Actionnable** : apporte des exemples concrets, des commandes, des extraits de code
   * **Vivante** : maintenue à jour, intégrée dans les cycles de développement
@@ -188,7 +190,7 @@ Que doit contenir (ou pas) la doc ?
   * **Inaccessible** : fichiers perdus, wiki abandonné…
   * **Encyclopédique** : trop de détails inutiles, illisible
   * **Vague** : « Il faut configurer le proxy »… Mais comment ?
-  * **Périmée** : décrit un monde qui n'existe plus
+  * **Périmée** : décrit un monde qui n’existe plus
 
 ---
 
@@ -201,17 +203,17 @@ Que doit contenir (ou pas) la doc ?
 - ✅ **Fiable** : toujours en phase avec le logiciel livré, à tout moment  
 - ⚙️ **À faible effort** : facile à maintenir, même lors de changements  
 - 🤝 **Collaborative** : favorise les échanges et le partage de savoir  
-- 🔎 **Porteuse de sens** : met en lumière les enjeux, déclenche des retours, et aide à mieux décider
+- 🔎 **Porteuse de sens** : met en lumière les enjeux, déclenche des retours et aide à mieux décider
 
 ---
 
-## Quid de la documentation d'architecturte en particulier ?
+## ❓ Quid de la documentation d’architecture en particulier ?
 
-- Tout ce qui a été dit précédemment s'applique aussi aux documents d'architecture
+- Tout ce qui a été dit précédemment s’applique aussi aux documents d’architecture
 
-- Préférer les diagrammes au texte (**UML**, **C4**, **BPMN**, **ArchiMate** en particulier) 
+- Préférer les diagrammes au texte (**UML**, **C4**, **BPMN**, **ArchiMate** en particulier)
 
-- Ne pas hésiter à commenter les diagrammes (directement dans diagramme ou dans le document parent avec des détails pertinents (**tips / warnings**)
+- Ne pas hésiter à commenter les diagrammes (directement dans le diagramme ou dans le document parent avec des détails pertinents : **tips / warnings**)
 
 - Être honnête :  
   - Lister les hypothèses d’architecture et études en cours dans un chapitre **« Points non statués »** pour chaque vue  
@@ -219,7 +221,7 @@ Que doit contenir (ou pas) la doc ?
 
 ---
 
-## 📚 Les documentations principales de l'architecte
+## 📚 Les documentations principales de l’architecte
 
 - 🏗️ **Dossier d’Architecture (DA)**  
   Vue d’ensemble des choix, contextes, exigences et contraintes
@@ -230,28 +232,20 @@ Que doit contenir (ou pas) la doc ?
 - 📝 **Suivi des points d’architecture**  
   Comptes-rendus des réunions, discussions et arbitrages techniques
 
-- 🔐 **Études techniques (sécurité, performance, etc.)**  
+- 🔐 **Études techniques** (sécurité, performance, etc.)  et bilans de **POC**
   Analyses approfondies pour justifier ou évaluer des solutions
-
-- 🧪 **POC – Proof of Concept**  
-  Expérimentations techniques pour valider une hypothèse ou un risque
 
 - 🎤 **Supports de présentation**  
   Slides pour comités d’architecture, parties prenantes, équipes
-
----
-
-_Tous ces artefacts doivent être vivants, partagés, versionnés et liés au contexte métier._
-
 ---
 
 ## 🛑 Les diagrammes : anti-patterns principaux
 
-- Mélange de **niveaux d'abstraction** différents
+- Mélange de **niveaux d’abstraction** différents
 
-- Trop d'éléments (**~ > 20**)
+- Trop d’éléments (**~ > 20**)
 
-- Métaréprésentations floues  
+- Métaréprésentations floues :  
   - Pas de légende  
   - Trop de couleurs, formes, types de flèches  
   - Légendes difficiles à comprendre
@@ -266,37 +260,38 @@ _Tous ces artefacts doivent être vivants, partagés, versionnés et liés au co
 
 ## ✅ Les diagrammes : bonnes pratiques principales
 
-- Métaréprésentations **simples**, niveau d’**abstraction homogène**, **nombre raisonnable** d'élements.
+- Métaréprésentations **simples**, niveau d’**abstraction homogène**, **nombre raisonnable** d’éléments
 
 - **Actions explicites sur les flèches**  
   - Indiquer le type d’échange ou de flux  
-  - Indiquer la nature du flux (Lecture / Écriture / Exécution) si utile
-  
+  - Indiquer la nature du flux (lecture / écriture / exécution), si utile
+
 ---
+
 ### Exemple C4 : diagramme de container
 ![width:20%](images/bons-diagrammes.png)
 
 ---
 
-# 1 - Le problème avec la documentation traditionnelle
+# 🗃️ 1 - Le problème avec la documentation traditionnelle
 
 ---
 
-## 🗃️ Ce que j'entends par 'documentation traditionnelle'
+## 💡 Ce que j’entends par « documentation traditionnelle »
 
-Répond à la plupart de ses critères :
+Répond à la plupart de ces critères :
 
-- **Documents bureautique** binaire Word, PDF, PowerPoint, ... (même partagés)
+- **Documents bureautiques** binaires : Word, PDF, PowerPoint… (même partagés)
 
 - **Statique et figée** dès sa publication
 
-- **Mise à jour fastidieuse** -> risque élevé de **rapidement devenir obsolète**
+- **Mise à jour fastidieuse** → risque élevé de **devenir rapidement obsolète**
 
 - **Traçabilité des modifications** faible ou manuelle
 
 - Peu intégrée aux **outils et processus de développement**
 
-- Existe uniquement parce comme livrable d'un **procesus, pas orienté produit**
+- Existe uniquement comme livrable d’un **processus**, pas orientée produit
 
 ---
 
@@ -310,129 +305,164 @@ Répond à la plupart de ses critères :
 
 * Difficulté en cas de **renommage** ou de réorganisation  
   - Références croisées cassées  
-  - Renomages / refactorings risqués et peu pratiques sur un lot de documents
+  - Renommages / refactorings risqués et peu pratiques sur un lot de documents
 
 ---
 
-## 🗃️ Une doc moins adaptée aux LLM
+## 🤖 Une doc moins adaptée aux LLM
 
-* Outils bureautiques **peu formels** : structure faible, pas de validation possible du contenu ou des meta-données (type Git hooks)
+* Outils bureautiques **peu formels** : structure faible, pas de validation possible du contenu ou des métadonnées (type Git hooks)
 
 * Perte de sens en cas d’**entraînement de LLM**  
-  - Contenu essentiellement binaire peu structuré, plus difficile à exploiter par l'IA  
-  - Plus diffile de faire générer du contenu
+  - Contenu essentiellement binaire, peu structuré, plus difficile à exploiter par l’IA  
+  - Plus difficile de faire générer du contenu
 
 ---
 
-## 🔒 Plus de risque de fuites
+## 🔒 Plus de risques de fuite
 
- - Aspiration de drives partagés  
- - Export et diffusion incontrôlés des fichiers
- - Métadonnées oubliées (devis pour un autre client...)
- - 📈 **Volumétrie importante** (surtout en multi-versions)
+- Aspiration de drives partagés  
+- Export et diffusion incontrôlés des fichiers  
+- Métadonnées oubliées (ex. : devis pour un autre client…)  
+- 📈 **Volumétrie importante** (surtout en cas de multi-versions)
 
 ---
 
 ## ⏱️ Des efforts de mise en page importants
 
-  - Trop de temps consacré à la **mise en page** du texte et au **polissage des diagrammes**  
-  - Esthétique privilégiée au détriment du fond  
-  - Création de **diagrammes figés** qui nécessitent de lourdes reprises pour toute modification
-  - Peu de **réutilisation** et pas de factorisation des représentations
+- Trop de temps consacré à la **mise en page** du texte et au **polissage des diagrammes**  
+- Esthétique privilégiée au détriment du fond  
+- Création de **diagrammes figés** nécessitant de lourdes reprises pour toute modification  
+- Peu de **réutilisation** et pas de factorisation des représentations
 
 ---
 
-# 2- Doc as code
+# 🚀 2 – La Documentation As Code
 
-## 🏛️ Documentation d'architecture : Traditionnelle vs Vivante (As Code)
+---
 
-| Traditionnelle 📚          | Vivante / As Code 💻          |
-|----------------------------|-------------------------------|
-| Fichiers Word / PDF statiques | Documentation versionnée (Git)  |
-| Mise à jour manuelle        | Mise à jour via PR-MR / CI-CD    |
-| Peu ou pas de traçabilité   | Historique, tags et auteurs tracés |
-| Rapide obsolescence         | Mise à jour continue          |
-| Non intégrée aux workflows  | Intégrée dans le cycle DevOps |
-| Lecture linéaire            | Navigation hypertexte         |
-| Diagrammes figés             | Diagrammes générés à partir du code (PlantUML, Structurizr) |
-| Peu collaborative           | Collaboration via revues de code / merge requests |
+## 🏛️ Documentation traditionnelle vs As Code
 
-🎯 **En résumé :** Passer d’un document que l’on subit à un **actif vivant et maîtrisé** du projet
+
+
+| Traditionnelle 📚              | Vivante / As Code 💻                        |
+|-------------------------------|--------------------------------------------|
+| Fichiers Word / PDF statiques | Documentation versionnée (Git)             |
+| Mise à jour manuelle          | Mise à jour via PR/MR / CI/CD              |
+| Peu ou pas de traçabilité     | Historique, tags et auteurs tracés         |
+| Rapide obsolescence           | Mise à jour continue                       |
+| Non intégrée aux workflows    | Intégrée dans le cycle DevOps              |
+| Lecture linéaire              | Navigation hypertexte                      |
+| Diagrammes figés              | Diagrammes générés à partir du code        |
+| Peu collaborative             | Collaboration via revues de code / MR/PR   |
+
+---
+
+🎯 **En résumé** : passer d’un document que l’on subit à un **actif vivant et maîtrisé** du projet
 
 ---
 
 ## 🧰 Utiliser Git pour documenter efficacement
 
--  **Historique complet** : chaque modification est enregistrée  
--  **Tags** : versionnez les jalons de votre documentation (v1.0, v2.0...)  
--  **Blame** : savoir *qui* a écrit *quoi*, et *quand*  
--  **Diffs** : comparaison facile entre deux versions  
--  **Revue via merge request / pull request**  
--  **Revenir dans le temps** : checkout d'une version antérieure  
+- **Historique complet** : chaque modification est enregistrée  
+- **Tags** : versionnez les jalons de votre documentation (v1.0, v2.0...)  
+- **Blame** : savoir *qui* a écrit *quoi*, et *quand*  
+- **Diffs** : comparaison facile entre deux versions  
+- **Revue via merge request / pull request**  
+- **Revenir dans le temps** : checkout d’une version antérieure  
 
 ---
 
-## 🚀 Et au-delà de Git de base
+## 🥷 Et au-delà de Git de base
 
--  **CI/CD** pour valider / publier automatiquement votre doc (PDF, HTML...)
--  **Git hooks** : automatiser la mise à jour d’index ou de métadonnées  
--  **Traçabilité / conformité** via signature GPG sur commits/tags : utile dans les environnements sensibles  
--  **Collaboration distribuée** : plusieurs auteurs, plusieurs branches  
+- **CI/CD** pour valider / publier automatiquement votre doc (PDF, HTML…)  
+- **Git hooks** : automatiser la mise à jour d’index ou de métadonnées  
+- **Traçabilité / conformité** via signature GPG sur commits/tags (utile dans les environnements sensibles)  
+- **Collaboration distribuée** : plusieurs auteurs, plusieurs branches  
 
 ---
 
-## 📄 L'intéret des langages de balisage légers : AsciiDoc / Markdown
+## 📄 L’intérêt des langages de balisage légers : AsciiDoc / Markdown
 
--  **Lisibles en brut** : pas besoin d’outil pour lire ou modifier  
--  **Simplicité** : syntaxe intuitive pour écrire vite  
--  **Facile à générer** : ex : spécificatons exécutables des rapports de tests Spock 
--  **Faciles à versionner** : parfait pour Git (diffs propres, pas de binaire)  
--  **Intégration continue** : générer HTML, PDF, Diagrams, SBOM, etc.  
--  **Extensibles** : AsciiDoc permet des blocs structurés (admonitions, macros, includes...)
+- **Lisibles en brut** : pas besoin d’outil pour lire ou modifier  
+- **Simplicité** : syntaxe intuitive pour écrire vite  
+- **Faciles à générer** : ex. : spécifications exécutables, rapports de tests Spock  
+- **Faciles à versionner** : parfait pour Git (diffs propres, pas de binaire)  
+- **Intégration continue** : générer HTML, PDF, diagrammes, SBOM, etc.  
+- **Extensibles** : AsciiDoc permet des blocs structurés (admonitions, macros, includes…)
 
 ---
 
 ## 🎯 Idéal pour de la doc "as code"
 
-> Les formats Markdown / AsciiDoc :
-> - ✅ s’intègrent naturellement à votre code source (de préférence dans le même dépot)
-> - ✅ évitent les formats fermés ou verbeux (Word, PDF, XML)
-> - ✅ permettent l’automatisation, la réutilisation et la documentation vivante
+> Les formats Markdown / AsciiDoc :  
+> - ✅ S’intègrent naturellement à votre code source (de préférence dans le même dépôt)  
+> - ✅ Évitent les formats fermés ou verbeux (Word, PDF, XML)  
+> - ✅ Permettent l’automatisation, la réutilisation et une documentation vivante
 
-📘 Utilisés par : GitHub, GitLab, Red Hat, Spring, Kubernetes...
+📘 Utilisés par : GitHub, GitLab, Red Hat, Spring, Kubernetes…
 
 ---
+
 ## 🏆 Pourquoi AsciiDoc pour la doc technique avancée ?
 
 - **Structure riche** : sections, blocs, tableaux complexes  
 - **Macros & includes** : contenu réutilisable, factorisable  
 - **Index, glossaires, bibliographies**  
 - **Admonitions** : `NOTE`, `TIP`, `CAUTION`, etc.  
-- **Diagrammes intégrés** : PlantUML, Mermaid...  
-- **Sorties variées** : HTML5, PDF, DocBook...
+- **Diagrammes intégrés** : PlantUML, Mermaid…  
+- **Sorties variées** : HTML5, PDF, DocBook…
+
+
+---
+
+## ⚙️ Comparaison d'outils de documentation As Code
+
+<!-- _class: small -->
+
+| Outil          | Format source              | Stack technique       | Points forts                                        | Limites                                       |
+|----------------|----------------------------|------------------------|----------------------------------------------------|----------------------------------------------|
+| **Docusaurus** | Markdown                   | React + Node.js        | UX moderne, thèmes, blog, versioning               | Moins adapté aux docs backend/archi          |
+| **Antora**     | AsciiDoc                   | Ruby (Asciidoctor)     | Multi-repo, modulaire, orienté architecture        | Plus sobre, nécessite structuration stricte  |
+| **MkDocs**     | Markdown                   | Python (YAML config)   | Léger, rapide, nombreux plugins                    | Moins modulaire que Antora                   |
+| **Sphinx**     | reStructuredText / Markdown | Python                | Puissant, utilisé pour Python/docs API complexes   | Syntaxe plus lourde, moins design            |
+| **GitBook**    | Markdown (SaaS ou CLI)     | Web/SaaS ou Node.js    | Très simple, beau rendu, collaboration             | Cloud-centric, moins d’automatisation, **propriétaire**        |
+| **AsciiDoc**   | AsciiDoc                   | Ruby (Asciidoctor)     | Syntaxe riche, blocs, admonitions, includes        | Moins répandu que Markdown, learning curve   |
+
+---
+
+🎯 **Quel outil pour quel usage ?**
+
+- 🖥️ **Docusaurus** : produit/API, design et navigation moderne  
+- 🧱 **Antora** : doc d'archi, microservices, équipes distribuées  
+- 🚀 **MkDocs** : doc rapide à mettre en place, mono-repo  
+- 🐍 **Sphinx** : API Python complexes, génération PDF/HTML  
+- ☁️ **GitBook** : équipes non techniques, onboarding, guides  
+- 🔧 **AsciiDoc seul** : doc technique avancée, sans framework  
+
 
 ---
 
 ## 🚀 Antora : plateforme de doc modulaire
 
--  **Organisation par composants, versions, modules**  
--  **Multi-dépôts Git** : chaque équipe gère sa doc dans son repo  
--  **Mise à jour automatique** des sources  
--  **Navigation unifiée** sur un portail de documentation  
--  **Thématisation et publication pro** (docs produits, API, guides, etc.)
+- **Organisation par composants, versions, modules**  
+- **Multi-dépôts Git** : chaque équipe gère sa doc dans son propre repo  
+- **Mise à jour automatique** des sources  
+- **Navigation unifiée** sur un portail de documentation  
+- **Thématisation et publication pro** (docs produit, API, guides…)
 
-> ✅ Parfait pour la doc d’architecture, microservices, documentation produit distribuée
+> ✅ Parfait pour la doc d’architecture, les microservices, et la documentation produit distribuée
 
 ---
 
 ## ✅ Les Spécifications Exécutables
 
 - Traduction directe d’une **exigence** en un **test automatisé**
-- Structuration des tests en **Gherkin** (Given/When/Then)
-- Servent à la fois :
-  - à **documenter** les comportements attendus
-  - à **vérifier** en continu leur respect
-- Forme lisible par les humains : développeurs, PO, QA...
+- Structuration des tests en **Gherkin** (Given / When / Then)
+- Servent à la fois à :  
+  - **Documenter** les comportements attendus  
+  - **Vérifier** en continu leur respect  
+- Forme lisible par les humains : développeurs, PO, QA…
 
 ---
 
@@ -484,32 +514,31 @@ class CalculatriceSpec extends Specification {
 
 ## 🎯 Bénéfices concrets
 
-- Plus de divergence entre code/test/doc
+- Plus de divergence entre le code, les tests et la documentation
 - Vérifiables automatiquement à chaque build
-- Réutilisables pour l'audit, l'architecture, etc.
+- Réutilisables pour l'audit, l'architecture, la conformité, etc.
 
 ---
 
-## 🔄 Exemple de site Antora multi-dépots à partir de documentation générée
+## 🔄 Exemple de site Antora multi-dépôts à partir de documentation générée
 
-Spécifications 
+Visualisation des spécifications sur un portail de documentation :
 
 ![image](https://github.com/user-attachments/assets/7c71d669-94e1-4f3c-b4b5-9b0ca23da1d4)
-
 
 ---
 
 ## 🛠️ Outils de diagrammes textuels
 
 - Description des **diagrammes en texte brut**
-- Stockables en Git, versionnables, diffables
+- Stockables dans Git, versionnables, diffables
 - Intégrables dans les docs AsciiDoc/Markdown
-- Génération automatique dans les CI/CD
+- Générables automatiquement dans les pipelines CI/CD
 
 **Exemples populaires :**
-- **Mermaid** : natif Markdown, supporté par GitHub, Obsidian...
-- **PlantUML** : plus riche, très utilisé en architecture logicielle
-- **Kroki** : agrege une vngtaine d'outils
+- **Mermaid** : syntaxe simple, intégré à GitHub, Obsidian, VS Code...
+- **PlantUML** : très expressif, idéal pour la modélisation logicielle (UML, C4…)
+- **Kroki** : plateforme qui agrège plus de 20 moteurs de rendu de diagrammes
 
 ---
 
@@ -543,70 +572,80 @@ graph TD
 
 ### 🔧 Autres outils de diagrammes textuels
 
-| Outil              | Points forts                                       | Format(s)      |
-|-------------------|----------------------------------------------------|----------------|
-| **Graphviz / DOT** | Graphes orientés (DAG, dépendances)               | `.dot`         |
-| **Draw.io CLI**    | GUI + export CLI (semi-textuel)                   | `.drawio`      |
-| **Structurizr DSL**| Vue C4 modélisée textuellement                    | `.dsl`         |
-| **Nomnoml**        | UML simplifié avec une syntaxe markdown-like      | `.nomnoml`     |
-| **Kroki**          | Service centralisé pour +10 formats               | API, remote    |
+| Outil               | Points forts                                           | Format(s)      |
+|--------------------|--------------------------------------------------------|----------------|
+| **Graphviz / DOT** | Graphes orientés (DAG, dépendances)                    | `.dot`         |
+| **Draw.io CLI**    | Interface graphique avec export en ligne de commande   | `.drawio`      |
+| **Structurizr DSL**| Modélisation C4 sous forme textuelle                   | `.dsl`         |
+| **Nomnoml**        | UML simplifié avec une syntaxe proche de Markdown      | `.nomnoml`     |
+| **Kroki**          | Service centralisé prenant en charge +10 formats       | API, distant   |
 
 ---
 
 ### ⚙️ Intégrations populaires
 
+<!-- _class: small -->
+
 - **IDE** :
-  - **IntelliJ** : support natif PlantUML, Mermaid via plugins
-  - **VS Code** : extensions Mermaid, PlantUML, Graphviz, Kroki
+  - **IntelliJ** : support natif de PlantUML, Mermaid via plugins
+  - **VS Code** : extensions pour Mermaid, PlantUML, Graphviz, Kroki
   - **Obsidian** : Mermaid intégré, PlantUML via plugins
-- **Docs** : Antora, MkDocs, Asciidoctor
-- **CI/CD** : génération automatique via CLI ou Kroki
-- **Plateformes** : GitHub, GitLab (prévisualisation automatique)
+
+- **Outils de documentation** :
+  - **Antora**, **MkDocs**, **Asciidoctor**
+
+- **CI/CD** :
+  - Génération automatique via CLI ou via **Kroki**
+
+- **Plateformes** :
+  - **GitHub**, **GitLab** : prévisualisation automatique intégrée
 
 ---
 
 ## 🧱 Le modèle C4 — Définition
 
 - Un ensemble d’**abstractions hiérarchiques** :  
-  *systèmes logiciels*, *conteneurs*, *composants*, et *code*
+  *systèmes logiciels*, *conteneurs*, *composants* et *code*
 
 - Un ensemble de **diagrammes hiérarchiques** :  
-  *contexte système*, *conteneurs*, *composants*, et *code*
+  *contexte système*, *conteneurs*, *composants* et *code*
 
 - **Indépendant de la notation**  
-  (UML, texte, diagramme libre…)
+  (UML, texte, diagrammes libres…)
 
 - **Indépendant des outils**  
   (Structurizr, PlantUML, AsciiDoc, etc.)
 
 ---
 
-## 🧱 Le modèle C4 — diagrammes
+## 🧱 Le modèle C4 — Diagrammes
 
 ![width:800px](images/c4-overview.png)
 
-Source: https://c4model.com/
+Source : https://c4model.com/
 
 ---
 
-## 💡 C4 dans la vraie vie
+## 👷 C4 dans la vraie vie
 
 <!-- _class: small -->
 
-* Coupler à Plantuml (intégré de base maintenant)
-* Mes diagrammes préférés
-  * Système Landscape (en ra)mplcement au Context) et servant pour l'architecture générale
-  * Diagramme de container* : de loin le plus utilisé
-  * Diagrammes de déploiement pour les diagrammes d'infrastrcture.
-* Les diagrammes dynamiques au format séquences sont une version améliorée d'un diagramme de séquence.   
-* Eviter trop de diagrammes de composant (conception détaillée -> risque de sur-documentation) et de code (UML) 
-* Utiliser les sprites (milliers inclus de base dans plantuml)
-* Moins adapté qu'Archimate dans certains cas (EA, TOGAF, outillage existant...)
+- À coupler avec **PlantUML** (support intégré nativement)
+- Mes diagrammes préférés :
+  - **System Landscape** (en remplacement du diagramme de contexte), utile pour l’architecture globale
+  - **Diagramme de conteneur** : le plus utilisé de loin
+  - **Diagramme de déploiement** : pour représenter l'infrastructure
+- Les **diagrammes dynamiques** (type séquence) sont une version améliorée des diagrammes de séquence UML
+- Éviter l’abus de diagrammes de **composants** (risque de sur-documentation) et de **code** (niveau UML)
+- Utiliser les **sprites** (plusieurs milliers inclus dans PlantUML)
+- C4 est parfois **moins adapté qu’Archimate** dans certains contextes : urbanisation SI, EA, TOGAF, ou outillage spécifique
 
 
 <div class="admonition tip">
-  💡 (*) Je n'aime pas le terme <i>diagramme de containeur</i> J'utilise à la place le terme <i>diagramme d'unités déployables</i>.
+  💡 <strong>Remarque :</strong> Je n’aime pas le terme <i>diagramme de conteneur</i>.  
+  Je préfère utiliser le terme <i>diagramme d’unités déployables</i>, que je trouve plus explicite.
 </div>
+
 
 ---
 
@@ -665,7 +704,8 @@ File diags-1.puml:
 
 ## 🥷 Pattern : diagrammes d'inventaire
 
-* Regrouper les unités déployables dans des 'librairires' reutilsiables et découpés en zones. Intégrer dans le DA (vue applicative) la big picture de l'inventaire sans relations.
+- Regrouper les unités déployables dans des **librairies réutilisables**, découpées par zones fonctionnelles.
+- Intégrer dans le DA (vue applicative) une **big picture** de l'inventaire, sans afficher les relations.
 
 ![bg left width:400px](images/28-diag-1.png)
 
@@ -673,127 +713,136 @@ File diags-1.puml:
 
 ## 🥷 Pattern : diagrammes dynamiques
 
-* Intégrer dans le DA (vue applicative) la big picture des dépenedances principales
+- Intégrer dans le DA (vue applicative) une **big picture** des principales dépendances applicatives.
 
 ![bg left width:400px](images/28-diag-2.png)
 
 ---
-## 🥷 Pattern : diagrammes de chaine de liaison 
 
-* Et pour chaque feature, découper en chaine de laiison synchrones :
+## 🥷 Pattern : diagrammes de chaîne de liaison
 
-![bg left width:400px](images/28-diag-9.svg)
+- Pour chaque feature, représenter une **chaîne de liaison synchrone** composée d’appels successifs.
 
----
-
-## 🥷 La notion de coordonnées d'architrecture
-
-* Si un DA contient des dizaines voire centaines de diagrammes, difficile de s'y référer (pour discutter d'un flux precis en PROD par exemple)
-* Nous découpons nos features en x chaines de liaison synchrones de n appels 
-* Exemple de corrdonnées du flux 5 de la chaine de laison 3 de la feature enregistrement de la commande :  `timeout sur com-3:5` -> à utiliser dans les tickets et post-mortems.
+![bg left width:400px fit](images/28-diag-9.svg)
 
 ---
 
-## Le Dossier d'Architecture As Code
+## 🥷 La notion de coordonnées d’architecture
 
-* Basé sur du light markup (ASCIIDOC de préférence)
-* et sur des diagrammes textuels
-* Utilisation de Git et des Merge Requests pour la collaboration
-* Peut être rendus et consolidé dans un site Antora
-* "Développé" dans un IDE (VSCode est mon préféré)
-* Mis à jour en continu + revue annuelle complète.
+- Si un DA contient **des dizaines voire des centaines de diagrammes**, il devient difficile de s’y référer précisément (par exemple, pour discuter d’un flux en production).
+- Nous découpons les **features** en *x* chaînes de liaison synchrones de *n* appels.
+- Exemple de coordonnées pour un flux :  
+  Flux numéro 5 de la chaîne numéro 3 de la feature _enregistrement de la commande_ → `timeout sur com-3:5`  
+  ➔ Référence directe dans les **tickets**, **post-mortems**, **alertes**, etc.
 
 ---
 
-## 📘 Mon modèle de dossier d'architecture
+## 🗂️ Le Dossier d’Architecture *As Code*
+
+- Basé sur du **light markup** (idéalement **AsciiDoc**)
+- Diagrammes **textuels** intégrés (PlantUML, Mermaid…)
+- Utilisation de **Git** et des **Merge Requests** pour la collaboration
+- Peut être **rendu et consolidé** dans un site **Antora**
+- “Développé” dans un **IDE** (VS Code recommandé)
+- **Mis à jour en continu**, avec une **revue annuelle complète**
+
+---
+
+## 📘 Mon modèle de dossier d’architecture
 <!-- _class: small -->
 
 ![bg left:20% fit](images/metiers.png)
 
 **https://github.com/bflorat/modele-da**
 
-![](images/stars-modele-da-fr.png)
+![](images/stars-modele-da-fr.png)  
 ![](images/stars-modele-da-en.png)
 
-* Découpe l'architecture solution en **cinq vues**
-* Structure chaque vue en **contraintes** / **exigences (ENF)** / **solution**
-* Orienté **'check-list'** : aide à ne pas oublier de sujets importants
-* **Intégère l'incertitude** (hypothèses / points à statuer...)
-* Licence **CC** Attribution Share-Alike
-* Existe aussi en **anglais**
-* **Pret à l'utilisation** (modèles vierges, manuel, outils d'exports...)
-* Amélioration continue
-* Contributions appréciées
-
+- Découpe l’architecture solution en **cinq vues**
+- Structure chaque vue en **Contraintes**, **Exigences** (ENF : Exigences Non Fonctionnelles) et **Solutions**
+- Approche **"check-list"** : aide à ne pas oublier les sujets importants
+- **Intègre l’incertitude** (hypothèses / points à statuer…)
+- Licence **Creative Commons – Attribution - Partage dans les mêmes conditions**
+- Existe aussi en **version anglaise**
+- **Prêt à l’usage** : modèles vierges, manuel utilisateur, outils d’export…
+- **Amélioration continue** – Contributions bienvenues !
 ---
-
-## Les ADR (Architecture Decision Record)
+## 📄 Les ADR (Architecture Decision Records)
 
 <!-- _class: small -->
 
-* Un DA de doit intégrer **que la solution retenue**
-* L'**historisation des choix** et leur raisons figure dans les ADR associés 
-* But : **permettre la connaissance et la compréhension des choix *aposteriori* et de partager les décisions**
-* Un bon ADR doit etre **court, clair, pertinent, accessible, tracés (dans Git), transparent**
-* Plusieurs formats, je suggère celui de ThoughtWork : 
-  . **Historique** et statut courant avec nom des validateurs
-  . **Contexte** (présentation de la problématique et des choix proposés). Intégre une analyse rapide de chaque solution envisagée (Avantage/inconvenient ou SWOT)
-  . **Décision** : choix clair identifiant de façon non ambigue la solution retenue (ex: _Solution 2 retenue_)
-  . **Conséquences** : conséquences pratiques de la décision (prévoir un budget dédié, un nouvel outil de suivi...)
-
-
-<div class="admonition tip">
-  💡 Article complet sur le sujet [ici](https://florat.net/comment-faire-de-bons-adr/)
-</div>
+- Un **dossier d’architecture** (DA) ne doit intégrer **que la solution retenue**
+- L’**historique des choix** et leurs raisons figurent dans des **ADR associés**
+- Objectif : **permettre la compréhension des décisions a posteriori** et faciliter leur **partage**
+- Un bon ADR doit être : **court**, **clair**, **pertinent**, **accessible**, **traçable** (Git), **transparent**
+- Plusieurs formats possibles — je recommande celui de **ThoughtWorks** :
+  - 🕓 **Historique** et **statut actuel**, avec noms des validateurs
+  - 📚 **Contexte** : description du problème et des options envisagées, avec analyse rapide (forces/faiblesses ou SWOT)
+  - ✅ **Décision** : choix clair, non ambigu (ex. : _Solution 2 retenue_)
+  - 📌 **Conséquences** : impacts pratiques (besoin en budget, suivi particulier, nouveaux outils...)
 
 ---
 
-## Exemple de bon ADR
+## ✅ Exemple d'ADR
 
 <!-- _class: small -->
 
 ```
-    ## Historique
-    Statut: `VALIDE`
+## Historique
+Statut: `VALIDE`
 
-    * Validé par xyz le 28 janvier
-    * Proposé par z le 02/01/2020
+* Proposé par Jean Dupont le 02/01/2020  
+* Validé par l’architecte référent Marie Lefevre le 28 janvier 2020
 
-    ## Contexte
+## Contexte
 
-    <Présentation générale de la problématique>
+Le projet nécessite la signature électronique de documents PDF produits par l'application.  
+Deux approches ont été envisagées : déléguer la signature à un service externe via API, ou embarquer un composant de signature dans notre propre infrastructure.  
+L’objectif est de garantir la conformité eIDAS, la traçabilité, et la résilience de l’opération de signature dans le cadre de traitements massifs (jusqu'à 10 000 signatures/jour).
 
-    # Solution 1: <description solution>
-    ## Forces
-    - Limite l'utilisation du réseau
+## Solution 1 : Utilisation d’un service externe de signature (ex : DocuSign, Yousign)
 
-    ## Faiblesses
-    - Moins robustesse
+### Forces
+- Aucun composant de signature à maintenir côté client
+- Conformité eIDAS assurée par le prestataire
 
-    ## Opportunités
+### Faiblesses
+- Dépendance à un prestataire externe
+- Coût unitaire à la signature
 
-    ## Risques
-    - [rédhibitoire] Nécessite que la signature se fasse en synchrone ou en fil l'eau
+### Opportunités
+- Possibilité d’intégrer un système de signature qualifiée à terme
+- Délégation des audits de sécurité et de conformité
 
-    # Solution 2: <description solution>
-    ## Forces
-    ## Faiblesses
-    ## Opportunités
-    ## Risques
+### Risques
+- [rédhibitoire] Nécessite une signature synchrone (en ligne) → problème pour nos traitements batch
+- Risque de saturation de l’API à forte volumétrie
 
-    ## Décisions
-    La solution 2 est retenue
+## Solution 2 : Intégration d’une brique de signature locale (ex : DSS + HSM interne)
+[...]
 
-    ## Conséquences
-    - Vérifier la configuration des JVM pour utiliser un générateur d'aléas
+## Décision
 
+La **Solution 2** est retenue.  
+Elle offre une meilleure résilience et une intégration plus souple dans notre architecture technique, notamment pour les traitements par lot.
+
+## Conséquences
+
+- Prévoir la montée en compétence de l’équipe sur le module DSS et l’API Java associée
+[...]
 ```
 
 ---
 
 ## 🥷 Consolidation automatique des ADR
 
-Avec les tags ASCIIDOC, possible de consilider le statut de toutes les ADR dans un tableau récapitulatif :
+<!-- _class: small -->
+
+Grâce aux **blocs structurés AsciiDoc**, il est possible de **consolider automatiquement** le statut de toutes les ADR dans un **tableau récapitulatif**.
+
+> ✅ Idéal pour suivre les décisions en cours, validées ou obsolètes  
+> 📊 Générable automatiquement via un script ou une extension AsciiDoctor
+
 
 ```
 .Table Liste et statuts des ADR RECE
@@ -827,32 +876,43 @@ Avec les tags ASCIIDOC, possible de consilider le statut de toutes les ADR dans 
 
 ---
 
-# Le CR de point architecture
+# 📝 Le compte-rendu d’un point d’architecture
 
-- **"Commite" le point**. Sans CR, la réunion n'a jamais eu lieu.
-- **Complète les ADR**, permet de justifier et remonter dans le passer
-- Fondamental pour un architecte, **permet de remetre les idées en clair**
-- Une fois le CR validé, **mettre à jour le DA et/ou les ADR**
-- Les écrire en **light markup** (ASCIIDOC de préférence) et tous les conserver, si possible dans des fichiers les regroupant pour facilité la recherche (CTRL-F)
-- Envoyer le **lien par mail**
-- Accepter les **corrections/compléments** par MR de préférence.
-- **Format conseillé** : Date / liste des partinipant.e.s / Informations / Décisions / Actions (**SMART**)
+- **« Commite » le point** : sans CR, la réunion n’a jamais eu lieu.
+- **Complète les ADR** et permet de justifier les décisions ou de retracer l’historique.
+- Fondamental pour l’architecte : il **clarifie les idées** et documente les échanges.
+- Une fois le CR validé, **mettre à jour le DA et/ou les ADR** concernés.
+- À rédiger en **light markup** (de préférence **AsciiDoc**)  
+  ➔ et à **conserver tous les CR**, idéalement dans des fichiers regroupés par thème ou date, pour faciliter la recherche (ex : `Ctrl+F`)
+- Envoyer le **lien du CR par e-mail** (éviter les pièces jointes)
+- Accepter les **corrections ou compléments** via **Merge Request** de préférence.
+
+---
+
+### 🧾 Format conseillé :
+- **Date**
+- **Liste des participant·e·s**
+- **Informations clés**
+- **Décisions prises**
+- **Actions à mener** (formulées en mode **SMART**)
 
 ---
 
 # 🖥️ Les supports de présentation *as code*
 
-
 ## 🎯 Pourquoi présenter *as code* ?
 
 - **Écriture textuelle** simple (Markdown, AsciiDoc)
 - **Versionnable** avec Git
-- **Réutilisable** et automatisable
-- **Moins de dépendances propriétaires** (PowerPoint, Google Slides) / gratuit
-- **Support des LLM** (mise en page, ex: émoticons / rédaction / orthographe ) et facile à parser pour alimenter un modèle d'architecture interne. Productivité x2.
+- **Réutilisable** et **automatisable**
+- **Indépendant des outils propriétaires** (PowerPoint, Google Slides) – 🆓 gratuit
+- Compatible avec les **LLM** (mise en page, émoticônes, rédaction, orthographe)  
+  ➔ facile à parser pour alimenter un modèle d’architecture interne  
+  ➔ **Productivité x2**
 
 <div class="admonition tip">
-  💡 Ce support a été écrit en Marp avec assistance de ChatGPT 4o + Le Chat 7B, source sur https://github.com/bflorat/meetup-arkup-juin-2025.github.io.
+  💡 Ce support a été rédigé avec Marp, assisté de ChatGPT 4o et Mistral 7B.  
+  📎 Source : https://github.com/bflorat/meetup-arkup-juin-2025.github.io .
 </div>
 
 ---
@@ -867,44 +927,62 @@ Avec les tags ASCIIDOC, possible de consilider le statut de toutes les ADR dans 
 
 ---
 
-## 🤖 Tirer profil de la CI-CD pour la documentation As Code
+## 🤖 Tirer profit de la CI/CD pour la documentation *As Code*
 
-* **Exports automatiquess en différents formats 
-  * Le mieux : **archive contenant les HTML et diagrammes en SVG**
-  * PDF : rendu correct mais pas toujours optimal (surtout pour les grands diagrammes)
-  * Docx/ODT : bof...
-* **Traitements automatiques** (ex: ajout d'includes, ajout de notice de copyright, découpage/filtrage par public visé...)
-* Analyses et contrôles : 
-  * Vérification copyright / de données sensibles
-  * Production d'indicateurs de taux d'avancement du remplacissage d'un DA...
-* Géénration de doc depuis le code. Exemple : annotations @Good dans le code -> on exporte la classe dans une docuemntation Antora pour servir d'exemple aux nouveaux arrivants.
+<!-- _class: small -->
+
+- **Exports automatiques** vers différents formats :
+  - ✅ Idéal : une **archive contenant les HTML** + **diagrammes en SVG**
+  - 📄 PDF : rendu correct mais parfois imparfait (surtout pour les grands diagrammes)
+  - ❌ Docx / ODT : peu recommandé…
+
+- **Traitements automatisés** :
+  - Ajout d’`include::`, notices de copyright, filtrage selon le public cible...
+  - Découpage en modules ou pages selon la structure du DA
+
+- **Analyses & contrôles** automatiques :
+  - Vérification d’éléments sensibles (copyright, données personnelles…)
+  - Indicateurs d’avancement du remplissage d’un Dossier d’Architecture (taux de couverture…)
+
+- **Génération de documentation depuis le code** :
+  - Exemple : détection d’annotations `@Good` dans le code ➔ export automatique vers une page de documentation Antora ➔ utile pour les nouveaux arrivants
+
 
 ---
 
-## 🔎 La doc au plus pret du code mais où ?
+## 🔎 La doc au plus près du code… mais où ?
 
-* Positionner la conception détaillée dans le dépot Git du projet lui-même.
-* Sur un petit projet mono-module, mettre le DA avec le code du projet.
-* Sur la plupart des projets, je conseille de prévoir un dépot Git dedié à la documentation et comprenant le DA, le suivi (CR), les ADR, les études...
+- Placer la **conception détaillée** directement dans le dépôt Git du projet.
+- Pour un **petit projet mono-module**, intégrer le DA dans le même dépôt que le code.
+- Pour la plupart des projets, il est préférable de créer un **dépôt Git dédié à la documentation**, regroupant :
+  - le Dossier d’Architecture (DA)
+  - le suivi (comptes-rendus)
+  - les ADR
+  - les études techniques
+
 
 ---
 
-## 🛰️ Archi As Code et IA
+## 🛰️ Architecture As Code & Intelligence Artificielle
 
-* Texte ? çà vous rapelle quelque chose ? les LLM ?
-* Il est en theorie possible de conxtruire aujourd'hui un chatbot orienté architecture et spécifique à l'organisation.
-* Objectif : respituer aux devs les régles d'architecture de façon rapide et ludique
+- Texte ? Ça vous rappelle quelque chose ? ➔ **les LLM** !
+- Il est aujourd’hui tout à fait possible de construire un **chatbot d’architecture** spécifique à votre organisation.
+- Objectif : 
+  - Fournir aux développeurs un **accès rapide et ludique** aux règles d’architecture
+  - **Réduire les malentendus**, augmenter l’autonomie
+  - Renforcer la **transmission de savoirs implicites**
+
 
 ---
 ## 🧸 Petit POC : ArchBot
 
-* Entrainé sur les documents d'architecture Asciidoc et Plantuml
-* Stack: RAG (Retrieval-Augmented Generation) basé sur modèles Mistral 7B ou DeepSeek-V2
-* POC en local sur mon PC
-* Résultats mitigés, largement meilleurs en `mistral-7b`
-* Extrement lent mais pas encore testé sur du matériel adapté
+- Entraîné sur des documents d’architecture **AsciiDoc** et **PlantUML**
+- Stack : **RAG** (Retrieval-Augmented Generation) basé sur les modèles **Mistral 7B** ou **DeepSeek-V2**
+- POC développé en local sur mon PC
+- Résultats **mitigés**, mais **nettement meilleurs avec `mistral-7b`**
+- Extrêmement lent (pas encore testé sur du matériel adapté)
 
-![bg right 80%](images/archbot.svg)
+![bg right:40% 80%](images/archbot.svg)
 
 
 
@@ -939,10 +1017,14 @@ Ne fais AUCUNE supposition ni invention.
 
 ---
 
-## 😓 La documentation, même As Code, c'est difficile
+## 😓 La documentation, même *As Code*, c’est difficile
 
-* Exige de bonnes capacités redactionnelles
-* Mais surtout de l'empathie pour trouver le bon niveau de détail (pas trop basique ni trop difficile pour quelqu'un de ,normalement compétent dans le domaine)
+<!-- _class: small -->
+
+- Nécessite de bonnes compétences rédactionnelles
+- Mais surtout : **de l’empathie** pour identifier le bon niveau de détail  
+  (ni trop basique, ni trop complexe pour une personne normalement compétente dans le domaine)
+
 * Wiio’s Laws :
 
 >Communication usually fails except by accident.
@@ -956,15 +1038,16 @@ If a message can be interpreted in several ways, it will be interpreted in a man
 
 ---
 
-## 😱 Epouvante chez les CP ou BA qui ont vu du Markdown
+## 😱 Épouvante chez les CP ou BA face au Markdown
 
-* Dans de la plupart des cas (RETEX), il n'est pas envisageable de faire faire du light markup ou des diagrammes as code aux non techniques.
-* Blocage de nombreux non-tech avec Gitlab ou Github.
-* Notre solution : filiere dediée pour eux sur du Wiki Confluent-like comme [xwiki](https://www.xwiki.org/xwiki/bin/view/Main/WebHome) ou [BookStack](https://www.bookstackapp.com/) avec intégration [diagrams.net](https://app.diagrams.net/) (ex Draw.io).
+- Dans la plupart des cas (RETEX), il n’est pas envisageable de faire produire du *light markup* ou des diagrammes *as code* aux non-techniques.
+- Blocage fréquent des non-techs face à GitLab ou GitHub.
+- **Notre solution** : filière dédiée pour ces profils sur un wiki de type Confluence-like comme [xwiki](https://www.xwiki.org/xwiki/bin/view/Main/WebHome) ou [BookStack](https://www.bookstackapp.com/), avec intégration [diagrams.net](https://app.diagrams.net/) (ex-Draw.io).
 
 <div class="admonition tip">
-  💡 Même si c'est moins agreable conceptuellement et qu'il ne faut pas les multiplier, je ne crois pas à une solution unique de doucmentation. L'approche Best of Breed est ici préférable.
+  💡 Même si c’est conceptuellement moins satisfaisant et qu’il ne faut pas multiplier les outils, je ne crois pas à une solution unique de documentation. L’approche *Best of Breed* est ici préférable.
 </div>
+
 
 ---
 
@@ -973,15 +1056,16 @@ If a message can be interpreted in several ways, it will be interpreted in a man
 ### 📦 1. Export via CI/CD
 
 - Utiliser une **pipeline CI/CD** pour générer automatiquement :
-  - une **archive ZIP**, ou  
-  - un **PDF du dossier d'architecture**
-- Permet un transfert simple et traçable
+  - une **archive**, ou  
+  - un **PDF** du dossier d’architecture
+- Permet un transfert simple, traçable et reproductible
 
-### 🔐 2. Pour les docs sensibles
+### 🔐 2. Pour les documents sensibles
 
 - Préférer un **accès contrôlé au dépôt Git**
-  - Restriction des **droits d’accès réseau** et **applicatifs**
-  - 🔍 Suivi des accès et historique Git
+  - Restriction des **droits d’accès réseau** et **droits applicatifs**
+  - 🔍 Suivi des accès et **historique Git** pour la traçabilité
+
 
 ---
 
@@ -989,44 +1073,45 @@ If a message can be interpreted in several ways, it will be interpreted in a man
 
 ### 🧭 Bonnes pratiques appliquées chez nous :
 
-- 📘 **Livret d'accueil**  
-  Contient les sections du DA à lire en fonction du **rôle** (dev, PO, ops…).
+- 📘 **Livret d’accueil**  
+  Contient les sections du DA à lire en fonction du **rôle** (développeur, PO, ops…).
 
-- ❓ **Quiz d'assimilation**  
-  ~50 questions (30 min), suivi de **4h de débrief avec un architecte**, 1 mois après l’arrivée.
+- ❓ **Quiz d’assimilation**  
+  Environ 50 questions (30 min), suivi de **4 heures de débrief** avec un architecte, un mois après l’arrivée.
 
 - 📩 **Communication proactive**  
-  Envoi de **mails ou messages** à chaque évolution du DA, avec lien direct ou extrait ciblé.
+  Envoi de **mails ou messages** à chaque évolution du DA, avec un **lien direct** ou un **extrait ciblé**.
 
 
 ---
 
 ## 🎯 Manque de contextualisation de certains modèles de DA
 
-- Certains modèles d'architecture (comme le mien) sont **trop larges**, peuvent être **chronophages** et **intimidants** pour leurs utilisateurs.
+- Certains modèles d’architecture (comme le mien) sont parfois **trop génériques**, ce qui les rend **chronophages** et parfois **intimidants** pour leurs utilisateurs.
 
-- Il est essentiel de **filtrer les sections par contexte** :
-  - Par **typologie d'architecture**  
+- Il est essentiel de **filtrer les sections en fonction du contexte** :
+  - Par **typologie d’architecture**  
     (ex : applicative, technique, métier)
   - Par **filière technologique**  
-    (ex : projet mobile, cloud, legacy...)
+    (ex : projet mobile, cloud, legacy…)
 
 ---
 
-## 🧭 Où commence le DA et le guide de DEV ?
+## 🧭 Où commence le DA et où s’arrête le guide de DEV ?
 
-- Le **guide de DEV** est géré par le(s) **LeadTech** et les **développeurs**.
-- Le **Dossier d’Architecture (DA)** doit donner les **principes de développement**, sans aller trop dans le **détail opérationnel**.
+- Le **guide de développement** est produit et maintenu par les **LeadTech** et les **équipes de développement**.
+- Le **Dossier d’Architecture (DA)** doit énoncer les **principes directeurs de développement**, sans entrer dans les **détails opérationnels** ou les choix d’implémentation spécifiques.
+
 
 ---
 
 ### 🧪 Exemple : validation des performances en DEV (DoD)
 
 - Le **DA** spécifie :  
-  > Les développeurs doivent réaliser de **mini-benchs** avec une montée en charge significative :  
-  > **10 threads minimum** pendant **1 minute au moins**.
+  > Les développeurs doivent réaliser des **mini-benchmarks** avec une montée en charge significative :  
+  > **au moins 10 threads** pendant **1 minute minimum**.
 
-- Le **guide DEV** détaille :  
+- Le **guide DEV** précise :  
   > Où trouver le **template JMeter**,  
   > Comment le **configurer**,  
   > Comment le **lancer**.
@@ -1034,11 +1119,11 @@ If a message can be interpreted in several ways, it will be interpreted in a man
 ---
 ## 🧭 Où commence le DA et le DEX ?
 
-- Le **DEX** (Dossier d'Exploitation) doit rester **léger** en contexte **Infra as Code** :
-  - Ne **pas détailler les manifestes** ou les **valeurs précises** (déjà dans le code).
-  
-- Le **DA** décrit uniquement les **principes** et les **technologies utilisées**,  
-  sans mentionner les **machines précises** ni les **chronogrammes**.
+- Le **DEX** (Dossier d'Exploitation) doit rester **léger**, surtout en contexte **Infrastructure as Code** :
+  - Ne **pas détailler les manifestes** ou les **valeurs de configuration** (déjà présentes dans le code).
+
+- Le **DA** se limite à décrire les **principes** et les **technologies utilisées**,  
+  sans mentionner les **machines spécifiques** ni les **chronogrammes**.
 
 ---
 
@@ -1051,41 +1136,54 @@ If a message can be interpreted in several ways, it will be interpreted in a man
   > `7` journalières / `5` hebdomadaires / `12` mensuelles / `2` annuelles.
 
 - Le **DEX** :
-  > Référence le DA  
-  > Explique **comment vérifier** que les sauvegardes fonctionnent
+  > Fait référence au DA  
+  > Décrit **comment vérifier** que les sauvegardes s’exécutent correctement
 
-- Le **code (ex : CronJob Kubernetes)** :
-  > Contient l'**expression cron exacte**
+- Le **code** (ex. : CronJob Kubernetes) :
+  > Contient l’**expression cron exacte**
+
 
 ---
 
 ## 🧩 Architecture as Code : rôle du management
+<!-- _class: small -->
 
 ### ✅ Comment suivre et valider le cycle de vie du DA ?
 
 - 🕵️‍♂️ **Suivi formel** :
-  - Définir un **workflow de revue** (Merge Request avec approbation obligatoire de l’architecte / manager)
-  - Intégrer des **tags de validation** (labels : `#validé-architecte`, `#à-relire`...)
+  - Définir un **workflow de revue** :  
+    ➤ Merge Request avec **approbation obligatoire** de l’architecte ou du manager
+  - Mettre en place des **tags de validation** :  
+    ➤ Ex. : `#validé-architecte`, `#à-relire`, `#en-cours`
 
 - 📈 **Traçabilité & Qualité** :
-  - Utiliser **Git** pour l’historique, le `blame`, les commits commentés
-  - Mettre en place un **template de MR** pour forcer la description des impacts du changement
+  - S’appuyer sur **Git** pour :
+    ➤ l’historique,  
+    ➤ le `blame`,  
+    ➤ des **commits commentés et explicites**
+  - Utiliser un **template de MR** :  
+    ➤ pour **documenter les impacts** des modifications sur l’architecture
+
 
 ---
 
 ## 🤝 Comment s’impliquer dans la qualité du DA ?
+<!-- _class: small -->
 
-- 🎯 **Définir les attentes** :
-  - Qualité rédactionnelle, clarté des rationales, cohérence avec les objectifs stratégiques
+- 🎯 **Clarifier les attentes** :
+  - Qualité rédactionnelle
+  - Clarté des rationales
+  - Cohérence avec les objectifs stratégiques
 
-- 🧪 **Mesures concrètes** :
-  - Quiz de validation (ex. 1 mois après onboarding)
-  - Relecture collective (revue par pairs, management technique)
+- 🧪 **Mettre en place des actions concrètes** :
+  - Quiz de validation (ex. un mois après l’onboarding)
+  - Relectures collectives (revues par pairs ou par le management technique)
   - Inclusion dans les critères de DoD ou de release
 
-- 🔁 **Ancrer dans les rituels** :
-  - Revue mensuelle du DA lors de comités tech
-  - Intégration dans les rituels d’équipe (revue d’évolution, changements majeurs)
+- 🔁 **Ancrer dans les rituels d’équipe** :
+  - Revue mensuelle du DA en comité technique
+  - Suivi dans les rituels d’équipe : évolutions, arbitrages, changements majeurs
+
 
 
 ---
@@ -1101,37 +1199,42 @@ If a message can be interpreted in several ways, it will be interpreted in a man
 
 ----
 
-## 🚀 Peut être un projet Open Source à venir ?
+## 🚀 Un projet open source en perspective ?
 
-* Améliorer de mon modèle de DA
-* GUI et/ou CLI et/ou Chatbot pour géénrer des templates de DA contexctuelisés.
-* Pas besoin de BDD, tout est stocké en texte dans un dépot Git
-* Chaque section du modèle de DA est enrichi de metadonnées pour filtrage :
+- Améliorer et enrichir le modèle de dossier d’architecture (DA)
+- Proposer une **interface CLI** et/ou un **GUI** et/ou un **chatbot** ? pour générer des templates de DA contextualisés
+- Pas de base de données nécessaire : tout est stocké **en texte dans un dépôt Git**
+- Chaque section du modèle est enrichie de **métadonnées** pour permettre le **filtrage intelligent**
 
 ```
-🏷️{"id":"5a5f3bc5-7a1d-4f68-8385-8e1a19faf288", "labels":["stockage_persistent", "niveau::avancé", "taille_projet::moyen","taille_projet::grand"]}
+🏷️{"id":"5a5f3bc5-7a1d-4f68-8385-8e1a19faf288", 
+   "labels":["stockage_persistent", "niveau::avancé", "taille_projet::moyen", "taille_projet::grand"]}
 # Gestion des transactions
 [...]
 
-🏷️{"id":"a1e81580-8a2d-4d4d-8f99-6c9ae9ace122", "labels":["greenit", "niveau::avancé"], "link_to":"51bc1362-9c2f-4cd8-81d9-face77ed4dc6"}
+🏷️{"id":"a1e81580-8a2d-4d4d-8f99-6c9ae9ace122", 
+   "labels":["greenit", "niveau::avancé"], 
+   "link_to":"51bc1362-9c2f-4cd8-81d9-face77ed4dc6"}
 # Écoconception
 [...]
-
-
 ```
 
 ----
 
 ## 🔗 Liens utiles
 
-* Bertrand Florat : Cette présentation: https://meetup-arkup-juin-2025.florat.net/
+- **Cette présentation** (Bertrand Florat) :  
+  👉 [https://meetup-arkup-juin-2025.florat.net](https://meetup-arkup-juin-2025.florat.net)
 
-* Bertrand Florat : [Patterns diagrammes Plantuml / C4](https://florat.net
-https://florat.net/architecture-as-code-with-c4-and-plantuml/) 
+- **Patterns de diagrammes PlantUML / C4** (Bertrand Florat) :  
+  👉 [https://florat.net/architecture-as-code-with-c4-and-plantuml/](https://florat.net/architecture-as-code-with-c4-and-plantuml/)
 
-* Bertrand Florat : [Comment faire de bons ADR](https://florat.net/comment-faire-de-bons-adr/)
+- **Rédiger de bons ADR** (Bertrand Florat) :  
+  👉 [https://florat.net/comment-faire-de-bons-adr/](https://florat.net/comment-faire-de-bons-adr/)
 
-* Cyrille Martraire : [Living Documentation: Continuous Knowledge Sharing by Design, First Edition](https://www.oreilly.com/library/view/living-documentation-continuous/9780134689418/) 
+- **Living Documentation** (Cyrille Martraire – O’Reilly) :  
+  👉 [https://www.oreilly.com/library/view/living-documentation-continuous/9780134689418/](https://www.oreilly.com/library/view/living-documentation-continuous/9780134689418/)
+
 
 ---
 
