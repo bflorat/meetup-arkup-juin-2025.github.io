@@ -47,8 +47,8 @@ color: white
 -->
 
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-Bertrand Florat 
 Meetup Arkup Juin 2025
+https://meetup-arkup-juin-2025.florat.net/
 © 2025 Bertrand Florat – CC BY-SA 4.0 
 
 ---
@@ -192,6 +192,19 @@ Que doit contenir (ou pas) la doc ?
 
 ---
 
+## 📖 La documentation vivante (Cyrille Martraire)
+
+> « Une documentation fiable, utile, et toujours à jour. »
+
+### ✨ Principes clés
+
+- ✅ **Fiable** : toujours en phase avec le logiciel livré, à tout moment  
+- ⚙️ **À faible effort** : facile à maintenir, même lors de changements  
+- 🤝 **Collaborative** : favorise les échanges et le partage de savoir  
+- 🔎 **Porteuse de sens** : met en lumière les enjeux, déclenche des retours, et aide à mieux décider
+
+---
+
 ## Quid de la documentation d'architecturte en particulier ?
 
 - Tout ce qui a été dit précédemment s'applique aussi aux documents d'architecture
@@ -203,6 +216,32 @@ Que doit contenir (ou pas) la doc ?
 - Être honnête :  
   - Lister les hypothèses d’architecture et études en cours dans un chapitre **« Points non statués »** pour chaque vue  
   - L’incertitude doit être **affichée, pas masquée**
+
+---
+
+## 📚 Les documentations principales de l'architecte
+
+- 🏗️ **Dossier d’Architecture (DA)**  
+  Vue d’ensemble des choix, contextes, exigences et contraintes
+
+- 🧠 **ADR – Architecture Decision Records**  
+  Journal des décisions d’architecture, horodatées et justifiées
+
+- 📝 **Suivi des points d’architecture**  
+  Comptes-rendus des réunions, discussions et arbitrages techniques
+
+- 🔐 **Études techniques (sécurité, performance, etc.)**  
+  Analyses approfondies pour justifier ou évaluer des solutions
+
+- 🧪 **POC – Proof of Concept**  
+  Expérimentations techniques pour valider une hypothèse ou un risque
+
+- 🎤 **Supports de présentation**  
+  Slides pour comités d’architecture, parties prenantes, équipes
+
+---
+
+_Tous ces artefacts doivent être vivants, partagés, versionnés et liés au contexte métier._
 
 ---
 
@@ -500,8 +539,6 @@ graph TD
 
 > Résultat : un diagramme lisible, versionnable, reproductible !
 
-
-
 ---
 
 ### 🔧 Autres outils de diagrammes textuels
@@ -657,7 +694,7 @@ File diags-1.puml:
 
 ---
 
-## Le Dossier d'Architecture vivant
+## Le Dossier d'Architecture As Code
 
 * Basé sur du light markup (ASCIIDOC de préférence)
 * et sur des diagrammes textuels
@@ -668,14 +705,15 @@ File diags-1.puml:
 
 ---
 
-## Mon modèle de dossier d'architecture
+## 📘 Mon modèle de dossier d'architecture
 <!-- _class: small -->
 
 ![bg left:20% fit](images/metiers.png)
 
 **https://github.com/bflorat/modele-da**
 
-![](images/stars-modele-da-fr.png)![](images/stars-modele-da-en.png)
+![](images/stars-modele-da-fr.png)
+![](images/stars-modele-da-en.png)
 
 * Découpe l'architecture solution en **cinq vues**
 * Structure chaque vue en **contraintes** / **exigences (ENF)** / **solution**
@@ -802,50 +840,304 @@ Avec les tags ASCIIDOC, possible de consilider le statut de toutes les ADR dans 
 
 ---
 
+# 🖥️ Les supports de présentation *as code*
 
-Takeaway
 
-Présentatrion disponible à https://florat.net
-https://florat.net/architecture-as-code-with-c4-and-plantuml/
+## 🎯 Pourquoi présenter *as code* ?
+
+- **Écriture textuelle** simple (Markdown, AsciiDoc)
+- **Versionnable** avec Git
+- **Réutilisable** et automatisable
+- **Moins de dépendances propriétaires** (PowerPoint, Google Slides) / gratuit
+- **Support des LLM** (mise en page, ex: émoticons / rédaction / orthographe ) et facile à parser pour alimenter un modèle d'architecture interne. Productivité x2.
+
+<div class="admonition tip">
+  💡 Ce support a été écrit en Marp avec assistance de ChatGPT 4o + Le Chat 7B, source sur https://github.com/bflorat/meetup-arkup-juin-2025.github.io.
+</div>
+
+---
+
+## 🛠️ Outils Open Source populaires
+
+| Outil         | Langage     | Caractéristiques clés                        |
+|---------------|-------------|----------------------------------------------|
+| **Marp**      | Markdown    | Compatible avec VS Code, export PDF/HTML     |
+| **Reveal.js** | HTML/Markdown | Hautement personnalisable avec JS/CSS      |
+| **Asciidoctor Reveal.js** | AsciiDoc | Reveal.js mais en Asciidoc          |
+
+---
+
+## 🤖 Tirer profil de la CI-CD pour la documentation As Code
+
+* **Exports automatiquess en différents formats 
+  * Le mieux : **archive contenant les HTML et diagrammes en SVG**
+  * PDF : rendu correct mais pas toujours optimal (surtout pour les grands diagrammes)
+  * Docx/ODT : bof...
+* **Traitements automatiques** (ex: ajout d'includes, ajout de notice de copyright, découpage/filtrage par public visé...)
+* Analyses et contrôles : 
+  * Vérification copyright / de données sensibles
+  * Production d'indicateurs de taux d'avancement du remplacissage d'un DA...
+* Géénration de doc depuis le code. Exemple : annotations @Good dans le code -> on exporte la classe dans une docuemntation Antora pour servir d'exemple aux nouveaux arrivants.
+
+---
+
+## 🔎 La doc au plus pret du code mais où ?
+
+* Positionner la conception détaillée dans le dépot Git du projet lui-même.
+* Sur un petit projet mono-module, mettre le DA avec le code du projet.
+* Sur la plupart des projets, je conseille de prévoir un dépot Git dedié à la documentation et comprenant le DA, le suivi (CR), les ADR, les études...
+
+---
+
+## 🛰️ Archi As Code et IA
+
+* Texte ? çà vous rapelle quelque chose ? les LLM ?
+* Il est en theorie possible de conxtruire aujourd'hui un chatbot orienté architecture et spécifique à l'organisation.
+* Objectif : respituer aux devs les régles d'architecture de façon rapide et ludique
+
+---
+## 🧸 Petit POC : ArchBot
+
+* Entrainé sur les documents d'architecture Asciidoc et Plantuml
+* Stack: RAG (Retrieval-Augmented Generation) basé sur modèles Mistral 7B ou DeepSeek-V2
+* POC en local sur mon PC
+* Résultats mitigés, largement meilleurs en `mistral-7b`
+* Extrement lent mais pas encore testé sur du matériel adapté
+
+![bg right 80%](images/archbot.svg)
+
+
+
+---
+## 🧸 Exemple d'utilisation
+
+### Pré-prompt
+
+```
+Tu es un assistant expert en architecture solutions qui répond UNIQUEMENT en français. 
+Tu ne travaille que sur un seul projet : FOO. Tu t'appelles 'ArchBot'.
+Tes réponses doivent être précises et basées sur les documents techniques fournis.
+Si tu ne trouves pas d'information pertinente dans les documents, réponds simplement : 
+"Je n'ai pas trouvé d'information pertinente sur ce sujet dans les documents."
+Ne fais AUCUNE supposition ni invention.
+```
+
+### Utilisation (GUI: Gradio)
+
+![](images/archbot-screen.png)
+
+---
+
+
+# 🧨 3 - Les challenges de la documentation As Code
+
+---
+
+## ❄️ Cela reste de la documentation froide
+
+![50%](./images/communication-channel-temperature.png)
+
+---
+
+## 😓 La documentation, même As Code, c'est difficile
+
+* Exige de bonnes capacités redactionnelles
+* Mais surtout de l'empathie pour trouver le bon niveau de détail (pas trop basique ni trop difficile pour quelqu'un de ,normalement compétent dans le domaine)
+* Wiio’s Laws :
+
+>Communication usually fails except by accident.
+If communication can fail, it will.
+If communication cannot fail, it still most usually fails.
+If communication seems to succeed in the intended way, there’s a misunderstanding.
+If you are content with your message, communication certainly fails.
+If a message can be interpreted in several ways, it will be interpreted in a manner that maximizes the damage.
+[...]
 
 
 ---
 
-Aller plus loin :
+## 😱 Epouvante chez les CP ou BA qui ont vu du Markdown
 
-La living documentation (pointeur vers Cyril Martraire)
+* Dans de la plupart des cas (RETEX), il n'est pas envisageable de faire faire du light markup ou des diagrammes as code aux non techniques.
+* Blocage de nombreux non-tech avec Gitlab ou Github.
+* Notre solution : filiere dediée pour eux sur du Wiki Confluent-like comme [xwiki](https://www.xwiki.org/xwiki/bin/view/Main/WebHome) ou [BookStack](https://www.bookstackapp.com/) avec intégration [diagrams.net](https://app.diagrams.net/) (ex Draw.io).
 
+<div class="admonition tip">
+  💡 Même si c'est moins agreable conceptuellement et qu'il ne faut pas les multiplier, je ne crois pas à une solution unique de doucmentation. L'approche Best of Breed est ici préférable.
+</div>
+
+---
+
+## 🔄 Comment transférer le DA depuis GitLab vers nos prestataires ?
+
+### 📦 1. Export via CI/CD
+
+- Utiliser une **pipeline CI/CD** pour générer automatiquement :
+  - une **archive ZIP**, ou  
+  - un **PDF du dossier d'architecture**
+- Permet un transfert simple et traçable
+
+### 🔐 2. Pour les docs sensibles
+
+- Préférer un **accès contrôlé au dépôt Git**
+  - Restriction des **droits d’accès réseau** et **applicatifs**
+  - 🔍 Suivi des accès et historique Git
+
+---
+
+## ✅ Comment s'assurer que le DA est lu et compris ?
+
+### 🧭 Bonnes pratiques appliquées chez nous :
+
+- 📘 **Livret d'accueil**  
+  Contient les sections du DA à lire en fonction du **rôle** (dev, PO, ops…).
+
+- ❓ **Quiz d'assimilation**  
+  ~50 questions (30 min), suivi de **4h de débrief avec un architecte**, 1 mois après l’arrivée.
+
+- 📩 **Communication proactive**  
+  Envoi de **mails ou messages** à chaque évolution du DA, avec lien direct ou extrait ciblé.
+
+
+---
+
+## 🎯 Manque de contextualisation de certains modèles de DA
+
+- Certains modèles d'architecture (comme le mien) sont **trop larges**, peuvent être **chronophages** et **intimidants** pour leurs utilisateurs.
+
+- Il est essentiel de **filtrer les sections par contexte** :
+  - Par **typologie d'architecture**  
+    (ex : applicative, technique, métier)
+  - Par **filière technologique**  
+    (ex : projet mobile, cloud, legacy...)
+
+---
+
+## 🧭 Où commence le DA et le guide de DEV ?
+
+- Le **guide de DEV** est géré par le(s) **LeadTech** et les **développeurs**.
+- Le **Dossier d’Architecture (DA)** doit donner les **principes de développement**, sans aller trop dans le **détail opérationnel**.
+
+---
+
+### 🧪 Exemple : validation des performances en DEV (DoD)
+
+- Le **DA** spécifie :  
+  > Les développeurs doivent réaliser de **mini-benchs** avec une montée en charge significative :  
+  > **10 threads minimum** pendant **1 minute au moins**.
+
+- Le **guide DEV** détaille :  
+  > Où trouver le **template JMeter**,  
+  > Comment le **configurer**,  
+  > Comment le **lancer**.
+
+---
+## 🧭 Où commence le DA et le DEX ?
+
+- Le **DEX** (Dossier d'Exploitation) doit rester **léger** en contexte **Infra as Code** :
+  - Ne **pas détailler les manifestes** ou les **valeurs précises** (déjà dans le code).
+  
+- Le **DA** décrit uniquement les **principes** et les **technologies utilisées**,  
+  sans mentionner les **machines précises** ni les **chronogrammes**.
+
+---
+
+### 💾 Exemple : gestion des sauvegardes
+
+- Le **DA** spécifie :
+  > Une **double sauvegarde** de la base PostgreSQL :  
+  > `pg_dump` + **sauvegarde Veeam** de la VM,  
+  > Avec une **politique de rétention** :  
+  > `7` journalières / `5` hebdomadaires / `12` mensuelles / `2` annuelles.
+
+- Le **DEX** :
+  > Référence le DA  
+  > Explique **comment vérifier** que les sauvegardes fonctionnent
+
+- Le **code (ex : CronJob Kubernetes)** :
+  > Contient l'**expression cron exacte**
+
+---
+
+## 🧩 Architecture as Code : rôle du management
+
+### ✅ Comment suivre et valider le cycle de vie du DA ?
+
+- 🕵️‍♂️ **Suivi formel** :
+  - Définir un **workflow de revue** (Merge Request avec approbation obligatoire de l’architecte / manager)
+  - Intégrer des **tags de validation** (labels : `#validé-architecte`, `#à-relire`...)
+
+- 📈 **Traçabilité & Qualité** :
+  - Utiliser **Git** pour l’historique, le `blame`, les commits commentés
+  - Mettre en place un **template de MR** pour forcer la description des impacts du changement
+
+---
+
+## 🤝 Comment s’impliquer dans la qualité du DA ?
+
+- 🎯 **Définir les attentes** :
+  - Qualité rédactionnelle, clarté des rationales, cohérence avec les objectifs stratégiques
+
+- 🧪 **Mesures concrètes** :
+  - Quiz de validation (ex. 1 mois après onboarding)
+  - Relecture collective (revue par pairs, management technique)
+  - Inclusion dans les critères de DoD ou de release
+
+- 🔁 **Ancrer dans les rituels** :
+  - Revue mensuelle du DA lors de comités tech
+  - Intégration dans les rituels d’équipe (revue d’évolution, changements majeurs)
+
+
+---
+
+# 🧠 4 - Takeaway — Ce qu'il faut retenir
+
+- **La documentation d’architecture** doit être vivante, utile, maintenue et adaptée à son audience.
+- **Architecture as Code** = gain de traçabilité, maintenabilité, lisibilité et automatisation.
+- **AsciiDoc + Git + CI/CD** → combo gagnant pour une doc versionnée, réutilisable et collaborative.
+- Le **DA** donne les **principes** ; les **guides DEV/DEX** précisent les **détails opérationnels**.
+- Le **management** peut suivre la qualité du DA via Git, MRs, quiz, revues croisées, etc.
+- Modèle recommandé : DA structuré en contraintes / exigences / solutions, avec ADRs et suivis intégrés.
 
 ----
 
+## 🚀 Peut être un projet Open Source à venir ?
 
-2)  La documentation Archi As Code
+* Améliorer de mon modèle de DA
+* GUI et/ou CLI et/ou Chatbot pour géénrer des templates de DA contexctuelisés.
+* Pas besoin de BDD, tout est stocké en texte dans un dépot Git
+* Chaque section du modèle de DA est enrichi de metadonnées pour filtrage :
 
-Les suivi de réunions
-Les supports (Marp, reveal.js...)
-Intégration dans une CI (exports...)
-Possibilité de découpage par type de public pour cibler le contenu
-Possibilité de filtrage par contexte (ex: pour un projet d'ETL, pas besoin des sections portant sur les GUI)
-Possibilité de faire des scripts pour avoir un taux d'avancement / remplissage ? -> Bonne idée !
-script avec des extractions automatique ( scan d'infra par exemple, analyse du paramétrage dans le code ou CMDB ?)  -> [BFL] A discuter, souvent une fausse bonne idée de mon expérience et faible ROI. 
+```
+🏷️{"id":"5a5f3bc5-7a1d-4f68-8385-8e1a19faf288", "labels":["stockage_persistent", "niveau::avancé", "taille_projet::moyen","taille_projet::grand"]}
+# Gestion des transactions
+[...]
+
+🏷️{"id":"a1e81580-8a2d-4d4d-8f99-6c9ae9ace122", "labels":["greenit", "niveau::avancé"], "link_to":"51bc1362-9c2f-4cd8-81d9-face77ed4dc6"}
+# Écoconception
+[...]
 
 
-3) Les challenges /REX
-Comment faire pour que cette documentation technique ne soit pas qu'a la main / en responsabilité de l'archi -> Écriture / MR par les non techniques (mais filtrage)
-Export PDF/HTML... -> mise en place dans la CI au MAE, export en 1 clic
-Comment faire lire le DA par les devs et autres parties prenantes  ? -> syllabus , quiz
-Cohabitation avec d'autres systèmes documentaires (ex: doc infra sur un autre wiki)
-Taille du modèle -> découper par filtres contextuels (en cours). Contextes par organisation et/ou projet.
-Petits projets / Manque d'architectes, quand les chefs de projet font l'architecture.
-Les contextes propices/ non propices
-Dichotomie DA/guide de développement (pour les solutions surtout)
-Dichotomie DA / DEX : ne pas mélanger, pas les mêmes temporalités / confidentialité des infos.
-Comment valider/suivre le cycle de vie du DA par le management ? s'impliquer dans la réalisation/qualité du DA.
-Attention à ne pas confondre exigences et solution.
-Problème de la maintenance toujours présent. Quelques solutions, la revue globale périodique.
-Solution 'loin' des exigences -> exige des hyperliens
-Business Analysts  sur specs générales: une approches Wysysig type Confluence peut être préférable (problème d’adhésion), pas de solution unique
+```
 
-4) Conclusion
-Vers un outil Open Source (SaaS / on Prem ? ) de gestion/génération des modèles de DA/ADR ?
-Aller plus loin : pointeurs vers 'Living documentation' de Cyrill Martraire , etc
+----
+
+## 🔗 Liens utiles
+
+* Bertrand Florat : Cette présentation: https://meetup-arkup-juin-2025.florat.net/
+
+* Bertrand Florat : [Patterns diagrammes Plantuml / C4](https://florat.net
+https://florat.net/architecture-as-code-with-c4-and-plantuml/) 
+
+* Bertrand Florat : [Comment faire de bons ADR](https://florat.net/comment-faire-de-bons-adr/)
+
+* Cyrille Martraire : [Living Documentation: Continuous Knowledge Sharing by Design, First Edition](https://www.oreilly.com/library/view/living-documentation-continuous/9780134689418/) 
+
+---
+
+# 🙏 Merci pour votre attention !
+
+
+# ❓ Des questions ? retours, suggestions ?
+
+
