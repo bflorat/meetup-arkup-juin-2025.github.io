@@ -657,22 +657,150 @@ File diags-1.puml:
 
 ---
 
+## Le Dossier d'Architecture vivant
 
-## 📚 Confusion des concepts
-
-- Solutions décrites **sans les exigences et contraintes correspondantes**  
-
-- Mélange fréquent entre :  
-  - **Contraintes** (imposées par le contexte)  
-  - **Exigences** (attendues par le métier)  
-  - **Solutions** (choix technologiques)  
-
-- Résultat :  
-  - Perte de lisibilité  
-  - Difficulté pour justifier les choix faits
+* Basé sur du light markup (ASCIIDOC de préférence)
+* et sur des diagrammes textuels
+* Utilisation de Git et des Merge Requests pour la collaboration
+* Peut être rendus et consolidé dans un site Antora
+* "Développé" dans un IDE (VSCode est mon préféré)
+* Mis à jour en continu + revue annuelle complète.
 
 ---
 
+## Mon modèle de dossier d'architecture
+<!-- _class: small -->
+
+![bg left:20% fit](images/metiers.png)
+
+**https://github.com/bflorat/modele-da**
+
+![](images/stars-modele-da-fr.png)![](images/stars-modele-da-en.png)
+
+* Découpe l'architecture solution en **cinq vues**
+* Structure chaque vue en **contraintes** / **exigences (ENF)** / **solution**
+* Orienté **'check-list'** : aide à ne pas oublier de sujets importants
+* **Intégère l'incertitude** (hypothèses / points à statuer...)
+* Licence **CC** Attribution Share-Alike
+* Existe aussi en **anglais**
+* **Pret à l'utilisation** (modèles vierges, manuel, outils d'exports...)
+* Amélioration continue
+* Contributions appréciées
+
+---
+
+## Les ADR (Architecture Decision Record)
+
+<!-- _class: small -->
+
+* Un DA de doit intégrer **que la solution retenue**
+* L'**historisation des choix** et leur raisons figure dans les ADR associés 
+* But : **permettre la connaissance et la compréhension des choix *aposteriori* et de partager les décisions**
+* Un bon ADR doit etre **court, clair, pertinent, accessible, tracés (dans Git), transparent**
+* Plusieurs formats, je suggère celui de ThoughtWork : 
+  . **Historique** et statut courant avec nom des validateurs
+  . **Contexte** (présentation de la problématique et des choix proposés). Intégre une analyse rapide de chaque solution envisagée (Avantage/inconvenient ou SWOT)
+  . **Décision** : choix clair identifiant de façon non ambigue la solution retenue (ex: _Solution 2 retenue_)
+  . **Conséquences** : conséquences pratiques de la décision (prévoir un budget dédié, un nouvel outil de suivi...)
+
+
+<div class="admonition tip">
+  💡 Article complet sur le sujet [ici](https://florat.net/comment-faire-de-bons-adr/)
+</div>
+
+---
+
+## Exemple de bon ADR
+
+<!-- _class: small -->
+
+```
+    ## Historique
+    Statut: `VALIDE`
+
+    * Validé par xyz le 28 janvier
+    * Proposé par z le 02/01/2020
+
+    ## Contexte
+
+    <Présentation générale de la problématique>
+
+    # Solution 1: <description solution>
+    ## Forces
+    - Limite l'utilisation du réseau
+
+    ## Faiblesses
+    - Moins robustesse
+
+    ## Opportunités
+
+    ## Risques
+    - [rédhibitoire] Nécessite que la signature se fasse en synchrone ou en fil l'eau
+
+    # Solution 2: <description solution>
+    ## Forces
+    ## Faiblesses
+    ## Opportunités
+    ## Risques
+
+    ## Décisions
+    La solution 2 est retenue
+
+    ## Conséquences
+    - Vérifier la configuration des JVM pour utiliser un générateur d'aléas
+
+```
+
+---
+
+## 🥷 Consolidation automatique des ADR
+
+Avec les tags ASCIIDOC, possible de consilider le statut de toutes les ADR dans un tableau récapitulatif :
+
+```
+.Table Liste et statuts des ADR RECE
+[cols="2,1a,4a"]
+|===
+|ADR |Statut |Historique
+
+|link:001-dedoublonnage-requetes.adoc[001-dedoublonnage-requetes]
+|include::001-dedoublonnage-requetes.adoc[tags=statut]
+|include::001-dedoublonnage-requetes.adoc[tags=historique]
+
+|link:002-appels-synchrones.adoc[002-appels-synchrones]
+|include::002-appels-synchrones.adoc[tags=statut]
+|include::002-appels-synchrones.adoc[tags=historique]
+...
+|===
+```
+
+---
+
+# 🗣️ L'importance de L'UL (Ubiquitus Language)
+
+- UL issu du **Domain-Driven Design (DDD)** d’Eric Evans  
+- Objectif : **un langage partagé** entre développeurs, experts métier, testeurs et architectes  
+- Le DA (dossier d'architecture) **doit refléter ce langage** :
+  - 📘 Utiliser **les mêmes termes métier** partout (code, doc, tests, diagrammes)  
+  - 🚫 **Éviter les synonymes** et les variations  
+- 🤝 Favorise la compréhension entre les parties prenantes  
+- 🔎 Améliore la traçabilité des concepts métier  
+- ✅ Garantit la cohérence entre code et documentation  
+
+---
+
+# Le CR de point architecture
+
+- **"Commite" le point**. Sans CR, la réunion n'a jamais eu lieu.
+- **Complète les ADR**, permet de justifier et remonter dans le passer
+- Fondamental pour un architecte, **permet de remetre les idées en clair**
+- Une fois le CR validé, **mettre à jour le DA et/ou les ADR**
+- Les écrire en **light markup** (ASCIIDOC de préférence) et tous les conserver, si possible dans des fichiers les regroupant pour facilité la recherche (CTRL-F)
+- Envoyer le **lien par mail**
+- Accepter les **corrections/compléments** par MR de préférence.
+- **Format conseillé** : Date / liste des partinipant.e.s / Informations / Décisions / Actions (**SMART**)
+
+---
 
 
 Takeaway
@@ -693,9 +821,6 @@ La living documentation (pointeur vers Cyril Martraire)
 
 2)  La documentation Archi As Code
 
-Modèle de DA orienté usage et orienté checklist
-Les ADR
-De l'importance de l'Ubiquitous Language
 Les suivi de réunions
 Les supports (Marp, reveal.js...)
 Intégration dans une CI (exports...)
