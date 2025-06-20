@@ -70,6 +70,17 @@ color: #555555
 # 📚 0 — Les enjeux de la documentation
 (en général et en architecture en particulier)
 
+
+---
+
+# 📊 Temps passé par un·e architecte à produire de la documentation  
+
+- Conception & réflexions techniques : 30–40 %  
+- **Rédaction de documentation : 20–30 %** (15 % sur projets très agiles, 40 % dans les secteurs très réglementés)  
+- Réunions & arbitrages : 20–30 %  
+- Communication & vulgarisation : 10–15 %  
+- Veille technologique : 5–10 %  
+
 ---
 
 ## ⚠️ Disclaimer
@@ -93,16 +104,6 @@ color: #555555
 - **Écrire une doc, c’est un engagement :**
   - Beaucoup aiment écrire, peu souhaitent maintenir
   - Écrire implique de maintenir dans la durée ⚠️
-
----
-
-# 📊 Temps passé par un·e architecte à produire de la documentation  
-
-- Conception & réflexions techniques : 30–40 %  
-- **Rédaction de documentation : 20–30 %** (15 % sur projets très agiles, 40 % dans les secteurs très réglementés)  
-- Réunions & arbitrages : 20–30 %  
-- Communication & vulgarisation : 10–15 %  
-- Veille technologique : 5–10 %  
 
 ---
 
@@ -388,19 +389,8 @@ Répond à la plupart de ces critères :
 - **Simplicité** : syntaxe intuitive pour écrire vite  
 - **Faciles à générer** : ex. : spécifications exécutables, rapports de tests Spock  
 - **Faciles à versionner** : parfait pour Git (diffs propres, pas de binaire)  
-- **Intégration continue** : générer HTML, PDF, diagrammes, SBOM, etc.  
+- **Bonne Intégration sur les plateformes** : disponible de base sur Gitlab, Github...
 - **Extensibles** : AsciiDoc permet des blocs structurés (admonitions, macros, includes…)
-
----
-
-## 🎯 Idéal pour de la doc "as code"
-
-> Les formats Markdown / AsciiDoc :  
-> - ✅ S’intègrent naturellement à votre code source (de préférence dans le même dépôt)  
-> - ✅ Évitent les formats fermés ou verbeux (Word, PDF, XML)  
-> - ✅ Permettent l’automatisation, la réutilisation et une documentation vivante
-
-📘 Utilisés par : GitHub, GitLab, Red Hat, Spring, Kubernetes…
 
 ---
 
@@ -408,15 +398,15 @@ Répond à la plupart de ces critères :
 
 - **Structure riche** : sections, blocs, tableaux complexes  
 - **Macros & includes** : contenu réutilisable, factorisable  
-- **Index, glossaires, bibliographies**  
+- **Table des matières (TOC), glossaires, bibliographies**  
 - **Admonitions** : `NOTE`, `TIP`, `CAUTION`, etc.  
-- **Diagrammes intégrés** : PlantUML, Mermaid…  
+- **Diagrammes intégrés** (avec plugins): PlantUML, Mermaid…  
 - **Sorties variées** : HTML5, PDF, DocBook…
 
 
 ---
 
-## ⚙️ Comparaison d'outils de documentation As Code
+## ⚙️ Comparaison d'outils de documentation As Code Open Source
 
 <!-- _class: small -->
 
@@ -425,8 +415,6 @@ Répond à la plupart de ces critères :
 | **Docusaurus** | Markdown                   | React + Node.js        | UX moderne, thèmes, blog, versioning               | Moins adapté aux docs backend/archi          |
 | **Antora**     | AsciiDoc                   | Ruby (Asciidoctor)     | Multi-repo, modulaire, orienté architecture        | Plus sobre, nécessite structuration stricte  |
 | **MkDocs**     | Markdown                   | Python (YAML config)   | Léger, rapide, nombreux plugins                    | Moins modulaire que Antora                   |
-| **Sphinx**     | reStructuredText / Markdown | Python                | Puissant, utilisé pour Python/docs API complexes   | Syntaxe plus lourde, moins design            |
-| **GitBook**    | Markdown (SaaS ou CLI)     | Web/SaaS ou Node.js    | Très simple, beau rendu, collaboration             | Cloud-centric, moins d’automatisation, **propriétaire**        |
 | **AsciiDoc**   | AsciiDoc                   | Ruby (Asciidoctor)     | Syntaxe riche, blocs, admonitions, includes        | Moins répandu que Markdown, learning curve   |
 
 ---
@@ -436,8 +424,6 @@ Répond à la plupart de ces critères :
 - 🖥️ **Docusaurus** : produit/API, design et navigation moderne  
 - 🧱 **Antora** : doc d'archi, microservices, équipes distribuées  
 - 🚀 **MkDocs** : doc rapide à mettre en place, mono-repo  
-- 🐍 **Sphinx** : API Python complexes, génération PDF/HTML  
-- ☁️ **GitBook** : équipes non techniques, onboarding, guides  
 - 🔧 **AsciiDoc seul** : doc technique avancée, sans framework  
 
 
@@ -512,19 +498,19 @@ class CalculatriceSpec extends Specification {
 ```
 ---
 
-## 🎯 Bénéfices concrets
-
-- Plus de divergence entre le code, les tests et la documentation
-- Vérifiables automatiquement à chaque build
-- Réutilisables pour l'audit, l'architecture, la conformité, etc.
-
----
-
 ## 🔄 Exemple de site Antora multi-dépôts à partir de documentation générée
 
 Visualisation des spécifications sur un portail de documentation :
 
 ![image](https://github.com/user-attachments/assets/7c71d669-94e1-4f3c-b4b5-9b0ca23da1d4)
+
+---
+
+## 🎯 Bénéfices concrets
+
+- Plus de divergence entre le code, les tests et la documentation
+- Vérifiables automatiquement à chaque build
+- Réutilisables pour l'audit, l'architecture, la conformité, etc.
 
 ---
 
@@ -544,7 +530,7 @@ Visualisation des spécifications sur un portail de documentation :
 
 ### ✍️ Exemples de syntaxe
 
-#### Mermaid (séquence)
+#### Mermaid (diagramme d'activité)
 
 ![bg left width:300px](images/ex-mermaid.png)
 ![bg left width:300px ](images/ex-plantuml.png)
@@ -570,24 +556,12 @@ graph TD
 
 ---
 
-### 🔧 Autres outils de diagrammes textuels
-
-| Outil               | Points forts                                           | Format(s)      |
-|--------------------|--------------------------------------------------------|----------------|
-| **Graphviz / DOT** | Graphes orientés (DAG, dépendances)                    | `.dot`         |
-| **Draw.io CLI**    | Interface graphique avec export en ligne de commande   | `.drawio`      |
-| **Structurizr DSL**| Modélisation C4 sous forme textuelle                   | `.dsl`         |
-| **Nomnoml**        | UML simplifié avec une syntaxe proche de Markdown      | `.nomnoml`     |
-| **Kroki**          | Service centralisé prenant en charge +10 formats       | API, distant   |
-
----
-
 ### ⚙️ Intégrations populaires
 
 <!-- _class: small -->
 
 - **IDE** :
-  - **IntelliJ** : support natif de PlantUML, Mermaid via plugins
+  - **IntelliJ IDEA** : support natif de PlantUML, Mermaid via plugins
   - **VS Code** : extensions pour Mermaid, PlantUML, Graphviz, Kroki
   - **Obsidian** : Mermaid intégré, PlantUML via plugins
 
@@ -599,22 +573,6 @@ graph TD
 
 - **Plateformes** :
   - **GitHub**, **GitLab** : prévisualisation automatique intégrée
-
----
-
-## 🧱 Le modèle C4 — Définition
-
-- Un ensemble d’**abstractions hiérarchiques** :  
-  *systèmes logiciels*, *conteneurs*, *composants* et *code*
-
-- Un ensemble de **diagrammes hiérarchiques** :  
-  *contexte système*, *conteneurs*, *composants* et *code*
-
-- **Indépendant de la notation**  
-  (UML, texte, diagrammes libres…)
-
-- **Indépendant des outils**  
-  (Structurizr, PlantUML, AsciiDoc, etc.)
 
 ---
 
@@ -758,7 +716,7 @@ File diags-1.puml:
 ![](images/stars-modele-da-fr.png)  
 ![](images/stars-modele-da-en.png)
 
-- Découpe l’architecture solution en **cinq vues**
+- Découpe l’architecture solutions en **cinq vues**
 - Structure chaque vue en **Contraintes**, **Exigences** (ENF : Exigences Non Fonctionnelles) et **Solutions**
 - Approche **"check-list"** : aide à ne pas oublier les sujets importants
 - **Intègre l’incertitude** (hypothèses / points à statuer…)
@@ -800,25 +758,25 @@ Le projet nécessite la signature électronique de documents PDF produits par l'
 Deux approches ont été envisagées : déléguer la signature à un service externe via API, ou embarquer un composant de signature dans notre propre infrastructure.  
 L’objectif est de garantir la conformité eIDAS, la traçabilité, et la résilience de l’opération de signature dans le cadre de traitements massifs (jusqu'à 10 000 signatures/jour).
 
-## Solution 1 : Utilisation d’un service externe de signature (ex : DocuSign, Yousign)
+### Solution 1 : Utilisation d’un service externe de signature (ex : DocuSign, Yousign)
 
-### Forces
+#### Forces
 - Aucun composant de signature à maintenir côté client
 - Conformité eIDAS assurée par le prestataire
 
-### Faiblesses
+#### Faiblesses
 - Dépendance à un prestataire externe
 - Coût unitaire à la signature
 
-### Opportunités
+#### Opportunités
 - Possibilité d’intégrer un système de signature qualifiée à terme
 - Délégation des audits de sécurité et de conformité
 
-### Risques
+#### Risques
 - [rédhibitoire] Nécessite une signature synchrone (en ligne) → problème pour nos traitements batch
 - Risque de saturation de l’API à forte volumétrie
 
-## Solution 2 : Intégration d’une brique de signature locale (ex : DSS + HSM interne)
+### Solution 2 : Intégration d’une brique de signature locale (ex : DSS + HSM interne)
 [...]
 
 ## Décision
@@ -928,7 +886,7 @@ Grâce aux **blocs structurés AsciiDoc**, il est possible de **consolider autom
 
 ## 🤖 Tirer profit de la CI/CD pour la documentation *As Code*
 
-<!-- _class: small -->
+<!-- _class: smaller -->
 
 - **Exports automatiques** vers différents formats :
   - ✅ Idéal : une **archive contenant les HTML** + **diagrammes en SVG**
@@ -975,13 +933,15 @@ Grâce aux **blocs structurés AsciiDoc**, il est possible de **consolider autom
 ---
 ## 🧸 Petit POC : ArchBot
 
+<!-- _class: small -->
+
 - Entraîné sur des documents d’architecture **AsciiDoc** et **PlantUML**
 - Stack : **RAG** (Retrieval-Augmented Generation) basé sur les modèles **Mistral 7B** ou **DeepSeek-V2**
 - POC développé en local sur mon PC
 - Résultats **mitigés**, mais **nettement meilleurs avec `mistral-7b`**
 - Extrêmement lent (pas encore testé sur du matériel adapté)
 
-![bg right:40% 80%](images/archbot.svg)
+![bg right:60% 80%](images/archbot.svg)
 
 
 
@@ -1044,9 +1004,8 @@ If a message can be interpreted in several ways, it will be interpreted in a man
 - **Notre solution** : filière dédiée pour ces profils sur un wiki de type Confluence-like comme [xwiki](https://www.xwiki.org/xwiki/bin/view/Main/WebHome) ou [BookStack](https://www.bookstackapp.com/), avec intégration [diagrams.net](https://app.diagrams.net/) (ex-Draw.io).
 
 <div class="admonition tip">
-  💡 Même si c’est conceptuellement moins satisfaisant et qu’il ne faut pas multiplier les outils, je ne crois pas à une solution unique de documentation. L’approche *Best of Breed* est ici préférable.
+  💡 Même si c’est conceptuellement moins satisfaisant et qu’il ne faut pas multiplier les outils, je ne crois pas à une solution unique de documentation. L’approche <b>Best of Breed</b> est ici préférable.
 </div>
-
 
 ---
 
@@ -1141,53 +1100,6 @@ If a message can be interpreted in several ways, it will be interpreted in a man
 - Le **code** (ex. : CronJob Kubernetes) :
   > Contient l’**expression cron exacte**
 
-
----
-
-## 🧩 Architecture as Code : rôle du management
-
----
-
-### ✅ Comment suivre et valider le cycle de vie du DA ?
-
-<!-- _class: small -->
-
-- 🕵️‍♂️ **Suivi formel** :
-  - Définir un **workflow de revue** :  
-    ➤ Merge Request avec **approbation obligatoire** de l’architecte ou du manager
-  - Mettre en place des **tags de validation** :  
-    ➤ Ex. : `#validé-architecte`, `#à-relire`, `#en-cours`
-
-- 📈 **Traçabilité & Qualité** :
-  - S’appuyer sur **Git** pour :
-    ➤ l’historique,  
-    ➤ le `blame`,  
-    ➤ des **commits commentés et explicites**
-  - Utiliser un **template de MR** :  
-    ➤ pour **documenter les impacts** des modifications sur l’architecture
-
-
----
-
-## 🤝 Comment s’impliquer dans la qualité du DA ?
-<!-- _class: small -->
-
-- 🎯 **Clarifier les attentes** :
-  - Qualité rédactionnelle
-  - Clarté des rationales
-  - Cohérence avec les objectifs stratégiques
-
-- 🧪 **Mettre en place des actions concrètes** :
-  - Quiz de validation (ex. un mois après l’onboarding)
-  - Relectures collectives (revues par pairs ou par le management technique)
-  - Inclusion dans les critères de DoD ou de release
-
-- 🔁 **Ancrer dans les rituels d’équipe** :
-  - Revue mensuelle du DA en comité technique
-  - Suivi dans les rituels d’équipe : évolutions, arbitrages, changements majeurs
-
-
-
 ---
 
 # 🧠 4 - Takeaway — Ce qu'il faut retenir
@@ -1201,7 +1113,7 @@ If a message can be interpreted in several ways, it will be interpreted in a man
 
 ----
 
-## 🚀 Un projet open source en perspective ?
+## 🚀 Un projet Open Qource en perspective ?
 
 - Améliorer et enrichir le modèle de dossier d’architecture (DA)
 - Proposer une **interface CLI** et/ou un **GUI** et/ou un **chatbot** ? pour générer des templates de DA contextualisés
