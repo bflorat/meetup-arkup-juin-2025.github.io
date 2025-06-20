@@ -933,7 +933,7 @@ Grâce aux **blocs structurés AsciiDoc**, il est possible de **consolider autom
 ---
 ## 🧸 Petit POC : ArchBot
 
-<!-- _class: small -->
+<!-- _class: smaller -->
 
 - Entraîné sur des documents d’architecture **AsciiDoc** et **PlantUML**
 - Stack : **RAG** (Retrieval-Augmented Generation) basé sur les modèles **Mistral 7B** ou **DeepSeek-V2**
@@ -1113,7 +1113,7 @@ If a message can be interpreted in several ways, it will be interpreted in a man
 
 ----
 
-## 🚀 Un projet Open Qource en perspective ?
+## 🚀 Un projet Open Source en perspective ?
 
 - Améliorer et enrichir le modèle de dossier d’architecture (DA)
 - Proposer une **interface CLI** et/ou un **GUI** et/ou un **chatbot** ? pour générer des templates de DA contextualisés
