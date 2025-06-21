@@ -935,14 +935,13 @@ Grâce aux **blocs structurés AsciiDoc**, il est possible de **consolider autom
 
 <!-- _class: smaller -->
 
+- POC en local
 - Entraîné sur des documents d’architecture **AsciiDoc** et **PlantUML**
 - Stack : **RAG** (Retrieval-Augmented Generation) basé sur les modèles **Mistral 7B** ou **DeepSeek-V2**
-- POC développé en local sur mon PC
 - Résultats **mitigés**, mais **nettement meilleurs avec `mistral-7b`**
 - Extrêmement lent (pas encore testé sur du matériel adapté)
 
 ![bg right:60% 80%](images/archbot.svg)
-
 
 
 ---
