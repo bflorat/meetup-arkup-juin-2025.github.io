@@ -340,13 +340,13 @@ Répond à la plupart de ces critères :
 
 ## 🗃️ Faible évolutivité et traçabilité
 
-* Peu ou pas de **collaboration active** avec les parties prenantes  
+- Peu ou pas de **collaboration active** avec les parties prenantes  
   - Décisions prises en silo  
   - Peu adapté aux revues par pair (suivi des modifications mais pas de MR)
 
-* Faible **traçabilité des évolutions**, en particulier sur les **diagrammes** (binaires)
+- Faible **traçabilité des évolutions**, en particulier sur les **diagrammes** (binaires)
 
-* Difficulté en cas de **renommage** ou de réorganisation  
+- Difficulté en cas de **renommage** ou de réorganisation  
   - Références croisées cassées  
   - Renommages / refactorings risqués et peu pratiques sur un lot de documents
 
