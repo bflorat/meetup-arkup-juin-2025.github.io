@@ -703,6 +703,35 @@ File diags-1.puml:
 
 ---
 
+## 🥷 La génération de matrice de flux depuis les diagrammes
+
+<!-- _class: smaller -->
+
+Exemple réel (à lancer depuis la CI-CD ou à la main) :
+
+``` 
+# Vers queues
+' cat diagrams/modules/dynamic.puml | grep Rel | awk -F'(' {'print $2'} |  sed 's/ //g' |  awk -F',' {'if ($1!=$2)print "| `"$1"` | `"$2"`"'}  | grep queue  | sed 's/_/-/g' | awk '!seen[$0]++'  | sort
+# Depuis et vers api:
+' cat diagrams/modules/dynamic.puml | grep Rel | awk -F'(' {'print $2'} |  sed 's/ //g' |  awk -F',' {'if ($1!=$2)print "| `"$1"` | `"$2"`"'}  | grep api | grep -vE 'frontal|appelant|pdf|trusted' | sed 's/_/-/g' | awk '!seen[$0]++'  | sort
+# Vers -fs ou -obj :
+' cat diagrams/modules/dynamic.puml | grep Rel | awk -F'(' {'print $2'} |  sed 's/ //g' |  awk -F',' {'if ($1!=$2)print "| `"$1"` | `"$2"`"'}  | grep -E '_fs|_obj' | sed 's/_/-/g' | awk '!seen[$0]++'  | sort
+# Vers bases de données
+' cat diagrams/modules/dynamic.puml | grep Rel | awk -F'(' {'print $2'} |  sed 's/ //g' |  awk -F',' {'if ($2 ~ /ma_base$|mon_autre_base$/)print "| `"$1"` | `"$2"`"'}  |  awk '!seen[$0]++'  | sort
+```
+Exemple partiel de sortie Asciidoc prête à coller dans le DA :
+
+```
+|====
+|Source|Destination
+
+| batch_xyz | base_1
+| api_y | base_2
+...
+```
+
+---
+
 ## 🗂️ Le Dossier d’Architecture *As Code*
 
 - Basé sur du **light markup** (idéalement **AsciiDoc**)
