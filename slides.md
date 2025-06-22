@@ -67,9 +67,19 @@ color: #555555
 
 ---
 
-# 📚 0 — Les enjeux de la documentation
-(en général et en architecture en particulier)
+# 📷 Le support  est disponible à :
 
+https://meetup-arkup-juin-2025.florat.net/
+
+ou simplement :
+
+https://florat.net/
+
+---
+
+# 📚 0 — Les enjeux de la documentation
+
+(en général et en architecture en particulier)
 
 ---
 
@@ -85,7 +95,7 @@ color: #555555
 
 ## ⚠️ Disclaimer
 
-- La **documentation** est, selon moi, particulièrement **incomprise** et **mal maîtrisée** par les équipes.
+- La **documentation** est particulièrement **incomprise** et **mal maîtrisée** par les équipes.
 - Le plus souvent :  
    - 🗂️ **Trop** de documentation...  
    - 📉 **Pas assez** de documentation...  
@@ -629,7 +639,7 @@ Source : https://c4model.com/
 ---
 
 ## 🥷 La factorisation des diagrammes
-<!-- _class: small -->
+<!-- _class: smaller -->
 Les diagrammes As Code permettent la factorisation de librairies (à utiliser en plantuml avec `remove @unlinked`) :
 
 ```
