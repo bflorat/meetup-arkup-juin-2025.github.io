@@ -69,11 +69,11 @@ color: #555555
 
 # 📷 Le support  est disponible à :
 
-https://meetup-arkup-juin-2025.florat.net/
+## https://meetup-arkup-juin-2025.florat.net/
 
 ou simplement :
 
-https://florat.net/
+## https://florat.net/
 
 ---
 
@@ -95,7 +95,9 @@ https://florat.net/
 
 ## ⚠️ Disclaimer
 
-- La **documentation** est particulièrement **incomprise** et **mal maîtrisée** par les équipes.
+<!-- _class: small -->
+
+- **Documentation** : sujet particulièrement **incompris** et **mal maîtrisé** par les équipes.
 - Le plus souvent :  
    - 🗂️ **Trop** de documentation...  
    - 📉 **Pas assez** de documentation...  
@@ -107,13 +109,13 @@ https://florat.net/
 ## 📈 Le ROI de la documentation
 
 - **Une activité qui dérape très facilement :**
-  - Documentation inutile, hors sujet, inmaintenable
-  - Coût élevé, retour hypothétique voire négatif
+  - Documentation inutile, hors sujet, **inmaintenable**
+  - **Coût élevé**, retour hypothétique voire négatif
   - En **Lean**, on appelle ça du **Muda** (gaspillage)
 
 - **Écrire une doc, c’est un engagement :**
-  - Beaucoup aiment écrire, peu souhaitent maintenir
-  - Écrire implique de maintenir dans la durée ⚠️
+  - Beaucoup aiment écrire, peu souhaitent **maintenir**
+  - Écrire implique de **maintenir dans la durée ⚠️**
 
 ---
 
@@ -130,11 +132,11 @@ https://florat.net/
 
 ---
 
-## 🛡️ **Documenter pour avancer**  
+## 🛡️ **Documenter pour avancer et cranter les sujets**  
 
 - 🚫 Moins de malentendus ➔ **économies** de temps, d’argent et de frustrations  
 - 📚 **Tracer les choix et leurs raisons** (ex. : ADR) ➔ éviter de reposer sans cesse les mêmes questions  
-- 🔄 Si besoin, on pourra toujours les réévaluer plus tard… mais en conscience.
+    - Si besoin, on pourra toujours les réévaluer plus tard… mais en conscience.
 
 ---
 
@@ -153,7 +155,7 @@ https://florat.net/
 
 # 🚫 Et ne doit pas :
 
-- Contenir du bullshit inutile :  
+- Contenir du **bullshit** :  
   - **Historique**, **détails inutiles**, **règles de l’art**, éléments **vagues** ou trop généraux
 
 - **Répéter** (principe DRY 🔄) :  
@@ -257,10 +259,9 @@ Que doit contenir (ou pas) la doc dans ce cas ?
 - Trop d’éléments (**~ > 20**)
 
 - Métaréprésentations floues :  
-  - Pas de légende  
+  - Pas de légende ou difficile à comprendre
   - Trop de couleurs, formes, types de flèches  
-  - Légendes difficiles à comprendre
-
+  
 - Flèches à **double sens** 🔁 (on ne sait pas qui initie la communication)
 
 ---
@@ -280,7 +281,7 @@ Que doit contenir (ou pas) la doc dans ce cas ?
 ---
 
 ### Exemple C4 : diagramme de container
-![width:20%](images/bons-diagrammes.png)
+![width:600](images/bons-diagrammes.svg)
 
 ---
 
@@ -512,7 +513,7 @@ class CalculatriceSpec extends Specification {
 
 Visualisation des spécifications sur un portail de documentation :
 
-![image](https://github.com/user-attachments/assets/7c71d669-94e1-4f3c-b4b5-9b0ca23da1d4)
+![bg right height:300px](images/antora.png)
 
 ---
 
@@ -596,22 +597,22 @@ Source : https://c4model.com/
 
 ## 👷 C4 dans la vraie vie
 
-<!-- _class: small -->
+<!-- _class: smaller -->
 
 - À coupler avec **PlantUML** (support intégré nativement)
 - Mes diagrammes préférés :
   - **System Landscape** (en remplacement du diagramme de contexte), utile pour l’architecture globale
   - **Diagramme de conteneur** : le plus utilisé de loin
   - **Diagramme de déploiement** : pour représenter l'infrastructure
-- Les **diagrammes dynamiques** (type séquence) sont une version améliorée des diagrammes de séquence UML
-- Éviter l’abus de diagrammes de **composants** (risque de sur-documentation) et de **code** (niveau UML)
+- Les **diagrammes dynamiques** : version améliorée diagrammes de séquence UML
+- Éviter l’abus de diagrammes de **composants** (sur-documentation) et de **code** (niveau UML)
 - Utiliser les **sprites** (plusieurs milliers inclus dans PlantUML)
-- C4 est parfois **moins adapté qu’Archimate** dans certains contextes : urbanisation SI, EA, TOGAF, ou outillage spécifique
+- Parfois **moins adapté qu’Archimate** : urbanisation SI, EA, TOGAF
 
 
 <div class="admonition tip">
-  💡 <strong>Remarque :</strong> Je n’aime pas le terme <i>diagramme de conteneur</i>.  
-  Je préfère utiliser le terme <i>diagramme d’unités déployables</i>, que je trouve plus explicite.
+  💡 <strong>Remarque :</strong> Je trouve le terme <i>diagramme de conteneur</i> confusant.  
+  J'utilise le terme <i>diagramme d’unités déployables</i>.
 </div>
 
 
@@ -653,9 +654,6 @@ fragments.iuml:
 !startsub intranet
   ContainerDb(db_a, "Database A","Postgresql", $sprite="postgresql")  
 !endsub
-!startsub extranet
-  ContainerDb(db_b, "Database B","Postgresql", $sprite="postgresql")
-!endsub
 
 File diags-1.puml:
 @startuml use-case-1
@@ -695,7 +693,7 @@ File diags-1.puml:
 
 ---
 
-## 🥷 La notion de coordonnées d’architecture
+## 🥷 La notion de coordonnée d’architecture
 
 - Si un DA contient **des dizaines voire des centaines de diagrammes**, il devient difficile de s’y référer précisément (par exemple, pour discuter d’un flux en production).
 - Nous découpons les **features** en *x* chaînes de liaison synchrones de *n* appels.
@@ -716,8 +714,8 @@ File diags-1.puml:
 
 ---
 
-## 📘 Mon modèle de dossier d’architecture
-<!-- _class: small -->
+## 📘 Une proposition de modèle de DA sur étagère
+<!-- _class: smaller -->
 
 ![bg left:20% fit](images/metiers.png)
 
@@ -727,13 +725,13 @@ File diags-1.puml:
 ![](images/stars-modele-da-en.png)
 
 - Découpe l’architecture solutions en **cinq vues**
-- Structure chaque vue en **Contraintes**, **Exigences** (ENF : Exigences Non Fonctionnelles) et **Solutions**
+- Structure chaque vue en **Contraintes**, **ENF** et **Solutions**
 - Approche **"check-list"** : aide à ne pas oublier les sujets importants
 - **Intègre l’incertitude** (hypothèses / points à statuer…)
 - Licence **CC Attribution - Partage dans les mêmes conditions**
 - Existe aussi en **version anglaise**
 - **Prêt à l’usage** : modèles vierges, manuel utilisateur, outils d’export…
-- **Amélioration continue** – Contributions bienvenues !
+- Projet **Open Source** – Contributions bienvenues !
 ---
 ## 📄 Les ADR (Architecture Decision Records)
 
@@ -804,7 +802,7 @@ Elle offre une meilleure résilience et une intégration plus souple dans notre 
 
 ## 🥷 Consolidation automatique des ADR
 
-<!-- _class: small -->
+<!-- _class: smaller -->
 
 Grâce aux **blocs structurés AsciiDoc**, il est possible de **consolider automatiquement** le statut de toutes les ADR dans un **tableau récapitulatif**.
 
@@ -858,11 +856,11 @@ Grâce aux **blocs structurés AsciiDoc**, il est possible de **consolider autom
 ---
 
 ### 🧾 Format conseillé :
-- **Date**
-- **Liste des participant·e·s**
-- **Informations clés**
-- **Décisions prises**
-- **Actions à mener** (formulées en mode **SMART**)
+1. **Date**
+2. **Liste des participant·e·s**
+3. **Informations clés**
+4. **Décisions prises**
+5. **Actions à mener** (formulées de façon **SMART**)
 
 ---
 
@@ -873,7 +871,7 @@ Grâce aux **blocs structurés AsciiDoc**, il est possible de **consolider autom
 - **Écriture textuelle** simple (Markdown, AsciiDoc)
 - **Versionnable** avec Git
 - **Réutilisable** et **automatisable**
-- **Indépendant des outils propriétaires** (PowerPoint, Google Slides) – 🆓 gratuit
+- **Indépendant des outils propriétaires** (PowerPoint, Google Slides)
 - Compatible avec les **LLM** (mise en page, émoticônes, rédaction, orthographe)  
   ➔ facile à parser pour alimenter un modèle d’architecture interne  
   ➔ **Productivité x2**
@@ -896,7 +894,7 @@ Grâce aux **blocs structurés AsciiDoc**, il est possible de **consolider autom
 
 ## 🤖 Tirer profit de la CI/CD pour la documentation *As Code*
 
-<!-- _class: smaller -->
+<!-- _class: small -->
 
 - **Exports automatiques** vers différents formats :
   - ✅ Idéal : une **archive contenant les HTML** + **diagrammes en SVG**
@@ -904,16 +902,21 @@ Grâce aux **blocs structurés AsciiDoc**, il est possible de **consolider autom
   - ❌ Docx / ODT : peu recommandé…
 
 - **Traitements automatisés** :
-  - Inclusion de texte, notices de copyright, filtrage selon le public cible...
-  - Découpage en modules ou pages selon la structure du DA
+  - Inclusion de texte, **notices de copyright**, filtrage selon le public cible...
+  - **Découpage en modules** ou pages selon la structure du DA
+
+
+---
+## 🤖 Tirer profit de la CI/CD pour la documentation *As Code* (suite)
+
+<!-- _class: small -->
 
 - **Analyses & contrôles** automatiques :
-  - Vérification d’éléments sensibles (copyright, données personnelles…)
-  - Indicateurs d’avancement du remplissage d’un Dossier d’Architecture (taux de couverture…)
+  - **Vérification** d’éléments sensibles (copyright, données personnelles…)
+  - **Indicateurs d’avancement** du remplissage d’un Dossier d’Architecture (taux de couverture…)
 
 - **Génération de documentation depuis le code** :
   - Exemple : détection d’annotations `@Good` dans le code ➔ export automatique vers une page de documentation Antora ➔ utile pour les nouveaux arrivants
-
 
 ---
 
@@ -926,7 +929,6 @@ Grâce aux **blocs structurés AsciiDoc**, il est possible de **consolider autom
   - le suivi (comptes-rendus)
   - les ADR
   - les études techniques
-
 
 ---
 
@@ -949,7 +951,6 @@ Grâce aux **blocs structurés AsciiDoc**, il est possible de **consolider autom
 - Entraîné sur des documents d’architecture **AsciiDoc** et **PlantUML**
 - Stack : **RAG** (Retrieval-Augmented Generation) basé sur les modèles **Mistral 7B** ou **DeepSeek-V2**
 - Résultats **mitigés**, mais **nettement meilleurs avec `mistral-7b`**
-- Extrêmement lent (pas encore testé sur du matériel adapté)
 
 ![bg right:60% 80%](images/archbot.svg)
 
@@ -987,13 +988,13 @@ Ne fais AUCUNE supposition ni invention.
 
 ## 😓 La documentation, même *As Code*, c’est difficile
 
-<!-- _class: small -->
+<!-- _class: smaller -->
 
-- Nécessite de bonnes compétences rédactionnelles
+- Nécessite de bonnes **compétences rédactionnelles**
 - Mais surtout : **de l’empathie** pour identifier le bon niveau de détail  
   (ni trop basique, ni trop complexe pour une personne normalement compétente dans le domaine)
 
-* Wiio’s Laws :
+- **Wiio’s Laws** :
 
 >Communication usually fails except by accident.
 If communication can fail, it will.
@@ -1002,7 +1003,6 @@ If communication seems to succeed in the intended way, there’s a misunderstand
 If you are content with your message, communication certainly fails.
 If a message can be interpreted in several ways, it will be interpreted in a manner that maximizes the damage.
 [...]
-
 
 ---
 
@@ -1019,6 +1019,8 @@ If a message can be interpreted in several ways, it will be interpreted in a man
 ---
 
 ## 🔄 Comment transférer le DA depuis GitLab vers nos prestataires ?
+
+<!-- _class: small -->
 
 ### 📦 1. Export via CI/CD
 
@@ -1146,7 +1148,7 @@ If a message can be interpreted in several ways, it will be interpreted in a man
 
 ## 🔗 Liens utiles
 
-- **Cette présentation** (Bertrand Florat) :  
+- **Cette présentation** :  
   👉 [https://meetup-arkup-juin-2025.florat.net](https://meetup-arkup-juin-2025.florat.net)
 
 - **Patterns de diagrammes PlantUML / C4** (Bertrand Florat) :  
