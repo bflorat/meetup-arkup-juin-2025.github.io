@@ -57,15 +57,6 @@ backgroundImage: none
 color: #555555
 -->
 
-# 🧭 Agenda (1H)
-
-* 0 - Les enjeux de la documentation (générale et d'architecture)
-* 1 - Les challenges de la documentation traditionnelle
-* 2 - La documentation d'architecture As Code
-* 3 - Les challenges de la doc As Code
-* 4 - Take-away & perspectives
-
----
 
 # 📷 Le support  est disponible à :
 
@@ -76,6 +67,31 @@ ou simplement :
 ## https://florat.net/
 
 ---
+
+
+## 🗳️ Sondage : Documentation as Code
+
+**Qui dans la salle…**  
+
+- ✋ A déjà entendu parler de "documentation as code" ?
+- 📄 Documente encore principalement avec des outils bureautiques ?
+- 🧪 A déjà testé une approche doc-as-code ?  
+- 🛠️ Utilise un outil comme **Asciidoc**, **Markdown**, **PlantUML**, **Antora**, **MkDocs**… ?
+- 🧙 Génère de la doc as code (depuis du code ou des diagrammes)
+- 🔁 A intégré la doc dans un **CI/CD**, ou dans une PR/MR comme du code ?
+
+---
+
+# 🧭 Agenda (1H)
+
+* 0 - Les enjeux de la documentation (générale et d'architecture)
+* 1 - Les challenges de la documentation traditionnelle
+* 2 - La documentation d'architecture As Code
+* 3 - Les challenges de la doc As Code
+* 4 - Take-away & perspectives
+
+---
+
 
 # 📚 0 — Les enjeux de la documentation
 
