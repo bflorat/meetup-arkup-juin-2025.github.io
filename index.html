@@ -236,7 +236,6 @@ section.smaller {
 <ul>
 <li><img class="emoji" draggable="false" alt="✋" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/270b.svg" data-marp-twemoji=""/> A déjà entendu parler de &quot;documentation as code&quot; ?</li>
 <li><img class="emoji" draggable="false" alt="📄" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4c4.svg" data-marp-twemoji=""/> Documente encore principalement avec des outils bureautiques ?</li>
-<li><img class="emoji" draggable="false" alt="🧪" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f9ea.svg" data-marp-twemoji=""/> A déjà testé une approche doc-as-code ?</li>
 <li><img class="emoji" draggable="false" alt="🛠️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f6e0.svg" data-marp-twemoji=""/> Utilise un outil comme <strong>Asciidoc</strong>, <strong>Markdown</strong>, <strong>PlantUML</strong>, <strong>Antora</strong>, <strong>MkDocs</strong>… ?</li>
 <li><img class="emoji" draggable="false" alt="🧙" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f9d9.svg" data-marp-twemoji=""/> Génère de la doc as code (depuis du code ou des diagrammes)</li>
 <li><img class="emoji" draggable="false" alt="🔁" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f501.svg" data-marp-twemoji=""/> A intégré la doc dans un <strong>CI/CD</strong>, ou dans une PR/MR comme du code ?</li>
@@ -739,7 +738,7 @@ section.smaller {
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -809,18 +808,121 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}">
+;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/rtfm.png&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="70%" height="720"><section id="10" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
+  width: 1280px;
+  height: 720px;
+  font-size: 28px;
+}
+@page {
+  size: 1280px 720px;
+  margin: 0;
+}
+section .admonition {
+  border-left: 4px solid #999;
+  padding: 0.75em 1em;
+  margin: 1.5em 0;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  font-size: 0.80em;
+}
+section .admonition.tip {
+  border-color: #2ecc71;
+  background: #f0fff0;    
+}
+section .admonition.warning {
+  border-color: #e67e22;
+  background: #fffaf0;
+}
+section .admonition.info {
+  border-color: #3498db;
+  background: #f0f8ff;
+}
+section.small {
+  font-size: 1.6em;
+}  
+section.smaller {
+  font-size: 1.4em;
+}
+" lang="en-US" data-marpit-pagination="10" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
+  width: 1280px;
+  height: 720px;
+  font-size: 28px;
+}
+@page {
+  size: 1280px 720px;
+  margin: 0;
+}
+section .admonition {
+  border-left: 4px solid #999;
+  padding: 0.75em 1em;
+  margin: 1.5em 0;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  font-size: 0.80em;
+}
+section .admonition.tip {
+  border-color: #2ecc71;
+  background: #f0fff0;    
+}
+section .admonition.warning {
+  border-color: #e67e22;
+  background: #fffaf0;
+}
+section .admonition.info {
+  border-color: #3498db;
+  background: #f0f8ff;
+}
+section.small {
+  font-size: 1.6em;
+}  
+section.smaller {
+  font-size: 1.4em;
+}
+;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h2 id="%F0%9F%9B%A1%EF%B8%8F-documenter-pour-avancer-et-cranter-les-sujets"><img class="emoji" draggable="false" alt="🛡️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f6e1.svg" data-marp-twemoji=""/> <strong>Documenter pour avancer et cranter les sujets</strong></h2>
+
 <ul>
-<li><img class="emoji" draggable="false" alt="🚫" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f6ab.svg" data-marp-twemoji=""/> Moins de malentendus ➔ <strong>économies</strong> de temps, d’argent et de frustrations</li>
-<li><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4da.svg" data-marp-twemoji=""/> <strong>Tracer les choix et leurs raisons</strong> (ex. : ADR) ➔ éviter de reposer sans cesse les mêmes questions
-<ul>
-<li>Si besoin, on pourra toujours les réévaluer plus tard… mais en conscience.</li>
-</ul>
-</li>
+<li>Moins de malentendus ➔ <strong>économies</strong> de temps, d’argent et de frustrations</li>
+<li><strong>Tracer les choix et leurs raisons</strong> (ex. : ADR) ➔ éviter de reposer sans cesse les mêmes questions</li>
+<li><strong>Economiser du temps</strong> et <strong>tester la motivation</strong> en renvoyant d'abord sur la doc</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
+  width: 1280px;
+  height: 720px;
+  font-size: 28px;
+}
+@page {
+  size: 1280px 720px;
+  margin: 0;
+}
+section .admonition {
+  border-left: 4px solid #999;
+  padding: 0.75em 1em;
+  margin: 1.5em 0;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  font-size: 0.80em;
+}
+section .admonition.tip {
+  border-color: #2ecc71;
+  background: #f0fff0;    
+}
+section .admonition.warning {
+  border-color: #e67e22;
+  background: #fffaf0;
+}
+section .admonition.info {
+  border-color: #3498db;
+  background: #f0f8ff;
+}
+section.small {
+  font-size: 1.6em;
+}  
+section.smaller {
+  font-size: 1.4em;
+}
+" lang="en-US" data-marpit-pagination="10" style="color:#555555;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -1400,24 +1502,14 @@ section.smaller {
   font-size: 1.4em;
 }
 ;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}">
-<h2 id="%E2%9D%93-quid-de-la-documentation-darchitecture-en-particulier"><img class="emoji" draggable="false" alt="❓" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2753.svg" data-marp-twemoji=""/> Quid de la documentation d’architecture en particulier ?</h2>
+<h1 id="%F0%9F%97%A3%EF%B8%8F-limportance-de-lul-ubiquitus-language"><img class="emoji" draggable="false" alt="🗣️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f5e3.svg" data-marp-twemoji=""/> L'importance de L'UL (Ubiquitus Language)</h1>
 <ul>
-<li>
-<p>Tout ce qui a été dit précédemment s’applique aussi aux documents d’architecture</p>
-</li>
-<li>
-<p>Préférer les diagrammes au texte (<strong>UML</strong>, <strong>C4</strong>, <strong>BPMN</strong>, <strong>ArchiMate</strong> en particulier)</p>
-</li>
-<li>
-<p>Ne pas hésiter à commenter les diagrammes (directement dans le diagramme ou dans le document parent avec des détails pertinents : <strong>tips / warnings</strong>)</p>
-</li>
-<li>
-<p>Être honnête :</p>
-<ul>
-<li>Lister les hypothèses d’architecture et études en cours dans un chapitre <strong>« Points non statués »</strong> pour chaque vue</li>
-<li>L’incertitude doit être <strong>affichée, pas masquée</strong></li>
-</ul>
-</li>
+<li>UL issu du <strong>Domain-Driven Design (DDD)</strong> d’Eric Evans</li>
+<li>Objectif : <strong>un langage partagé</strong> entre développeurs, experts métier, testeurs et architectes</li>
+<li>Utiliser <strong>les mêmes termes métier</strong> partout (code, doc, tests, diagrammes)</li>
+<li><strong>Éviter les synonymes</strong> et les variations</li>
+<li>Favorise la <strong>compréhension</strong> entre les parties prenantes</li>
+<li>Garantit la <strong>cohérence</strong> entre code et documentation</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
@@ -1491,27 +1583,23 @@ section.smaller {
   font-size: 1.4em;
 }
 ;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}">
-<h2 id="%F0%9F%93%9A-les-documentations-principales-de-larchitecte"><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4da.svg" data-marp-twemoji=""/> Les documentations principales de l’architecte</h2>
+<h2 id="%E2%9D%93-quid-de-la-documentation-darchitecture-en-particulier"><img class="emoji" draggable="false" alt="❓" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2753.svg" data-marp-twemoji=""/> Quid de la documentation d’architecture en particulier ?</h2>
 <ul>
 <li>
-<p><img class="emoji" draggable="false" alt="🏗️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f3d7.svg" data-marp-twemoji=""/> <strong>Dossier d’Architecture (DA)</strong><br />
-Vue d’ensemble des choix, contextes, exigences et contraintes</p>
+<p>Tout ce qui a été dit précédemment s’applique aussi aux documents d’architecture</p>
 </li>
 <li>
-<p><img class="emoji" draggable="false" alt="🧠" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f9e0.svg" data-marp-twemoji=""/> <strong>ADR – Architecture Decision Records</strong><br />
-Journal des décisions d’architecture, horodatées et justifiées</p>
+<p>Préférer les diagrammes au texte (<strong>UML</strong>, <strong>C4</strong>, <strong>BPMN</strong>, <strong>ArchiMate</strong> en particulier)</p>
 </li>
 <li>
-<p><img class="emoji" draggable="false" alt="📝" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4dd.svg" data-marp-twemoji=""/> <strong>Suivi des points d’architecture</strong><br />
-Comptes-rendus des réunions, discussions et arbitrages techniques</p>
+<p>Ne pas hésiter à commenter les diagrammes (directement dans le diagramme ou dans le document parent avec des détails pertinents : <strong>tips / warnings</strong>)</p>
 </li>
 <li>
-<p><img class="emoji" draggable="false" alt="🔐" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f510.svg" data-marp-twemoji=""/> <strong>Études techniques</strong> (sécurité, performance, etc.)  et bilans de <strong>POC</strong><br />
-Analyses approfondies pour justifier ou évaluer des solutions</p>
-</li>
-<li>
-<p><img class="emoji" draggable="false" alt="🎤" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f3a4.svg" data-marp-twemoji=""/> <strong>Supports de présentation</strong><br />
-Slides pour comités d’architecture, parties prenantes, équipes</p>
+<p>Être honnête :</p>
+<ul>
+<li>Lister les hypothèses d’architecture et études en cours dans un chapitre <strong>« Points non statués »</strong> pour chaque vue</li>
+<li>L’incertitude doit être <strong>affichée, pas masquée</strong></li>
+</ul>
 </li>
 </ul>
 </section>
@@ -1586,23 +1674,27 @@ section.smaller {
   font-size: 1.4em;
 }
 ;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}">
-<h2 id="%F0%9F%9B%91-les-diagrammes--anti-patterns-principaux"><img class="emoji" draggable="false" alt="🛑" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f6d1.svg" data-marp-twemoji=""/> Les diagrammes : anti-patterns principaux</h2>
+<h2 id="%F0%9F%93%9A-les-documentations-principales-de-larchitecte"><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4da.svg" data-marp-twemoji=""/> Les documentations principales de l’architecte</h2>
 <ul>
 <li>
-<p>Mélange de <strong>niveaux d’abstraction</strong> différents</p>
+<p><img class="emoji" draggable="false" alt="🏗️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f3d7.svg" data-marp-twemoji=""/> <strong>Dossier d’Architecture (DA)</strong><br />
+Vue d’ensemble des choix, contextes, exigences et contraintes</p>
 </li>
 <li>
-<p>Trop d’éléments (<strong>~ &gt; 20</strong>)</p>
+<p><img class="emoji" draggable="false" alt="🧠" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f9e0.svg" data-marp-twemoji=""/> <strong>ADR – Architecture Decision Records</strong><br />
+Journal des décisions d’architecture, horodatées et justifiées</p>
 </li>
 <li>
-<p>Métaréprésentations floues :</p>
-<ul>
-<li>Pas de légende ou difficile à comprendre</li>
-<li>Trop de couleurs, formes, types de flèches</li>
-</ul>
+<p><img class="emoji" draggable="false" alt="📝" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4dd.svg" data-marp-twemoji=""/> <strong>Suivi des points d’architecture</strong><br />
+Comptes-rendus des réunions, discussions et arbitrages techniques</p>
 </li>
 <li>
-<p>Flèches à <strong>double sens</strong> <img class="emoji" draggable="false" alt="🔁" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f501.svg" data-marp-twemoji=""/> (on ne sait pas qui initie la communication)</p>
+<p><img class="emoji" draggable="false" alt="🔐" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f510.svg" data-marp-twemoji=""/> <strong>Études techniques</strong> (sécurité, performance, etc.)  et bilans de <strong>POC</strong><br />
+Analyses approfondies pour justifier ou évaluer des solutions</p>
+</li>
+<li>
+<p><img class="emoji" draggable="false" alt="🎤" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f3a4.svg" data-marp-twemoji=""/> <strong>Supports de présentation</strong><br />
+Slides pour comités d’architecture, parties prenantes, équipes</p>
 </li>
 </ul>
 </section>
@@ -1677,7 +1769,25 @@ section.smaller {
   font-size: 1.4em;
 }
 ;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}">
-<p><img src="images/anti-patterns-diagrammes.png" alt="" /></p>
+<h2 id="%F0%9F%9B%91-les-diagrammes--anti-patterns-principaux"><img class="emoji" draggable="false" alt="🛑" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f6d1.svg" data-marp-twemoji=""/> Les diagrammes : anti-patterns principaux</h2>
+<ul>
+<li>
+<p>Mélange de <strong>niveaux d’abstraction</strong> différents</p>
+</li>
+<li>
+<p>Trop d’éléments (<strong>~ &gt; 20</strong>)</p>
+</li>
+<li>
+<p>Métaréprésentations floues :</p>
+<ul>
+<li>Pas de légende ou difficile à comprendre</li>
+<li>Trop de couleurs, formes, types de flèches</li>
+</ul>
+</li>
+<li>
+<p>Flèches à <strong>double sens</strong> <img class="emoji" draggable="false" alt="🔁" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f501.svg" data-marp-twemoji=""/> (on ne sait pas qui initie la communication)</p>
+</li>
+</ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
   width: 1280px;
@@ -1750,19 +1860,7 @@ section.smaller {
   font-size: 1.4em;
 }
 ;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}">
-<h2 id="%E2%9C%85-les-diagrammes--bonnes-pratiques-principales"><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" data-marp-twemoji=""/> Les diagrammes : bonnes pratiques principales</h2>
-<ul>
-<li>
-<p>Métaréprésentations <strong>simples</strong>, niveau d’<strong>abstraction homogène</strong>, <strong>nombre raisonnable</strong> d’éléments</p>
-</li>
-<li>
-<p><strong>Actions explicites sur les flèches</strong></p>
-<ul>
-<li>Indiquer le type d’échange ou de flux</li>
-<li>Indiquer la nature du flux (lecture / écriture / exécution), si utile</li>
-</ul>
-</li>
-</ul>
+<p><img src="images/anti-patterns-diagrammes.png" alt="" /></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
   width: 1280px;
@@ -1835,8 +1933,19 @@ section.smaller {
   font-size: 1.4em;
 }
 ;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}">
-<h3 id="exemple-c4--diagramme-de-container">Exemple C4 : diagramme de container</h3>
-<p><img src="images/bons-diagrammes.svg" alt="" style="width:600px;" /></p>
+<h2 id="%E2%9C%85-les-diagrammes--bonnes-pratiques-principales"><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" data-marp-twemoji=""/> Les diagrammes : bonnes pratiques principales</h2>
+<ul>
+<li>
+<p>Métaréprésentations <strong>simples</strong>, niveau d’<strong>abstraction homogène</strong>, <strong>nombre raisonnable</strong> d’éléments</p>
+</li>
+<li>
+<p><strong>Actions explicites sur les flèches</strong></p>
+<ul>
+<li>Indiquer le type d’échange ou de flux</li>
+<li>Indiquer la nature du flux (lecture / écriture / exécution), si utile</li>
+</ul>
+</li>
+</ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
   width: 1280px;
@@ -1909,7 +2018,8 @@ section.smaller {
   font-size: 1.4em;
 }
 ;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}">
-<h1 id="%F0%9F%97%83%EF%B8%8F-1---le-probl%C3%A8me-avec-la-documentation-traditionnelle"><img class="emoji" draggable="false" alt="🗃️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f5c3.svg" data-marp-twemoji=""/> 1 - Le problème avec la documentation traditionnelle</h1>
+<h3 id="exemple-c4--diagramme-de-container">Exemple C4 : diagramme de container</h3>
+<p><img src="images/bons-diagrammes.svg" alt="" style="width:600px;" /></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
   width: 1280px;
@@ -1982,30 +2092,9 @@ section.smaller {
   font-size: 1.4em;
 }
 ;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}">
-<h2 id="%F0%9F%92%A1-ce-que-jentends-par-%C2%AB-documentation-traditionnelle-%C2%BB"><img class="emoji" draggable="false" alt="💡" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4a1.svg" data-marp-twemoji=""/> Ce que j’entends par « documentation traditionnelle »</h2>
-<p>Répond à la plupart de ces critères :</p>
-<ul>
-<li>
-<p><strong>Documents bureautiques</strong> binaires : Word, PDF, PowerPoint… (même partagés)</p>
-</li>
-<li>
-<p><strong>Statique et figée</strong> dès sa publication</p>
-</li>
-<li>
-<p><strong>Mise à jour fastidieuse</strong> → risque élevé de <strong>devenir rapidement obsolète</strong></p>
-</li>
-<li>
-<p><strong>Traçabilité des modifications</strong> faible ou manuelle</p>
-</li>
-<li>
-<p>Peu intégrée aux <strong>outils et processus de développement</strong></p>
-</li>
-<li>
-<p>Existe uniquement comme livrable d’un <strong>processus</strong>, pas orientée produit</p>
-</li>
-</ul>
+<h1 id="%F0%9F%97%83%EF%B8%8F-1---le-probl%C3%A8me-avec-la-documentation-traditionnelle"><img class="emoji" draggable="false" alt="🗃️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f5c3.svg" data-marp-twemoji=""/> 1 - Le problème avec la documentation traditionnelle</h1>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-marpit-fragments="3" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -2076,28 +2165,30 @@ section.smaller {
   font-size: 1.4em;
 }
 ;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}">
-<h2 id="%F0%9F%97%83%EF%B8%8F-faible-%C3%A9volutivit%C3%A9-et-tra%C3%A7abilit%C3%A9"><img class="emoji" draggable="false" alt="🗃️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f5c3.svg" data-marp-twemoji=""/> Faible évolutivité et traçabilité</h2>
+<h2 id="%F0%9F%92%A1-ce-que-jentends-par-%C2%AB-documentation-traditionnelle-%C2%BB"><img class="emoji" draggable="false" alt="💡" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4a1.svg" data-marp-twemoji=""/> Ce que j’entends par « documentation traditionnelle »</h2>
+<p>Répond à la plupart de ces critères :</p>
 <ul>
-<li data-marpit-fragment="1">
-<p>Peu ou pas de <strong>collaboration active</strong> avec les parties prenantes</p>
-<ul>
-<li>Décisions prises en silo</li>
-<li>Peu adapté aux revues par pair (suivi des modifications mais pas de MR)</li>
-</ul>
+<li>
+<p><strong>Documents bureautiques</strong> binaires : Word, PDF, PowerPoint… (même partagés)</p>
 </li>
-<li data-marpit-fragment="2">
-<p>Faible <strong>traçabilité des évolutions</strong>, en particulier sur les <strong>diagrammes</strong> (binaires)</p>
+<li>
+<p><strong>Statique et figée</strong> dès sa publication</p>
 </li>
-<li data-marpit-fragment="3">
-<p>Difficulté en cas de <strong>renommage</strong> ou de réorganisation</p>
-<ul>
-<li>Références croisées cassées</li>
-<li>Renommages / refactorings risqués et peu pratiques sur un lot de documents</li>
-</ul>
+<li>
+<p><strong>Mise à jour fastidieuse</strong> → risque élevé de <strong>devenir rapidement obsolète</strong></p>
+</li>
+<li>
+<p><strong>Traçabilité des modifications</strong> faible ou manuelle</p>
+</li>
+<li>
+<p>Peu intégrée aux <strong>outils et processus de développement</strong></p>
+</li>
+<li>
+<p>Existe uniquement comme livrable d’un <strong>processus</strong>, pas orientée produit</p>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-marpit-fragments="2" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-marpit-fragments="3" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -2168,16 +2259,23 @@ section.smaller {
   font-size: 1.4em;
 }
 ;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}">
-<h2 id="%F0%9F%A4%96-une-doc-moins-adapt%C3%A9e-aux-llm"><img class="emoji" draggable="false" alt="🤖" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f916.svg" data-marp-twemoji=""/> Une doc moins adaptée aux LLM</h2>
+<h2 id="%F0%9F%97%83%EF%B8%8F-faible-%C3%A9volutivit%C3%A9-et-tra%C3%A7abilit%C3%A9"><img class="emoji" draggable="false" alt="🗃️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f5c3.svg" data-marp-twemoji=""/> Faible évolutivité et traçabilité</h2>
 <ul>
 <li data-marpit-fragment="1">
-<p>Outils bureautiques <strong>peu formels</strong> : structure faible, pas de validation possible du contenu ou des métadonnées (type Git hooks)</p>
+<p>Peu ou pas de <strong>collaboration active</strong> avec les parties prenantes</p>
+<ul>
+<li>Décisions prises en silo</li>
+<li>Peu adapté aux revues par pair (suivi des modifications mais pas de MR)</li>
+</ul>
 </li>
 <li data-marpit-fragment="2">
-<p>Perte de sens en cas d’<strong>entraînement de LLM</strong></p>
+<p>Faible <strong>traçabilité des évolutions</strong>, en particulier sur les <strong>diagrammes</strong> (binaires)</p>
+</li>
+<li data-marpit-fragment="3">
+<p>Difficulté en cas de <strong>renommage</strong> ou de réorganisation</p>
 <ul>
-<li>Contenu essentiellement binaire, peu structuré, plus difficile à exploiter par l’IA</li>
-<li>Plus difficile de faire générer du contenu</li>
+<li>Références croisées cassées</li>
+<li>Renommages / refactorings risqués et peu pratiques sur un lot de documents</li>
 </ul>
 </li>
 </ul>
@@ -2253,12 +2351,18 @@ section.smaller {
   font-size: 1.4em;
 }
 ;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}">
-<h2 id="%F0%9F%94%92-plus-de-risques-de-fuite"><img class="emoji" draggable="false" alt="🔒" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f512.svg" data-marp-twemoji=""/> Plus de risques de fuite</h2>
+<h2 id="%F0%9F%A4%96-une-doc-moins-adapt%C3%A9e-aux-llm"><img class="emoji" draggable="false" alt="🤖" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f916.svg" data-marp-twemoji=""/> Une doc moins adaptée aux LLM</h2>
 <ul>
-<li>Aspiration de drives partagés</li>
-<li>Export et diffusion incontrôlés des fichiers</li>
-<li>Métadonnées oubliées (ex. : devis pour un autre client…)</li>
-<li><img class="emoji" draggable="false" alt="📈" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4c8.svg" data-marp-twemoji=""/> <strong>Volumétrie importante</strong> (surtout en cas de multi-versions)</li>
+<li>
+<p>Documents bureautiques <strong>peu formels</strong> : structure faible, pas de validation possible du contenu ou des métadonnées (type Git hooks)</p>
+</li>
+<li>
+<p>Perte de sens en cas d’<strong>entraînement de LLM</strong></p>
+<ul>
+<li>Contenu essentiellement binaire, peu structuré, plus difficile à exploiter par l’IA</li>
+<li>Plus difficile de faire générer du contenu</li>
+</ul>
+</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
@@ -2332,12 +2436,12 @@ section.smaller {
   font-size: 1.4em;
 }
 ;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}">
-<h2 id="%E2%8F%B1%EF%B8%8F-des-efforts-de-mise-en-page-importants"><img class="emoji" draggable="false" alt="⏱️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/23f1.svg" data-marp-twemoji=""/> Des efforts de mise en page importants</h2>
+<h2 id="%F0%9F%94%92-plus-de-risques-de-fuite"><img class="emoji" draggable="false" alt="🔒" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f512.svg" data-marp-twemoji=""/> Plus de risques de fuite</h2>
 <ul>
-<li>Trop de temps consacré à la <strong>mise en page</strong> du texte et au <strong>polissage des diagrammes</strong></li>
-<li>Esthétique privilégiée au détriment du fond</li>
-<li>Création de <strong>diagrammes figés</strong> nécessitant de lourdes reprises pour toute modification</li>
-<li>Peu de <strong>réutilisation</strong> et pas de factorisation des représentations</li>
+<li>Aspiration de drives partagés</li>
+<li>Export et diffusion incontrôlés des fichiers</li>
+<li>Métadonnées oubliées (ex. : devis pour un autre client…)</li>
+<li><img class="emoji" draggable="false" alt="📈" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4c8.svg" data-marp-twemoji=""/> <strong>Volumétrie importante</strong> (surtout en cas de multi-versions)</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
@@ -2411,7 +2515,13 @@ section.smaller {
   font-size: 1.4em;
 }
 ;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}">
-<h1 id="%F0%9F%9A%80-2-%E2%80%93-la-documentation-as-code"><img class="emoji" draggable="false" alt="🚀" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f680.svg" data-marp-twemoji=""/> 2 – La Documentation As Code</h1>
+<h2 id="%E2%8F%B1%EF%B8%8F-des-efforts-de-mise-en-page-importants"><img class="emoji" draggable="false" alt="⏱️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/23f1.svg" data-marp-twemoji=""/> Des efforts de mise en page importants</h2>
+<ul>
+<li>Trop de temps consacré à la <strong>mise en page</strong> du texte et au <strong>polissage des diagrammes</strong></li>
+<li>Esthétique privilégiée au détriment du fond</li>
+<li>Création de <strong>diagrammes figés</strong> nécessitant de lourdes reprises pour toute modification</li>
+<li>Peu de <strong>réutilisation</strong> et pas de factorisation des représentations</li>
+</ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
   width: 1280px;
@@ -2484,49 +2594,7 @@ section.smaller {
   font-size: 1.4em;
 }
 ;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}">
-<h2 id="%F0%9F%8F%9B%EF%B8%8F-documentation-traditionnelle-vs-as-code"><img class="emoji" draggable="false" alt="🏛️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f3db.svg" data-marp-twemoji=""/> Documentation traditionnelle vs As Code</h2>
-<table>
-<thead>
-<tr>
-<th>Traditionnelle <img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4da.svg" data-marp-twemoji=""/></th>
-<th>Vivante / As Code <img class="emoji" draggable="false" alt="💻" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4bb.svg" data-marp-twemoji=""/></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Fichiers Word / PDF statiques</td>
-<td>Documentation versionnée (Git)</td>
-</tr>
-<tr>
-<td>Mise à jour manuelle</td>
-<td>Mise à jour via PR/MR / CI/CD</td>
-</tr>
-<tr>
-<td>Peu ou pas de traçabilité</td>
-<td>Historique, tags et auteurs tracés</td>
-</tr>
-<tr>
-<td>Rapide obsolescence</td>
-<td>Mise à jour continue</td>
-</tr>
-<tr>
-<td>Non intégrée aux workflows</td>
-<td>Intégrée dans le cycle DevOps</td>
-</tr>
-<tr>
-<td>Lecture linéaire</td>
-<td>Navigation hypertexte</td>
-</tr>
-<tr>
-<td>Diagrammes figés</td>
-<td>Diagrammes générés à partir du code</td>
-</tr>
-<tr>
-<td>Peu collaborative</td>
-<td>Collaboration via revues de code / MR/PR</td>
-</tr>
-</tbody>
-</table>
+<h1 id="%F0%9F%9A%80-2-%E2%80%93-la-documentation-as-code"><img class="emoji" draggable="false" alt="🚀" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f680.svg" data-marp-twemoji=""/> 2 – La Documentation As Code</h1>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
   width: 1280px;
@@ -2599,7 +2667,45 @@ section.smaller {
   font-size: 1.4em;
 }
 ;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}">
-<p><img class="emoji" draggable="false" alt="🎯" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f3af.svg" data-marp-twemoji=""/> <strong>En résumé</strong> : passer d’un document que l’on subit à un <strong>actif vivant et maîtrisé</strong> du projet</p>
+<h2 id="%F0%9F%8F%9B%EF%B8%8F-documentation-traditionnelle-vs-as-code"><img class="emoji" draggable="false" alt="🏛️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f3db.svg" data-marp-twemoji=""/> Documentation traditionnelle vs As Code</h2>
+<table>
+<thead>
+<tr>
+<th>Traditionnelle <img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4da.svg" data-marp-twemoji=""/></th>
+<th>Vivante / As Code <img class="emoji" draggable="false" alt="💻" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4bb.svg" data-marp-twemoji=""/></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fichiers Word / PDF statiques</td>
+<td>Texte versionné (Git)</td>
+</tr>
+<tr>
+<td>Peu ou pas de traçabilité</td>
+<td>Historique, tags et auteurs tracés</td>
+</tr>
+<tr>
+<td>Rapide obsolescence</td>
+<td>Mise à jour continue</td>
+</tr>
+<tr>
+<td>Non intégrée aux workflows</td>
+<td>Intégrée dans le cycle DevOps</td>
+</tr>
+<tr>
+<td>Lecture linéaire</td>
+<td>Navigation hypertexte</td>
+</tr>
+<tr>
+<td>Diagrammes figés</td>
+<td>Diagrammes générés à partir du code</td>
+</tr>
+<tr>
+<td>Peu collaborative</td>
+<td>Collaboration via revues de code / MR/PR</td>
+</tr>
+</tbody>
+</table>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
   width: 1280px;
@@ -2672,15 +2778,7 @@ section.smaller {
   font-size: 1.4em;
 }
 ;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}">
-<h2 id="%F0%9F%A7%B0-utiliser-git-pour-documenter-efficacement"><img class="emoji" draggable="false" alt="🧰" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f9f0.svg" data-marp-twemoji=""/> Utiliser Git pour documenter efficacement</h2>
-<ul>
-<li><strong>Historique complet</strong> : chaque modification est enregistrée</li>
-<li><strong>Tags</strong> : versionnez les jalons de votre documentation (v1.0, v2.0...)</li>
-<li><strong>Blame</strong> : savoir <em>qui</em> a écrit <em>quoi</em>, et <em>quand</em></li>
-<li><strong>Diffs</strong> : comparaison facile entre deux versions</li>
-<li><strong>Revue via merge request / pull request</strong></li>
-<li><strong>Revenir dans le temps</strong> : checkout d’une version antérieure</li>
-</ul>
+<p><img class="emoji" draggable="false" alt="🎯" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f3af.svg" data-marp-twemoji=""/> <strong>En résumé</strong> : passer d’un document que l’on subit à un <strong>actif vivant et maîtrisé</strong> du projet</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
   width: 1280px;
@@ -2753,12 +2851,14 @@ section.smaller {
   font-size: 1.4em;
 }
 ;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}">
-<h2 id="%F0%9F%A5%B7-et-au-del%C3%A0-de-git-de-base"><img class="emoji" draggable="false" alt="🥷" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f977.svg" data-marp-twemoji=""/> Et au-delà de Git de base</h2>
+<h2 id="%F0%9F%A7%B0-utiliser-git-pour-documenter-efficacement"><img class="emoji" draggable="false" alt="🧰" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f9f0.svg" data-marp-twemoji=""/> Utiliser Git pour documenter efficacement</h2>
 <ul>
-<li><strong>CI/CD</strong> pour valider / publier automatiquement votre doc (PDF, HTML…)</li>
-<li><strong>Git hooks</strong> : automatiser la mise à jour d’index ou de métadonnées</li>
-<li><strong>Traçabilité / conformité</strong> via signature GPG sur commits/tags (utile dans les environnements sensibles)</li>
-<li><strong>Collaboration distribuée</strong> : plusieurs auteurs, plusieurs branches</li>
+<li><strong>Historique complet</strong> : chaque modification est enregistrée</li>
+<li><strong>Tags</strong> : versionnez les jalons de votre documentation (v1.0, v2.0...)</li>
+<li><strong>Blame</strong> : savoir <em>qui</em> a écrit <em>quoi</em>, et <em>quand</em></li>
+<li><strong>Diffs</strong> : comparaison facile entre deux versions</li>
+<li><strong>Revue via merge request / pull request</strong></li>
+<li><strong>Revenir dans le temps</strong> : checkout d’une version antérieure</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
@@ -2832,14 +2932,11 @@ section.smaller {
   font-size: 1.4em;
 }
 ;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}">
-<h2 id="%F0%9F%93%84-lint%C3%A9r%C3%AAt-des-langages-de-balisage-l%C3%A9gers--asciidoc--markdown"><img class="emoji" draggable="false" alt="📄" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4c4.svg" data-marp-twemoji=""/> L’intérêt des langages de balisage légers : AsciiDoc / Markdown</h2>
+<h2 id="%F0%9F%A5%B7-et-au-del%C3%A0-de-git-de-base"><img class="emoji" draggable="false" alt="🥷" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f977.svg" data-marp-twemoji=""/> Et au-delà de Git de base</h2>
 <ul>
-<li><strong>Lisibles en brut</strong> : pas besoin d’outil pour lire ou modifier</li>
-<li><strong>Simplicité</strong> : syntaxe intuitive pour écrire vite</li>
-<li><strong>Faciles à générer</strong> : ex. : spécifications exécutables, rapports de tests Spock</li>
-<li><strong>Faciles à versionner</strong> : parfait pour Git (diffs propres, pas de binaire)</li>
-<li><strong>Bonne Intégration sur les plateformes</strong> : disponible de base sur Gitlab, Github...</li>
-<li><strong>Extensibles</strong> : AsciiDoc permet des blocs structurés (admonitions, macros, includes…)</li>
+<li><strong>CI/CD</strong> pour valider / publier automatiquement votre doc (PDF, HTML…)</li>
+<li><strong>Git hooks</strong> : automatiser la mise à jour d’index ou de métadonnées</li>
+<li><strong>Traçabilité / conformité</strong> via signature GPG sur commits/tags (utile dans les environnements sensibles)</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
@@ -2913,17 +3010,17 @@ section.smaller {
   font-size: 1.4em;
 }
 ;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}">
-<h2 id="%F0%9F%8F%86-pourquoi-asciidoc-pour-la-doc-technique-avanc%C3%A9e"><img class="emoji" draggable="false" alt="🏆" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f3c6.svg" data-marp-twemoji=""/> Pourquoi AsciiDoc pour la doc technique avancée ?</h2>
+<h2 id="%F0%9F%93%84-lint%C3%A9r%C3%AAt-des-langages-de-balisage-l%C3%A9gers--asciidoc--markdown"><img class="emoji" draggable="false" alt="📄" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4c4.svg" data-marp-twemoji=""/> L’intérêt des langages de balisage légers : AsciiDoc / Markdown</h2>
 <ul>
-<li><strong>Structure riche</strong> : sections, blocs, tableaux complexes</li>
-<li><strong>Macros &amp; includes</strong> : contenu réutilisable, factorisable</li>
-<li><strong>Table des matières (TOC), glossaires, bibliographies</strong></li>
-<li><strong>Admonitions</strong> : <code>NOTE</code>, <code>TIP</code>, <code>CAUTION</code>, etc.</li>
-<li><strong>Diagrammes intégrés</strong> (avec plugins): PlantUML, Mermaid…</li>
-<li><strong>Sorties variées</strong> : HTML5, PDF, DocBook…</li>
+<li><strong>Lisibles en brut</strong> : pas besoin d’outil pour lire ou modifier</li>
+<li><strong>Simplicité</strong> : syntaxe intuitive pour écrire vite</li>
+<li><strong>Faciles à générer</strong> : ex. : spécifications exécutables, rapports de tests Spock</li>
+<li><strong>Faciles à versionner</strong> : parfait pour Git (diffs propres, pas de binaire)</li>
+<li><strong>Bonne Intégration sur les plateformes</strong> : disponible de base sur Gitlab, Github...</li>
+<li><strong>Extensibles</strong> : AsciiDoc permet des blocs structurés (admonitions, macros, includes…)</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-class="small" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -2958,7 +3055,88 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-" lang="en-US" class="small" data-marpit-pagination="36" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--class:small;--style:section {
+" lang="en-US" data-marpit-pagination="36" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
+  width: 1280px;
+  height: 720px;
+  font-size: 28px;
+}
+@page {
+  size: 1280px 720px;
+  margin: 0;
+}
+section .admonition {
+  border-left: 4px solid #999;
+  padding: 0.75em 1em;
+  margin: 1.5em 0;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  font-size: 0.80em;
+}
+section .admonition.tip {
+  border-color: #2ecc71;
+  background: #f0fff0;    
+}
+section .admonition.warning {
+  border-color: #e67e22;
+  background: #fffaf0;
+}
+section .admonition.info {
+  border-color: #3498db;
+  background: #f0f8ff;
+}
+section.small {
+  font-size: 1.6em;
+}  
+section.smaller {
+  font-size: 1.4em;
+}
+;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}">
+<h2 id="%F0%9F%8F%86-pourquoi-asciidoc-pour-la-doc-technique-avanc%C3%A9e"><img class="emoji" draggable="false" alt="🏆" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f3c6.svg" data-marp-twemoji=""/> Pourquoi AsciiDoc pour la doc technique avancée ?</h2>
+<ul>
+<li><strong>Structure riche</strong> : sections, blocs, tableaux complexes</li>
+<li><strong>Macros &amp; includes</strong> : contenu réutilisable, factorisable</li>
+<li><strong>Table des matières (TOC), glossaires, bibliographies</strong></li>
+<li><strong>Admonitions</strong> : <code>NOTE</code>, <code>TIP</code>, <code>CAUTION</code>, etc.</li>
+<li><strong>Diagrammes intégrés</strong> (avec plugins): PlantUML, Mermaid…</li>
+<li><strong>Sorties variées</strong> : HTML5, PDF, DocBook…</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-class="small" data-style="section {
+  width: 1280px;
+  height: 720px;
+  font-size: 28px;
+}
+@page {
+  size: 1280px 720px;
+  margin: 0;
+}
+section .admonition {
+  border-left: 4px solid #999;
+  padding: 0.75em 1em;
+  margin: 1.5em 0;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  font-size: 0.80em;
+}
+section .admonition.tip {
+  border-color: #2ecc71;
+  background: #f0fff0;    
+}
+section .admonition.warning {
+  border-color: #e67e22;
+  background: #fffaf0;
+}
+section .admonition.info {
+  border-color: #3498db;
+  background: #f0f8ff;
+}
+section.small {
+  font-size: 1.6em;
+}  
+section.smaller {
+  font-size: 1.4em;
+}
+" lang="en-US" class="small" data-marpit-pagination="37" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--class:small;--style:section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -3038,85 +3216,6 @@ section.smaller {
 </tbody>
 </table>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
-  width: 1280px;
-  height: 720px;
-  font-size: 28px;
-}
-@page {
-  size: 1280px 720px;
-  margin: 0;
-}
-section .admonition {
-  border-left: 4px solid #999;
-  padding: 0.75em 1em;
-  margin: 1.5em 0;
-  border-radius: 4px;
-  background-color: #f9f9f9;
-  font-size: 0.80em;
-}
-section .admonition.tip {
-  border-color: #2ecc71;
-  background: #f0fff0;    
-}
-section .admonition.warning {
-  border-color: #e67e22;
-  background: #fffaf0;
-}
-section .admonition.info {
-  border-color: #3498db;
-  background: #f0f8ff;
-}
-section.small {
-  font-size: 1.6em;
-}  
-section.smaller {
-  font-size: 1.4em;
-}
-" lang="en-US" data-marpit-pagination="37" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
-  width: 1280px;
-  height: 720px;
-  font-size: 28px;
-}
-@page {
-  size: 1280px 720px;
-  margin: 0;
-}
-section .admonition {
-  border-left: 4px solid #999;
-  padding: 0.75em 1em;
-  margin: 1.5em 0;
-  border-radius: 4px;
-  background-color: #f9f9f9;
-  font-size: 0.80em;
-}
-section .admonition.tip {
-  border-color: #2ecc71;
-  background: #f0fff0;    
-}
-section .admonition.warning {
-  border-color: #e67e22;
-  background: #fffaf0;
-}
-section .admonition.info {
-  border-color: #3498db;
-  background: #f0f8ff;
-}
-section.small {
-  font-size: 1.6em;
-}  
-section.smaller {
-  font-size: 1.4em;
-}
-;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}">
-<p><img class="emoji" draggable="false" alt="🎯" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f3af.svg" data-marp-twemoji=""/> <strong>Quel outil pour quel usage ?</strong></p>
-<ul>
-<li><img class="emoji" draggable="false" alt="🖥️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f5a5.svg" data-marp-twemoji=""/> <strong>Docusaurus</strong> : produit/API, design et navigation moderne</li>
-<li><img class="emoji" draggable="false" alt="🧱" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f9f1.svg" data-marp-twemoji=""/> <strong>Antora</strong> : doc d'archi, microservices, équipes distribuées</li>
-<li><img class="emoji" draggable="false" alt="🚀" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f680.svg" data-marp-twemoji=""/> <strong>MkDocs</strong> : doc rapide à mettre en place, mono-repo</li>
-<li><img class="emoji" draggable="false" alt="🔧" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f527.svg" data-marp-twemoji=""/> <strong>AsciiDoc seul</strong> : doc technique avancée, sans framework</li>
-</ul>
-</section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
   width: 1280px;
   height: 720px;
@@ -3188,17 +3287,13 @@ section.smaller {
   font-size: 1.4em;
 }
 ;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}">
-<h2 id="%F0%9F%9A%80-antora--plateforme-de-doc-modulaire"><img class="emoji" draggable="false" alt="🚀" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f680.svg" data-marp-twemoji=""/> Antora : plateforme de doc modulaire</h2>
+<p><img class="emoji" draggable="false" alt="🎯" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f3af.svg" data-marp-twemoji=""/> <strong>Quel outil pour quel usage ?</strong></p>
 <ul>
-<li><strong>Organisation par composants, versions, modules</strong></li>
-<li><strong>Multi-dépôts Git</strong> : chaque équipe gère sa doc dans son propre repo</li>
-<li><strong>Mise à jour automatique</strong> des sources</li>
-<li><strong>Navigation unifiée</strong> sur un portail de documentation</li>
-<li><strong>Thématisation et publication pro</strong> (docs produit, API, guides…)</li>
+<li><img class="emoji" draggable="false" alt="🖥️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f5a5.svg" data-marp-twemoji=""/> <strong>Docusaurus</strong> : produit/API, design et navigation moderne</li>
+<li><img class="emoji" draggable="false" alt="🧱" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f9f1.svg" data-marp-twemoji=""/> <strong>Antora</strong> : doc d'archi, microservices, équipes distribuées</li>
+<li><img class="emoji" draggable="false" alt="🚀" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f680.svg" data-marp-twemoji=""/> <strong>MkDocs</strong> : doc rapide à mettre en place, mono-repo</li>
+<li><img class="emoji" draggable="false" alt="🔧" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f527.svg" data-marp-twemoji=""/> <strong>AsciiDoc seul</strong> : doc technique avancée, sans framework</li>
 </ul>
-<blockquote>
-<p><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" data-marp-twemoji=""/> Parfait pour la doc d’architecture, les microservices, et la documentation produit distribuée</p>
-</blockquote>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
   width: 1280px;
@@ -3271,18 +3366,17 @@ section.smaller {
   font-size: 1.4em;
 }
 ;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}">
-<h2 id="%E2%9C%85-les-sp%C3%A9cifications-ex%C3%A9cutables"><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" data-marp-twemoji=""/> Les Spécifications Exécutables</h2>
+<h2 id="%F0%9F%9A%80-antora--plateforme-de-doc-modulaire"><img class="emoji" draggable="false" alt="🚀" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f680.svg" data-marp-twemoji=""/> Antora : plateforme de doc modulaire</h2>
 <ul>
-<li>Traduction directe d’une <strong>exigence</strong> en un <strong>test automatisé</strong></li>
-<li>Structuration des tests en <strong>Gherkin</strong> (Given / When / Then)</li>
-<li>Servent à la fois à :
-<ul>
-<li><strong>Documenter</strong> les comportements attendus</li>
-<li><strong>Vérifier</strong> en continu leur respect</li>
+<li><strong>Organisation par composants, versions, modules</strong></li>
+<li><strong>Multi-dépôts Git</strong> : chaque équipe gère sa doc dans son propre repo</li>
+<li><strong>Mise à jour automatique</strong> des sources</li>
+<li><strong>Navigation unifiée</strong> sur un portail de documentation</li>
+<li><strong>Thématisation et publication pro</strong> (docs produit, API, guides…)</li>
 </ul>
-</li>
-<li>Forme lisible par les humains : développeurs, PO, QA…</li>
-</ul>
+<blockquote>
+<p><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" data-marp-twemoji=""/> Parfait pour la doc d’architecture, les microservices, et la documentation produit distribuée</p>
+</blockquote>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
   width: 1280px;
@@ -3355,27 +3449,18 @@ section.smaller {
   font-size: 1.4em;
 }
 ;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}">
-<h2 id="%F0%9F%A7%AA-exemple-de-sp%C3%A9cification-avec-spock"><img class="emoji" draggable="false" alt="🧪" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f9ea.svg" data-marp-twemoji=""/> Exemple de spécification avec Spock</h2>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-groovy"><span class="hljs-keyword">class</span> <span class="hljs-title class_">CalculatriceSpec</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Specification</span> {
-
-  <span class="hljs-keyword">def</span> <span class="hljs-string">&quot;La somme de deux nombres – Gherkin style&quot;</span>() {
-    <span class="hljs-symbol">given:</span> <span class="hljs-string">&quot;une calculatrice&quot;</span>
-    <span class="hljs-keyword">def</span> calculatrice = <span class="hljs-keyword">new</span> Calculatrice()
-
-    <span class="hljs-symbol">when:</span> <span class="hljs-string">&quot;je calcule la somme de #a et #b&quot;</span>
-    <span class="hljs-keyword">def</span> resultat = calculatrice.somme(a, b)
-
-    <span class="hljs-symbol">then:</span> <span class="hljs-string">&quot;le résultat doit être #result&quot;</span>
-    resultat == result
-
-    <span class="hljs-symbol">where:</span>
-    a  | b  || result
-    <span class="hljs-number">1</span>  | <span class="hljs-number">2</span>  || <span class="hljs-number">3</span>
-    <span class="hljs-number">0</span>  | <span class="hljs-number">0</span>  || <span class="hljs-number">0</span>
-    <span class="hljs-number">-1</span> | <span class="hljs-number">1</span>  || <span class="hljs-number">0</span>
-  }
-}
-</code></pre>
+<h2 id="%E2%9C%85-les-sp%C3%A9cifications-ex%C3%A9cutables"><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" data-marp-twemoji=""/> Les Spécifications Exécutables</h2>
+<ul>
+<li>Traduction directe d’une <strong>exigence</strong> en un <strong>test automatisé</strong></li>
+<li>Structuration des tests en <strong>Gherkin</strong> (Given / When / Then)</li>
+<li>Servent à la fois à :
+<ul>
+<li><strong>Documenter</strong> les comportements attendus</li>
+<li><strong>Vérifier</strong> en continu leur respect</li>
+</ul>
+</li>
+<li>Forme lisible par les humains : développeurs, PO, QA…</li>
+</ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
   width: 1280px;
@@ -3413,6 +3498,99 @@ section.smaller {
   font-size: 1.4em;
 }
 " lang="en-US" data-marpit-pagination="41" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
+  width: 1280px;
+  height: 720px;
+  font-size: 28px;
+}
+@page {
+  size: 1280px 720px;
+  margin: 0;
+}
+section .admonition {
+  border-left: 4px solid #999;
+  padding: 0.75em 1em;
+  margin: 1.5em 0;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  font-size: 0.80em;
+}
+section .admonition.tip {
+  border-color: #2ecc71;
+  background: #f0fff0;    
+}
+section .admonition.warning {
+  border-color: #e67e22;
+  background: #fffaf0;
+}
+section .admonition.info {
+  border-color: #3498db;
+  background: #f0f8ff;
+}
+section.small {
+  font-size: 1.6em;
+}  
+section.smaller {
+  font-size: 1.4em;
+}
+;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}">
+<h2 id="%F0%9F%A7%AA-exemple-de-sp%C3%A9cification-avec-spock"><img class="emoji" draggable="false" alt="🧪" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f9ea.svg" data-marp-twemoji=""/> Exemple de spécification avec Spock</h2>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-groovy"><span class="hljs-keyword">class</span> <span class="hljs-title class_">CalculatriceSpec</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Specification</span> {
+
+  <span class="hljs-keyword">def</span> <span class="hljs-string">&quot;La somme de deux nombres – Gherkin style&quot;</span>() {
+    <span class="hljs-symbol">given:</span> <span class="hljs-string">&quot;une calculatrice&quot;</span>
+    <span class="hljs-keyword">def</span> calculatrice = <span class="hljs-keyword">new</span> Calculatrice()
+
+    <span class="hljs-symbol">when:</span> <span class="hljs-string">&quot;je calcule la somme de #a et #b&quot;</span>
+    <span class="hljs-keyword">def</span> resultat = calculatrice.somme(a, b)
+
+    <span class="hljs-symbol">then:</span> <span class="hljs-string">&quot;le résultat doit être #result&quot;</span>
+    resultat == result
+
+    <span class="hljs-symbol">where:</span>
+    a  | b  || result
+    <span class="hljs-number">1</span>  | <span class="hljs-number">2</span>  || <span class="hljs-number">3</span>
+    <span class="hljs-number">0</span>  | <span class="hljs-number">0</span>  || <span class="hljs-number">0</span>
+    <span class="hljs-number">-1</span> | <span class="hljs-number">1</span>  || <span class="hljs-number">0</span>
+  }
+}
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
+  width: 1280px;
+  height: 720px;
+  font-size: 28px;
+}
+@page {
+  size: 1280px 720px;
+  margin: 0;
+}
+section .admonition {
+  border-left: 4px solid #999;
+  padding: 0.75em 1em;
+  margin: 1.5em 0;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  font-size: 0.80em;
+}
+section .admonition.tip {
+  border-color: #2ecc71;
+  background: #f0fff0;    
+}
+section .admonition.warning {
+  border-color: #e67e22;
+  background: #fffaf0;
+}
+section .admonition.info {
+  border-color: #3498db;
+  background: #f0f8ff;
+}
+section.small {
+  font-size: 1.6em;
+}  
+section.smaller {
+  font-size: 1.4em;
+}
+" lang="en-US" data-marpit-pagination="42" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -3501,7 +3679,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-" lang="en-US" data-marpit-pagination="42" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
+" lang="en-US" data-marpit-pagination="43" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -3536,7 +3714,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/antora.png&quot;);background-size:auto 300px;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="42" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
+;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/antora.png&quot;);background-size:auto 300px;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="43" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -3571,7 +3749,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-" lang="en-US" data-marpit-pagination="42" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
+" lang="en-US" data-marpit-pagination="43" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -3645,7 +3823,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-" lang="en-US" data-marpit-pagination="42" style="color:#555555;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
+" lang="en-US" data-marpit-pagination="43" style="color:#555555;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -3680,7 +3858,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-" lang="en-US" data-marpit-pagination="43" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
+" lang="en-US" data-marpit-pagination="44" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -3723,7 +3901,7 @@ section.smaller {
 <li>Réutilisables pour l'audit, l'architecture, la conformité, etc.</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -3758,7 +3936,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-" lang="en-US" data-marpit-pagination="44" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
+" lang="en-US" data-marpit-pagination="45" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -3843,7 +4021,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-" lang="en-US" data-marpit-pagination="45" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
+" lang="en-US" data-marpit-pagination="46" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -3878,7 +4056,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="background" data-marpit-advanced-background-split="left"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/ex-mermaid.png&quot;);background-size:300px auto;"></figure><figure style="background-image:url(&quot;images/ex-plantuml.png&quot;);background-size:300px auto;"></figure></div></section></foreignObject><foreignObject width="50%" height="720" x="50%"><section id="45" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
+;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="background" data-marpit-advanced-background-split="left"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/ex-mermaid.png&quot;);background-size:300px auto;"></figure><figure style="background-image:url(&quot;images/ex-plantuml.png&quot;);background-size:300px auto;"></figure></div></section></foreignObject><foreignObject width="50%" height="720" x="50%"><section id="46" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -3913,7 +4091,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-" lang="en-US" data-marpit-pagination="45" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
+" lang="en-US" data-marpit-pagination="46" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -4003,7 +4181,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-" lang="en-US" data-marpit-pagination="45" style="color:#555555;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="left"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="46" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-class="small" data-style="section {
+" lang="en-US" data-marpit-pagination="46" style="color:#555555;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="left"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="47" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-class="small" data-style="section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -4038,7 +4216,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-" lang="en-US" class="small" data-marpit-pagination="46" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--class:small;--style:section {
+" lang="en-US" class="small" data-marpit-pagination="47" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--class:small;--style:section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -4080,21 +4258,8 @@ section.smaller {
 <li>
 <p><strong>IDE</strong> :</p>
 <ul>
-<li><strong>IntelliJ IDEA</strong> : support natif de PlantUML, Mermaid via plugins</li>
 <li><strong>VS Code</strong> : extensions pour Mermaid, PlantUML, Graphviz, Kroki</li>
-<li><strong>Obsidian</strong> : Mermaid intégré, PlantUML via plugins</li>
-</ul>
-</li>
-<li>
-<p><strong>Outils de documentation</strong> :</p>
-<ul>
-<li><strong>Antora</strong>, <strong>MkDocs</strong>, <strong>Asciidoctor</strong></li>
-</ul>
-</li>
-<li>
-<p><strong>CI/CD</strong> :</p>
-<ul>
-<li>Génération automatique via CLI ou via <strong>Kroki</strong></li>
+<li><strong>IntelliJ IDEA</strong> : support natif de PlantUML, Mermaid via plugins</li>
 </ul>
 </li>
 <li>
@@ -4105,7 +4270,7 @@ section.smaller {
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="47" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -4140,7 +4305,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-" lang="en-US" data-marpit-pagination="47" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
+" lang="en-US" data-marpit-pagination="48" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -4180,7 +4345,7 @@ section.smaller {
 <p><img src="images/c4-overview.png" alt="" style="width:800px;" /></p>
 <p>Source : <a href="https://c4model.com/">https://c4model.com/</a></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-class="smaller" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-class="smaller" data-style="section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -4215,7 +4380,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-" lang="en-US" class="smaller" data-marpit-pagination="48" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--class:smaller;--style:section {
+" lang="en-US" class="smaller" data-marpit-pagination="49" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--class:smaller;--style:section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -4272,7 +4437,7 @@ section.smaller {
   J'utilise le terme <i>diagramme d’unités déployables</i>.
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -4307,7 +4472,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-" lang="en-US" data-marpit-pagination="49" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
+" lang="en-US" data-marpit-pagination="50" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -4359,7 +4524,7 @@ section.smaller {
 @enduml
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-class="smaller" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="51" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-class="smaller" data-style="section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -4394,7 +4559,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-" lang="en-US" class="smaller" data-marpit-pagination="50" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--class:smaller;--style:section {
+" lang="en-US" class="smaller" data-marpit-pagination="51" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--class:smaller;--style:section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -4490,7 +4655,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-" lang="en-US" data-marpit-pagination="51" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
+" lang="en-US" data-marpit-pagination="52" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -4525,7 +4690,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="background" data-marpit-advanced-background-split="left"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/28-diag-1.png&quot;);background-size:400px auto;"></figure></div></section></foreignObject><foreignObject width="50%" height="720" x="50%"><section id="51" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
+;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="background" data-marpit-advanced-background-split="left"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/28-diag-1.png&quot;);background-size:400px auto;"></figure></div></section></foreignObject><foreignObject width="50%" height="720" x="50%"><section id="52" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -4560,7 +4725,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-" lang="en-US" data-marpit-pagination="51" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
+" lang="en-US" data-marpit-pagination="52" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -4600,187 +4765,6 @@ section.smaller {
 <ul>
 <li>Regrouper les unités déployables dans des <strong>librairies réutilisables</strong>, découpées par zones fonctionnelles.</li>
 <li>Intégrer dans le DA (vue applicative) une <strong>big picture</strong> de l'inventaire, sans afficher les relations.</li>
-</ul>
-</section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
-  width: 1280px;
-  height: 720px;
-  font-size: 28px;
-}
-@page {
-  size: 1280px 720px;
-  margin: 0;
-}
-section .admonition {
-  border-left: 4px solid #999;
-  padding: 0.75em 1em;
-  margin: 1.5em 0;
-  border-radius: 4px;
-  background-color: #f9f9f9;
-  font-size: 0.80em;
-}
-section .admonition.tip {
-  border-color: #2ecc71;
-  background: #f0fff0;    
-}
-section .admonition.warning {
-  border-color: #e67e22;
-  background: #fffaf0;
-}
-section .admonition.info {
-  border-color: #3498db;
-  background: #f0f8ff;
-}
-section.small {
-  font-size: 1.6em;
-}  
-section.smaller {
-  font-size: 1.4em;
-}
-" lang="en-US" data-marpit-pagination="51" style="color:#555555;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="left"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
-  width: 1280px;
-  height: 720px;
-  font-size: 28px;
-}
-@page {
-  size: 1280px 720px;
-  margin: 0;
-}
-section .admonition {
-  border-left: 4px solid #999;
-  padding: 0.75em 1em;
-  margin: 1.5em 0;
-  border-radius: 4px;
-  background-color: #f9f9f9;
-  font-size: 0.80em;
-}
-section .admonition.tip {
-  border-color: #2ecc71;
-  background: #f0fff0;    
-}
-section .admonition.warning {
-  border-color: #e67e22;
-  background: #fffaf0;
-}
-section .admonition.info {
-  border-color: #3498db;
-  background: #f0f8ff;
-}
-section.small {
-  font-size: 1.6em;
-}  
-section.smaller {
-  font-size: 1.4em;
-}
-" lang="en-US" data-marpit-pagination="52" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
-  width: 1280px;
-  height: 720px;
-  font-size: 28px;
-}
-@page {
-  size: 1280px 720px;
-  margin: 0;
-}
-section .admonition {
-  border-left: 4px solid #999;
-  padding: 0.75em 1em;
-  margin: 1.5em 0;
-  border-radius: 4px;
-  background-color: #f9f9f9;
-  font-size: 0.80em;
-}
-section .admonition.tip {
-  border-color: #2ecc71;
-  background: #f0fff0;    
-}
-section .admonition.warning {
-  border-color: #e67e22;
-  background: #fffaf0;
-}
-section .admonition.info {
-  border-color: #3498db;
-  background: #f0f8ff;
-}
-section.small {
-  font-size: 1.6em;
-}  
-section.smaller {
-  font-size: 1.4em;
-}
-;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="background" data-marpit-advanced-background-split="left"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/28-diag-2.png&quot;);background-size:400px auto;"></figure></div></section></foreignObject><foreignObject width="50%" height="720" x="50%"><section id="52" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
-  width: 1280px;
-  height: 720px;
-  font-size: 28px;
-}
-@page {
-  size: 1280px 720px;
-  margin: 0;
-}
-section .admonition {
-  border-left: 4px solid #999;
-  padding: 0.75em 1em;
-  margin: 1.5em 0;
-  border-radius: 4px;
-  background-color: #f9f9f9;
-  font-size: 0.80em;
-}
-section .admonition.tip {
-  border-color: #2ecc71;
-  background: #f0fff0;    
-}
-section .admonition.warning {
-  border-color: #e67e22;
-  background: #fffaf0;
-}
-section .admonition.info {
-  border-color: #3498db;
-  background: #f0f8ff;
-}
-section.small {
-  font-size: 1.6em;
-}  
-section.smaller {
-  font-size: 1.4em;
-}
-" lang="en-US" data-marpit-pagination="52" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
-  width: 1280px;
-  height: 720px;
-  font-size: 28px;
-}
-@page {
-  size: 1280px 720px;
-  margin: 0;
-}
-section .admonition {
-  border-left: 4px solid #999;
-  padding: 0.75em 1em;
-  margin: 1.5em 0;
-  border-radius: 4px;
-  background-color: #f9f9f9;
-  font-size: 0.80em;
-}
-section .admonition.tip {
-  border-color: #2ecc71;
-  background: #f0fff0;    
-}
-section .admonition.warning {
-  border-color: #e67e22;
-  background: #fffaf0;
-}
-section .admonition.info {
-  border-color: #3498db;
-  background: #f0f8ff;
-}
-section.small {
-  font-size: 1.6em;
-}  
-section.smaller {
-  font-size: 1.4em;
-}
-;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="content" data-marpit-advanced-background-split="left">
-<h2 id="%F0%9F%A5%B7-pattern--diagrammes-dynamiques"><img class="emoji" draggable="false" alt="🥷" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f977.svg" data-marp-twemoji=""/> Pattern : diagrammes dynamiques</h2>
-<ul>
-<li>Intégrer dans le DA (vue applicative) une <strong>big picture</strong> des principales dépendances applicatives.</li>
 </ul>
 </section>
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
@@ -4888,7 +4872,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="background" data-marpit-advanced-background-split="left"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/28-diag-9.svg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="50%" height="720" x="50%"><section id="53" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
+;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="background" data-marpit-advanced-background-split="left"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/28-diag-2.png&quot;);background-size:400px auto;"></figure></div></section></foreignObject><foreignObject width="50%" height="720" x="50%"><section id="53" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -4924,6 +4908,187 @@ section.smaller {
   font-size: 1.4em;
 }
 " lang="en-US" data-marpit-pagination="53" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
+  width: 1280px;
+  height: 720px;
+  font-size: 28px;
+}
+@page {
+  size: 1280px 720px;
+  margin: 0;
+}
+section .admonition {
+  border-left: 4px solid #999;
+  padding: 0.75em 1em;
+  margin: 1.5em 0;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  font-size: 0.80em;
+}
+section .admonition.tip {
+  border-color: #2ecc71;
+  background: #f0fff0;    
+}
+section .admonition.warning {
+  border-color: #e67e22;
+  background: #fffaf0;
+}
+section .admonition.info {
+  border-color: #3498db;
+  background: #f0f8ff;
+}
+section.small {
+  font-size: 1.6em;
+}  
+section.smaller {
+  font-size: 1.4em;
+}
+;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="content" data-marpit-advanced-background-split="left">
+<h2 id="%F0%9F%A5%B7-pattern--diagrammes-dynamiques"><img class="emoji" draggable="false" alt="🥷" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f977.svg" data-marp-twemoji=""/> Pattern : diagrammes dynamiques</h2>
+<ul>
+<li>Intégrer dans le DA (vue applicative) une <strong>big picture</strong> des principales dépendances applicatives.</li>
+</ul>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
+  width: 1280px;
+  height: 720px;
+  font-size: 28px;
+}
+@page {
+  size: 1280px 720px;
+  margin: 0;
+}
+section .admonition {
+  border-left: 4px solid #999;
+  padding: 0.75em 1em;
+  margin: 1.5em 0;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  font-size: 0.80em;
+}
+section .admonition.tip {
+  border-color: #2ecc71;
+  background: #f0fff0;    
+}
+section .admonition.warning {
+  border-color: #e67e22;
+  background: #fffaf0;
+}
+section .admonition.info {
+  border-color: #3498db;
+  background: #f0f8ff;
+}
+section.small {
+  font-size: 1.6em;
+}  
+section.smaller {
+  font-size: 1.4em;
+}
+" lang="en-US" data-marpit-pagination="53" style="color:#555555;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="left"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
+  width: 1280px;
+  height: 720px;
+  font-size: 28px;
+}
+@page {
+  size: 1280px 720px;
+  margin: 0;
+}
+section .admonition {
+  border-left: 4px solid #999;
+  padding: 0.75em 1em;
+  margin: 1.5em 0;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  font-size: 0.80em;
+}
+section .admonition.tip {
+  border-color: #2ecc71;
+  background: #f0fff0;    
+}
+section .admonition.warning {
+  border-color: #e67e22;
+  background: #fffaf0;
+}
+section .admonition.info {
+  border-color: #3498db;
+  background: #f0f8ff;
+}
+section.small {
+  font-size: 1.6em;
+}  
+section.smaller {
+  font-size: 1.4em;
+}
+" lang="en-US" data-marpit-pagination="54" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
+  width: 1280px;
+  height: 720px;
+  font-size: 28px;
+}
+@page {
+  size: 1280px 720px;
+  margin: 0;
+}
+section .admonition {
+  border-left: 4px solid #999;
+  padding: 0.75em 1em;
+  margin: 1.5em 0;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  font-size: 0.80em;
+}
+section .admonition.tip {
+  border-color: #2ecc71;
+  background: #f0fff0;    
+}
+section .admonition.warning {
+  border-color: #e67e22;
+  background: #fffaf0;
+}
+section .admonition.info {
+  border-color: #3498db;
+  background: #f0f8ff;
+}
+section.small {
+  font-size: 1.6em;
+}  
+section.smaller {
+  font-size: 1.4em;
+}
+;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="background" data-marpit-advanced-background-split="left"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/28-diag-9.svg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="50%" height="720" x="50%"><section id="54" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
+  width: 1280px;
+  height: 720px;
+  font-size: 28px;
+}
+@page {
+  size: 1280px 720px;
+  margin: 0;
+}
+section .admonition {
+  border-left: 4px solid #999;
+  padding: 0.75em 1em;
+  margin: 1.5em 0;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  font-size: 0.80em;
+}
+section .admonition.tip {
+  border-color: #2ecc71;
+  background: #f0fff0;    
+}
+section .admonition.warning {
+  border-color: #e67e22;
+  background: #fffaf0;
+}
+section .admonition.info {
+  border-color: #3498db;
+  background: #f0f8ff;
+}
+section.small {
+  font-size: 1.6em;
+}  
+section.smaller {
+  font-size: 1.4em;
+}
+" lang="en-US" data-marpit-pagination="54" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -4999,7 +5164,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-" lang="en-US" data-marpit-pagination="53" style="color:#555555;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="left"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="54" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
+" lang="en-US" data-marpit-pagination="54" style="color:#555555;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="left"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="55" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -5034,7 +5199,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-" lang="en-US" data-marpit-pagination="54" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
+" lang="en-US" data-marpit-pagination="55" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -5079,7 +5244,7 @@ Flux numéro 5 de la chaîne numéro 3 de la feature <em>enregistrement de la co
 ➔ Référence directe dans les <strong>tickets</strong>, <strong>post-mortems</strong>, <strong>alertes</strong>, etc.</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="55" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-class="smaller" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="56" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-class="smaller" data-style="section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -5114,7 +5279,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-" lang="en-US" class="smaller" data-marpit-pagination="55" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--class:smaller;--style:section {
+" lang="en-US" class="smaller" data-marpit-pagination="56" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--class:smaller;--style:section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -5171,7 +5336,7 @@ section.smaller {
 ...
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="56" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="57" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -5206,7 +5371,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-" lang="en-US" data-marpit-pagination="56" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
+" lang="en-US" data-marpit-pagination="57" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -5287,7 +5452,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-" lang="en-US" class="smaller" data-marpit-pagination="57" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--class:smaller;--style:section {
+" lang="en-US" class="smaller" data-marpit-pagination="58" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--class:smaller;--style:section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -5322,7 +5487,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:20%;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="background" data-marpit-advanced-background-split="left"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/metiers.png&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="80%" height="720" x="20%"><section id="57" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-class="smaller" data-style="section {
+;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:20%;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="background" data-marpit-advanced-background-split="left"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/metiers.png&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="80%" height="720" x="20%"><section id="58" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-class="smaller" data-style="section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -5357,7 +5522,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-" lang="en-US" class="smaller" data-marpit-pagination="57" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--class:smaller;--style:section {
+" lang="en-US" class="smaller" data-marpit-pagination="58" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--class:smaller;--style:section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -5444,7 +5609,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-" lang="en-US" class="smaller" data-marpit-pagination="57" style="color:#555555;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="left"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="58" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-class="small" data-style="section {
+" lang="en-US" class="smaller" data-marpit-pagination="58" style="color:#555555;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="left"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="59" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-class="small" data-style="section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -5479,7 +5644,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-" lang="en-US" class="small" data-marpit-pagination="58" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--class:small;--style:section {
+" lang="en-US" class="small" data-marpit-pagination="59" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--class:small;--style:section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -5532,7 +5697,7 @@ section.smaller {
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="59" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-class="small" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="60" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-class="small" data-style="section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -5567,7 +5732,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-" lang="en-US" class="small" data-marpit-pagination="59" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--class:small;--style:section {
+" lang="en-US" class="small" data-marpit-pagination="60" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--class:small;--style:section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -5648,7 +5813,7 @@ Elle offre une meilleure résilience et une intégration plus souple dans notre 
 [...]
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="60" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-class="smaller" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="61" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-class="smaller" data-style="section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -5683,7 +5848,7 @@ section.small {
 section.smaller {
   font-size: 1.4em;
 }
-" lang="en-US" class="smaller" data-marpit-pagination="60" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--class:smaller;--style:section {
+" lang="en-US" class="smaller" data-marpit-pagination="61" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--class:smaller;--style:section {
   width: 1280px;
   height: 720px;
   font-size: 28px;
@@ -5741,92 +5906,6 @@ section.smaller {
 ...
 |===
 </code></pre>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="61" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
-  width: 1280px;
-  height: 720px;
-  font-size: 28px;
-}
-@page {
-  size: 1280px 720px;
-  margin: 0;
-}
-section .admonition {
-  border-left: 4px solid #999;
-  padding: 0.75em 1em;
-  margin: 1.5em 0;
-  border-radius: 4px;
-  background-color: #f9f9f9;
-  font-size: 0.80em;
-}
-section .admonition.tip {
-  border-color: #2ecc71;
-  background: #f0fff0;    
-}
-section .admonition.warning {
-  border-color: #e67e22;
-  background: #fffaf0;
-}
-section .admonition.info {
-  border-color: #3498db;
-  background: #f0f8ff;
-}
-section.small {
-  font-size: 1.6em;
-}  
-section.smaller {
-  font-size: 1.4em;
-}
-" lang="en-US" data-marpit-pagination="61" style="--paginate:true;--background-image:none;--background-size:cover;--color:#555555;--style:section {
-  width: 1280px;
-  height: 720px;
-  font-size: 28px;
-}
-@page {
-  size: 1280px 720px;
-  margin: 0;
-}
-section .admonition {
-  border-left: 4px solid #999;
-  padding: 0.75em 1em;
-  margin: 1.5em 0;
-  border-radius: 4px;
-  background-color: #f9f9f9;
-  font-size: 0.80em;
-}
-section .admonition.tip {
-  border-color: #2ecc71;
-  background: #f0fff0;    
-}
-section .admonition.warning {
-  border-color: #e67e22;
-  background: #fffaf0;
-}
-section .admonition.info {
-  border-color: #3498db;
-  background: #f0f8ff;
-}
-section.small {
-  font-size: 1.6em;
-}  
-section.smaller {
-  font-size: 1.4em;
-}
-;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}">
-<h1 id="%F0%9F%97%A3%EF%B8%8F-limportance-de-lul-ubiquitus-language"><img class="emoji" draggable="false" alt="🗣️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f5e3.svg" data-marp-twemoji=""/> L'importance de L'UL (Ubiquitus Language)</h1>
-<ul>
-<li>UL issu du <strong>Domain-Driven Design (DDD)</strong> d’Eric Evans</li>
-<li>Objectif : <strong>un langage partagé</strong> entre développeurs, experts métier, testeurs et architectes</li>
-<li>Le DA (dossier d'architecture) <strong>doit refléter ce langage</strong> :
-<ul>
-<li><img class="emoji" draggable="false" alt="📘" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4d8.svg" data-marp-twemoji=""/> Utiliser <strong>les mêmes termes métier</strong> partout (code, doc, tests, diagrammes)</li>
-<li><img class="emoji" draggable="false" alt="🚫" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f6ab.svg" data-marp-twemoji=""/> <strong>Éviter les synonymes</strong> et les variations</li>
-</ul>
-</li>
-<li><img class="emoji" draggable="false" alt="🤝" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f91d.svg" data-marp-twemoji=""/> Favorise la compréhension entre les parties prenantes</li>
-<li><img class="emoji" draggable="false" alt="🔎" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f50e.svg" data-marp-twemoji=""/> Améliore la traçabilité des concepts métier</li>
-<li><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" data-marp-twemoji=""/> Garantit la cohérence entre code et documentation</li>
-</ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="62" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
   width: 1280px;
@@ -7537,8 +7616,7 @@ section.smaller {
 <li>
 <p>Le <strong>DA</strong> spécifie :</p>
 <blockquote>
-<p>Les développeurs doivent réaliser des <strong>mini-benchmarks</strong> avec une montée en charge significative :<br />
-<strong>au moins 10 threads</strong> pendant <strong>1 minute minimum</strong>.</p>
+<p>Les développeurs doivent réaliser des <strong>mini-benchmarks</strong> avec une montée en charge significative.</p>
 </blockquote>
 </li>
 <li>
@@ -7810,8 +7888,7 @@ section.smaller {
 <li><strong>Architecture as Code</strong> = gain de traçabilité, maintenabilité, lisibilité et automatisation.</li>
 <li><strong>AsciiDoc + Git + CI/CD</strong> → combo gagnant pour une doc versionnée, réutilisable et collaborative.</li>
 <li>Le <strong>DA</strong> donne les <strong>principes</strong> ; les <strong>guides DEV/DEX</strong> précisent les <strong>détails opérationnels</strong>.</li>
-<li>Le <strong>management</strong> peut suivre la qualité du DA via Git, MRs, quiz, revues croisées, etc.</li>
-<li>Modèle recommandé : DA structuré en contraintes / exigences / solutions, avec ADRs et suivis intégrés.</li>
+<li>Modèle recommandé : DA structuré en <strong>contraintes / ENF / solutions</strong> accompagné d'ADRs.</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="84" data-paginate="true" data-background-image="none" data-background-size="cover" data-color="#555555" data-style="section {
@@ -7887,7 +7964,6 @@ section.smaller {
 ;color:#555555;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-pagination-total="86" data-transition-back="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;push&quot;,&quot;builtinFallback&quot;:true}">
 <h2 id="%F0%9F%9A%80-un-projet-open-source-en-perspective"><img class="emoji" draggable="false" alt="🚀" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f680.svg" data-marp-twemoji=""/> Un projet Open Source en perspective ?</h2>
 <ul>
-<li>Améliorer et enrichir le modèle de dossier d’architecture (DA)</li>
 <li>Proposer une <strong>interface CLI</strong> et/ou un <strong>GUI</strong> et/ou un <strong>chatbot</strong> ? pour générer des templates de DA contextualisés</li>
 <li>Pas de base de données nécessaire : tout est stocké <strong>en texte dans un dépôt Git</strong></li>
 <li>Chaque section du modèle est enrichie de <strong>métadonnées</strong> pour permettre le <strong>filtrage intelligent</strong></li>

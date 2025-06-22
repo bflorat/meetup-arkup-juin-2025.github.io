@@ -75,7 +75,6 @@ ou simplement :
 
 - ✋ A déjà entendu parler de "documentation as code" ?
 - 📄 Documente encore principalement avec des outils bureautiques ?
-- 🧪 A déjà testé une approche doc-as-code ?  
 - 🛠️ Utilise un outil comme **Asciidoc**, **Markdown**, **PlantUML**, **Antora**, **MkDocs**… ?
 - 🧙 Génère de la doc as code (depuis du code ou des diagrammes)
 - 🔁 A intégré la doc dans un **CI/CD**, ou dans une PR/MR comme du code ?
@@ -150,9 +149,13 @@ ou simplement :
 
 ## 🛡️ **Documenter pour avancer et cranter les sujets**  
 
-- 🚫 Moins de malentendus ➔ **économies** de temps, d’argent et de frustrations  
-- 📚 **Tracer les choix et leurs raisons** (ex. : ADR) ➔ éviter de reposer sans cesse les mêmes questions  
-    - Si besoin, on pourra toujours les réévaluer plus tard… mais en conscience.
+![bg right:30% fit](images/rtfm.png)
+
+- Moins de malentendus ➔ **économies** de temps, d’argent et de frustrations  
+- **Tracer les choix et leurs raisons** (ex. : ADR) ➔ éviter de reposer sans cesse les mêmes questions      
+- **Economiser du temps** et **tester la motivation** en renvoyant d'abord sur la doc
+
+
 
 ---
 
@@ -235,6 +238,18 @@ Que doit contenir (ou pas) la doc dans ce cas ?
 - 🔎 **Porteuse de sens** : met en lumière les enjeux, déclenche des retours et aide à mieux décider
 
 ---
+
+# 🗣️ L'importance de L'UL (Ubiquitus Language)
+
+- UL issu du **Domain-Driven Design (DDD)** d’Eric Evans  
+- Objectif : **un langage partagé** entre développeurs, experts métier, testeurs et architectes  
+- Utiliser **les mêmes termes métier** partout (code, doc, tests, diagrammes)  
+- **Éviter les synonymes** et les variations  
+- Favorise la **compréhension** entre les parties prenantes  
+- Garantit la **cohérence** entre code et documentation  
+
+---
+
 
 ## ❓ Quid de la documentation d’architecture en particulier ?
 
@@ -339,9 +354,9 @@ Répond à la plupart de ces critères :
 
 ## 🤖 Une doc moins adaptée aux LLM
 
-* Outils bureautiques **peu formels** : structure faible, pas de validation possible du contenu ou des métadonnées (type Git hooks)
+- Documents bureautiques **peu formels** : structure faible, pas de validation possible du contenu ou des métadonnées (type Git hooks)
 
-* Perte de sens en cas d’**entraînement de LLM**  
+- Perte de sens en cas d’**entraînement de LLM**  
   - Contenu essentiellement binaire, peu structuré, plus difficile à exploiter par l’IA  
   - Plus difficile de faire générer du contenu
 
@@ -375,8 +390,7 @@ Répond à la plupart de ces critères :
 
 | Traditionnelle 📚              | Vivante / As Code 💻                        |
 |-------------------------------|--------------------------------------------|
-| Fichiers Word / PDF statiques | Documentation versionnée (Git)             |
-| Mise à jour manuelle          | Mise à jour via PR/MR / CI/CD              |
+| Fichiers Word / PDF statiques | Texte versionné (Git)                      |
 | Peu ou pas de traçabilité     | Historique, tags et auteurs tracés         |
 | Rapide obsolescence           | Mise à jour continue                       |
 | Non intégrée aux workflows    | Intégrée dans le cycle DevOps              |
@@ -406,7 +420,6 @@ Répond à la plupart de ces critères :
 - **CI/CD** pour valider / publier automatiquement votre doc (PDF, HTML…)  
 - **Git hooks** : automatiser la mise à jour d’index ou de métadonnées  
 - **Traçabilité / conformité** via signature GPG sur commits/tags (utile dans les environnements sensibles)  
-- **Collaboration distribuée** : plusieurs auteurs, plusieurs branches  
 
 ---
 
@@ -588,16 +601,9 @@ graph TD
 <!-- _class: small -->
 
 - **IDE** :
-  - **IntelliJ IDEA** : support natif de PlantUML, Mermaid via plugins
   - **VS Code** : extensions pour Mermaid, PlantUML, Graphviz, Kroki
-  - **Obsidian** : Mermaid intégré, PlantUML via plugins
-
-- **Outils de documentation** :
-  - **Antora**, **MkDocs**, **Asciidoctor**
-
-- **CI/CD** :
-  - Génération automatique via CLI ou via **Kroki**
-
+  - **IntelliJ IDEA** : support natif de PlantUML, Mermaid via plugins
+  
 - **Plateformes** :
   - **GitHub**, **GitLab** : prévisualisation automatique intégrée
 
@@ -874,19 +880,6 @@ Grâce aux **blocs structurés AsciiDoc**, il est possible de **consolider autom
 
 ---
 
-# 🗣️ L'importance de L'UL (Ubiquitus Language)
-
-- UL issu du **Domain-Driven Design (DDD)** d’Eric Evans  
-- Objectif : **un langage partagé** entre développeurs, experts métier, testeurs et architectes  
-- Le DA (dossier d'architecture) **doit refléter ce langage** :
-  - 📘 Utiliser **les mêmes termes métier** partout (code, doc, tests, diagrammes)  
-  - 🚫 **Éviter les synonymes** et les variations  
-- 🤝 Favorise la compréhension entre les parties prenantes  
-- 🔎 Améliore la traçabilité des concepts métier  
-- ✅ Garantit la cohérence entre code et documentation  
-
----
-
 # 📝 Le compte-rendu d’un point d’architecture
 
 - **« Commite » le point** : sans CR, la réunion n’a jamais eu lieu.
@@ -1122,8 +1115,7 @@ If a message can be interpreted in several ways, it will be interpreted in a man
 ### 🧪 Exemple : validation des performances en DEV (DoD)
 
 - Le **DA** spécifie :  
-  > Les développeurs doivent réaliser des **mini-benchmarks** avec une montée en charge significative :  
-  > **au moins 10 threads** pendant **1 minute minimum**.
+  > Les développeurs doivent réaliser des **mini-benchmarks** avec une montée en charge significative.
 
 - Le **guide DEV** précise :  
   > Où trouver le **template JMeter**,  
@@ -1164,14 +1156,12 @@ If a message can be interpreted in several ways, it will be interpreted in a man
 - **Architecture as Code** = gain de traçabilité, maintenabilité, lisibilité et automatisation.
 - **AsciiDoc + Git + CI/CD** → combo gagnant pour une doc versionnée, réutilisable et collaborative.
 - Le **DA** donne les **principes** ; les **guides DEV/DEX** précisent les **détails opérationnels**.
-- Le **management** peut suivre la qualité du DA via Git, MRs, quiz, revues croisées, etc.
-- Modèle recommandé : DA structuré en contraintes / exigences / solutions, avec ADRs et suivis intégrés.
+- Modèle recommandé : DA structuré en **contraintes / ENF / solutions** accompagné d'ADRs.
 
 ----
 
 ## 🚀 Un projet Open Source en perspective ?
 
-- Améliorer et enrichir le modèle de dossier d’architecture (DA)
 - Proposer une **interface CLI** et/ou un **GUI** et/ou un **chatbot** ? pour générer des templates de DA contextualisés
 - Pas de base de données nécessaire : tout est stocké **en texte dans un dépôt Git**
 - Chaque section du modèle est enrichie de **métadonnées** pour permettre le **filtrage intelligent**
