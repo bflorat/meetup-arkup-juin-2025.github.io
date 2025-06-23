@@ -246,7 +246,6 @@ Que doit contenir (ou pas) la doc dans ce cas ?
 - Utiliser **les mêmes termes métier** partout (code, doc, tests, diagrammes)  
 - **Éviter les synonymes** et les variations  
 - Favorise la **compréhension** entre les parties prenantes  
-- Garantit la **cohérence** entre code et documentation  
 
 ---
 
@@ -312,7 +311,7 @@ Que doit contenir (ou pas) la doc dans ce cas ?
 ---
 
 ### Exemple C4 : diagramme de container
-![width:600](images/bons-diagrammes.svg)
+![width:600](images/bons-diagrammes.png)
 
 ---
 
@@ -443,7 +442,6 @@ Répond à la plupart de ces critères :
 - **Diagrammes intégrés** (avec plugins): PlantUML, Mermaid…  
 - **Sorties variées** : HTML5, PDF, DocBook…
 
-
 ---
 
 ## ⚙️ Comparaison d'outils de documentation As Code Open Source
@@ -455,7 +453,7 @@ Répond à la plupart de ces critères :
 | **Docusaurus** | Markdown                   | React + Node.js        | UX moderne, thèmes, blog, versioning               | Moins adapté aux docs backend/archi          |
 | **Antora**     | AsciiDoc                   | Ruby (Asciidoctor)     | Multi-repo, modulaire, orienté architecture        | Plus sobre, nécessite structuration stricte  |
 | **MkDocs**     | Markdown                   | Python (YAML config)   | Léger, rapide, nombreux plugins                    | Moins modulaire que Antora                   |
-| **AsciiDoc**   | AsciiDoc                   | Ruby (Asciidoctor)     | Syntaxe riche, blocs, admonitions, includes        | Moins répandu que Markdown, learning curve   |
+| **AsciiDoc**   | AsciiDoc                   | Ruby (Asciidoctor)     | Syntaxe riche, blocs, admonitions, includes        | Moins répandu que Markdown  |
 
 ---
 
@@ -464,8 +462,11 @@ Répond à la plupart de ces critères :
 - 🖥️ **Docusaurus** : produit/API, design et navigation moderne  
 - 🧱 **Antora** : doc d'archi, microservices, équipes distribuées  
 - 🚀 **MkDocs** : doc rapide à mettre en place, mono-repo  
-- 🔧 **AsciiDoc seul** : doc technique avancée, sans framework  
+- 🔧 **AsciiDoc seul** : doc technique avancée, sans framework
 
+<div class="admonition tip">
+  💡 <strong>Remarque :</strong> Pour tirer profil des différents outils, pipelines, process mis en place, privilégiez l'<b>uniformisation du language light markup</b> au sein d'un projet voire de l'organisation.
+</div>
 
 ---
 
@@ -538,19 +539,11 @@ class CalculatriceSpec extends Specification {
 ```
 ---
 
-## 🔄 Exemple de site Antora multi-dépôts à partir de documentation générée
+## 🥷 Exemple de site Antora multi-dépôts à partir de documentation générée
 
 Visualisation des spécifications sur un portail de documentation :
 
 ![bg right height:300px](images/antora.png)
-
----
-
-## 🎯 Bénéfices concrets
-
-- Plus de divergence entre le code, les tests et la documentation
-- Vérifiables automatiquement à chaque build
-- Réutilisables pour l'audit, l'architecture, la conformité, etc.
 
 ---
 
@@ -637,12 +630,11 @@ Source : https://c4model.com/
   J'utilise le terme <i>diagramme d’unités déployables</i>.
 </div>
 
-
 ---
 
 ## 💡 Exemple de C4 en plantuml
 
-![width:600px](images/28-diag-4.svg)
+![width:600px](images/28-diag-4.png)
 
 ```
 @startuml
@@ -711,7 +703,7 @@ File diags-1.puml:
 
 - Pour chaque feature, représenter une **chaîne de liaison synchrone** composée d’appels successifs.
 
-![bg left width:400px fit](images/28-diag-9.svg)
+![bg left width:400px fit](images/28-diag-9.png)
 
 ---
 
@@ -729,17 +721,21 @@ File diags-1.puml:
 
 <!-- _class: smaller -->
 
-Exemple réel (à lancer depuis la CI-CD ou à la main) :
+Exemple réel (à lancer depuis la CI-CD ou à la main) **sur un diagramme Plantuml**:
 
 ``` 
 # Vers queues
-' cat diagrams/modules/dynamic.puml | grep Rel | awk -F'(' {'print $2'} |  sed 's/ //g' |  awk -F',' {'if ($1!=$2)print "| `"$1"` | `"$2"`"'}  | grep queue  | sed 's/_/-/g' | awk '!seen[$0]++'  | sort
+' cat diagrams/modules/dynamic.puml | grep Rel | awk -F'(' {'print $2'} |  sed 's/ //g' \
+  | awk -F',' {'if ($1!=$2)print "| `"$1"` | `"$2"`"'}  | grep queue  | sed 's/_/-/g' | awk '!seen[$0]++'  | sort
 # Depuis et vers api:
-' cat diagrams/modules/dynamic.puml | grep Rel | awk -F'(' {'print $2'} |  sed 's/ //g' |  awk -F',' {'if ($1!=$2)print "| `"$1"` | `"$2"`"'}  | grep api | grep -vE 'frontal|appelant|pdf|trusted' | sed 's/_/-/g' | awk '!seen[$0]++'  | sort
+' cat diagrams/modules/dynamic.puml | grep Rel | awk -F'(' {'print $2'} |  sed 's/ //g' \
+  |  awk -F',' {'if ($1!=$2)print "| `"$1"` | `"$2"`"'}  | grep api | grep -vE 'frontal|appelant|pdf|trusted' | sed 's/_/-/g' | awk '!seen[$0]++'  | sort
 # Vers -fs ou -obj :
-' cat diagrams/modules/dynamic.puml | grep Rel | awk -F'(' {'print $2'} |  sed 's/ //g' |  awk -F',' {'if ($1!=$2)print "| `"$1"` | `"$2"`"'}  | grep -E '_fs|_obj' | sed 's/_/-/g' | awk '!seen[$0]++'  | sort
+' cat diagrams/modules/dynamic.puml | grep Rel | awk -F'(' {'print $2'} |  sed 's/ //g' \
+  |  awk -F',' {'if ($1!=$2)print "| `"$1"` | `"$2"`"'}  | grep -E '_fs|_obj' | sed 's/_/-/g' | awk '!seen[$0]++'  | sort
 # Vers bases de données
-' cat diagrams/modules/dynamic.puml | grep Rel | awk -F'(' {'print $2'} |  sed 's/ //g' |  awk -F',' {'if ($2 ~ /ma_base$|mon_autre_base$/)print "| `"$1"` | `"$2"`"'}  |  awk '!seen[$0]++'  | sort
+' cat diagrams/modules/dynamic.puml | grep Rel | awk -F'(' {'print $2'} |  sed 's/ //g' \
+  |  awk -F',' {'if ($2 ~ /ma_base$|mon_autre_base$/)print "| `"$1"` | `"$2"`"'}  |  awk '!seen[$0]++'  | sort
 ```
 Exemple partiel de sortie Asciidoc prête à coller dans le DA :
 
@@ -762,6 +758,7 @@ Exemple partiel de sortie Asciidoc prête à coller dans le DA :
 - Peut être **rendu et consolidé** dans un site **Antora**
 - “Développé” dans un **IDE** (VS Code recommandé)
 - **Mis à jour en continu**, avec une **revue annuelle complète**
+- Beaucoup d'**admonitions** (TIPS, WARNING...) : **bon signe** de l'utilité du DA
 
 ---
 
@@ -990,7 +987,7 @@ Grâce aux **blocs structurés AsciiDoc**, il est possible de **consolider autom
 - Stack : **RAG** (Retrieval-Augmented Generation) basé sur les modèles **Mistral 7B** ou **DeepSeek-V2**
 - Résultats **mitigés**, mais **nettement meilleurs avec `mistral-7b`**
 
-![bg right:60% 80%](images/archbot.svg)
+![bg right:60% 80%](images/archbot.png)
 
 
 ---
@@ -1089,7 +1086,6 @@ If a message can be interpreted in several ways, it will be interpreted in a man
 - 📩 **Communication proactive**  
   Envoi de **mails ou messages** à chaque évolution du DA, avec un **lien direct** ou un **extrait ciblé**.
 
-
 ---
 
 ## 🎯 Manque de contextualisation de certains modèles de DA
@@ -1108,7 +1104,6 @@ If a message can be interpreted in several ways, it will be interpreted in a man
 
 - Le **guide de développement** est produit et maintenu par les **LeadTech** et les **équipes de développement**.
 - Le **Dossier d’Architecture (DA)** doit énoncer les **principes directeurs de développement**, sans entrer dans les **détails opérationnels** ou les choix d’implémentation spécifiques.
-
 
 ---
 
