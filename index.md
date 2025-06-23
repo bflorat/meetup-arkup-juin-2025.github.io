@@ -772,14 +772,13 @@ Exemple partiel de sortie Asciidoc prête à coller dans le DA :
 ![](images/stars-modele-da-fr.png)  
 ![](images/stars-modele-da-en.png)
 
-- Découpe l’architecture solutions en **cinq vues**
+- Découpe l’architecture solutions par rôle en **cinq vues** 
 - Structure chaque vue en **Contraintes**, **ENF** et **Solutions**
 - Approche **"check-list"** : aide à ne pas oublier les sujets importants
+- Approche **par l'exemple** : explication détaillée et de 1 à 3 ex. par section
 - **Intègre l’incertitude** (hypothèses / points à statuer…)
-- Licence **CC Attribution - Partage dans les mêmes conditions**
-- Existe aussi en **version anglaise**
 - **Prêt à l’usage** : modèles vierges, manuel utilisateur, outils d’export…
-- Projet **Open Source** – Contributions bienvenues !
+- Projet **Open Source** (CC SA) – Contributions bienvenues !
 ---
 ## 📄 Les ADR (Architecture Decision Records)
 
