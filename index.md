@@ -773,7 +773,7 @@ Exemple partiel de sortie Asciidoc prête à coller dans le DA :
 ![](images/stars-modele-da-en.png)
 
 - Découpe l’architecture solutions par rôle en **cinq vues** 
-- Structure chaque vue en **Contraintes**, **ENF** et **Solutions**
+- Structure chaque vue en **Contraintes**, **Exigences Non Fonctionnelles (ENF)** et **Solutions**
 - Approche **"check-list"** : aide à ne pas oublier les sujets importants
 - Approche **par l'exemple** : explication détaillée et de 1 à 3 ex. par section
 - **Intègre l’incertitude** (hypothèses / points à statuer…)
