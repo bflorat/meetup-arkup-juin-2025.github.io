@@ -691,7 +691,7 @@ File diags-1.puml:
 
 ---
 
-## 🥷 Pattern : diagrammes dynamiques
+## 🥷 Pattern : diagrammes de dépendances
 
 - Intégrer dans le DA (vue applicative) une **big picture** des principales dépendances applicatives.
 
